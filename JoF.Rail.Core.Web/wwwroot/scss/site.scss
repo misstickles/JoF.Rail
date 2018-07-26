@@ -1,0 +1,167 @@
+﻿@import "../lib/bootstrap/scss/_functions.scss";
+@import "../lib/bootstrap/scss/_variables.scss";
+@import "../lib/bootstrap/scss/_mixins.scss";
+
+@font-face {
+    font-family: "led";
+    src:    url("../fonts/LED6X8.woff") format("woff"),
+            url("../fonts/LED6X8.TTF") format("truetype");
+}
+
+@font-face {
+    font-family: "Dot-Matrix";
+        src:    url("../fonts/LED Dot-Matrix.woff2") format("woff2"),
+                url("../fonts/LED Dot-Matrix.woff") format("woff"),
+                url("../fonts/LED Dot-Matrix.ttf") format("truetype");
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Merchant";
+    src:    url("../fonts/MerchantCopy.woff2") format("woff2"),
+            url("../fonts/MerchantCopy.woff") format("woff"),
+            url("../fonts/MerchantCopy.ttf") format("truetype");
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "SubwayLondon";
+    src:    url("../fonts/SubwayLondon.woff2") format("woff2"), 
+            url("../fonts/SubwayLondon.woff") format("woff"),
+            url("../fonts/SubwayLondon.ttf") format("truetype");
+    font-weight: normal;
+    font-style: normal;
+}
+
+/*
+orange #FE6005
+    f94e06
+light green ecfdaa
+    f1faa1
+    f4fdbd
+yellow #EAC32A
+dark grey 111111
+text grey 2a2014
+ticket white
+    fdfefb
+*/
+
+$ticket-orange: #F94E06;
+$ticket-green: #f4fdbd;
+$board-yellow: #EAC32A;
+$board-grey: #111;
+$ticket-grey: #2A2014;
+$off-white: #fdfefb;
+$nre-blue: #003364;
+
+$enable-gradients:  true;
+
+$theme-colors: (
+    "primary": $ticket-orange,
+    "secondary": $ticket-grey,
+    "info": $ticket-green,
+    "light": $off-white
+);
+
+$body-bg:       $board-grey;
+$body-color:    $board-yellow;
+
+$font-family-sans-serif: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+
+@import "../lib/bootstrap/scss/bootstrap";
+
+body {
+    padding-top: 80px;
+    padding-bottom: 70px;
+}
+
+.departure-board {
+    color: $board-yellow;
+    font-size: 1em;
+}
+
+.text-departure-board {
+    color: $board-yellow;
+}
+
+.bg-departure-board, .departure-board {
+    background-color: $board-grey;
+}
+
+.bg-off-white {
+    background-color: $off-white;
+}
+
+.text-off-white {
+    color: $off-white;
+}
+
+footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    color: $ticket-grey;
+    background-color: $off-white;
+}
+
+hr {
+    border-color: $off-white;
+}
+
+.bg-danger a {
+    color: $off-white;
+    text-decoration: underline;
+}
+
+.bg-danger a:hover {
+    color: color-yiq($off-white);
+    text-decoration: none;
+}
+
+.time, .time small {
+    font-family: Dot-Matrix, $font-family-sans-serif;
+    font-weight: 400;
+    color: $board-grey;
+}
+
+.time {
+    font-size: 1.5rem;
+}
+
+.text-merchant {
+    font-family: Merchant, $font-family-sans-serif;
+    font-size: 1.8em;
+}
+
+.text-merchant {
+    input, button {
+        font-size: 1.5rem;
+    }
+}
+
+.text-subway {
+    font-family: SubwayLondon, $font-family-sans-serif;
+}
+
+.rounded-1 {
+    border-radius: calc(1rem - 1px) calc(1rem - 1px) calc(1rem - 1px) calc(1rem - 1px) !important;
+}
+
+.rounded-1-top {
+    border-radius: calc(1rem - 1px) calc(1rem - 1px) 0 0 !important;
+}
+
+.rounded-1-bottom {
+    border-radius: 0 0 calc(1rem - 1px) calc(1rem - 1px) !important;
+}
+
+.bg-text {
+    background-repeat: repeat;
+    background-image: url("../images/TicketBackground.svg");
+}
+
+.indent {
+    padding-left: 15px;
+}

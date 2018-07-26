@@ -1,0 +1,108 @@
+﻿@page
+@model Boards.FastestDepartures
+@{
+    ViewData["Title"] = "Fastest Departures";
+}
+
+<h2>Fastest Departures</h2>
+
+<div class="row">
+    <form method="POST">
+        From: <input asp-for="Query.Crs" />
+        To: <input asp-for="Query.FilterCrsList" />
+        Window: <input asp-for="Query.TimeWindow" />
+        Back: <input asp-for="Query.TimeOffset" />
+        <br />
+        <button type="submit">Find</button>
+    </form>
+</div>
+
+@if (Model.Board != null)
+{
+    <div class="row">
+        @foreach (var message in Model.Board.Messages)
+        {
+            <div>@Html.Raw(@message)</div>
+        }
+    </div>
+    <div class="departureBoard">
+        <div id="grid">
+            <table class="table table-borderless">
+                <thead>
+                    <tr><th>To</th><th>Arrive<br />Depart</th><th>Platform</th><th>Expected</th><th>Arrives</th><th>Origin</th><th>Destination</th></tr>
+                </thead>
+                <tbody>
+                    @foreach (var dest in Model.Board.Departures)
+                    {
+                        var service = dest.Service;
+                    <tr>
+                        <td>
+                            @Html.DisplayFor(x => dest.Crs)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(x => service.ScheduledTimeArrival)
+                            <br />
+                            @Html.DisplayFor(x => service.ScheduledTimeDeparture)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(x => service.Platform)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(x => service.ScheduledTimeDeparture)
+                            <br />
+                            @Html.DisplayFor(x => service.EstimatedTimeDeparture)
+                        </td>
+                        <td>
+                            @{
+                                var callingPoints = service.SubsequentCallingPoints.First();
+                                var arrives = callingPoints.CallingPoints.First(x => x.Crs == dest.Crs);
+                                @Html.DisplayFor(x => arrives.ScheduledTime)
+                                <br />
+                                @Html.DisplayFor(x => arrives.EstimatedTime)
+                            }
+                        </td>
+                        <td>
+                            @foreach (var origin in service.Origins)
+                            {
+                                @Html.DisplayFor(x => origin.Location)
+                                <br />
+                            }
+                        </td>
+                        <td>
+                            @foreach (var destinations in service.Destinations)
+                            {
+                                @Html.DisplayFor(x => destinations.Location)
+                                <br />
+                            }
+                        </td>
+                    </tr>
+                        @if (service.DelayReason != null || service.CancellationReason != null)
+                        {
+                            <tr>
+                                <td colspan="4">
+                                    @if (service.DelayReason != null)
+                                    {
+                                        <span class="small reason">
+                                            @Html.DisplayFor(x => service.DelayReason)
+                                        </span>
+                                    }
+                                    @if (service.CancellationReason != null)
+                                    {
+                                        <span class="small reason">
+                                            @Html.DisplayFor(x => service.CancellationReason)
+                                        </span>
+                                    }
+                                </td>
+                            </tr>
+                        }
+                    }
+                    <tr>
+                        <td colspan="4" class="right">
+                            @Html.DisplayFor(x => Model.Board.GeneratedAt)
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+}

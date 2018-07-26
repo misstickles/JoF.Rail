@@ -1,0 +1,13 @@
+﻿<svg xmlns="http://www.w3.org/2000/svg" 
+  version="1.1"
+  width="59" height="10">
+  <style>
+    .svg-text {
+      font: normal 10px sans-serif;
+      fill: #f4fdbd;
+    }
+  </style>
+  <text x="0" y="10" class="svg-text">
+    National Rail
+  </text>
+</svg>
