@@ -49,8 +49,6 @@ namespace JoF.Rail.Core.Web
                         cfg.RegisterValidatorsFromAssemblyContaining<Startup>();
                     })
                 .AddFeatureFolders();
-
-            //services.AddSingleton<IConfiguration>(Configuration);
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -70,13 +68,14 @@ namespace JoF.Rail.Core.Web
             app.UseHttpsRedirection();
             app.UseStatusCodePages();
             app.UseStaticFiles();
-            app.UseCookiePolicy();
-            app.UseMvc(routes =>
-            {
-                routes.MapRoute(
-                    "default",
-                    "{controller}/{action=Index}");
-            });
+            // app.UseCookiePolicy();
+            app.UseMvcWithDefaultRoute();
+            //app.UseMvc(routes =>
+            //{
+            //    routes.MapRoute(
+            //        "default",
+            //        "{controller}/{action=Index}");
+            //});
         }
     }
 }
