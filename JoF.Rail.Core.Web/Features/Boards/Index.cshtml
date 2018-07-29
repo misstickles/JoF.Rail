@@ -2,7 +2,7 @@
     <div class="row">
         <div class="col">
             <h2>Live Departure Boards</h2>
-            <div class="text-off-white">Live departure and arrival information boards - as they are displaying at the station.</div>
+            <div>Live departure and arrival information boards - as they are displaying at the station.</div>
         </div>
         <div class="col-1">
             <button type="button" class="btn btn-primary float-right font-weight-bold text-off-white" data-toggle="modal" data-target="#depBoardModal">?</button>
@@ -11,7 +11,7 @@
 
     <div class="row text-merchant">
         <div class="col-lg-8 offset-lg-2 col-12">
-            <div class="card rounded-1 border-0 mt-4">
+            <div class="card rounded-1 border-0 shadow-lg mt-4">
                 <h3 class="card-header rounded-1-top bg-primary text-off-white pt-3 pb-3">
                     Departure / Arrival Stations
                 </h3>
@@ -24,10 +24,6 @@
                 </h4>
             </div>
         </div>
-    </div>
-
-    <div class="alert alert-info mt-5" role="alert">
-        (This is version 0.1) Please ensure you select station(s) from the list presented.
     </div>
 </div>
 
@@ -43,11 +39,11 @@
             <div class="modal-body">
                 <ul>
                     <li>Please ensure you enter a 'from' Station and select it from the list</li>
-                    <li>Boards list the direct services running from (departures) or to (arrivals) a station - they do not display routes requiring a change</li>
+                    <li>Boards display the direct services running (departures) from or (arrivals) to a station - they do not display routes requiring a change</li>
                     <li>Each service includes scheduled time, destination (or origin), expected time, delay (minutes), platform and number of coaches</li>
                     <li>Click the <i class="fas fa-info"></i> button to see more details and calling points of the service</li>
                     <li>The little train icon (<i class="fas fa-train"></i>) displays the approximate current location of the train</li>
-                    <li>Stations yet to be stopped at are in italic</li>
+                    <li>Times for stations yet to be stopped at are in italic</li>
                     <li>Data is as provided by <abbr title="See footer for details" class="initialism">National Rail</abbr></li>
                 </ul>
             </div>

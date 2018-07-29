@@ -17,9 +17,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "JoF.Rail.Standard", "JoF.Ra
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Services", "Services", "{3FB53660-B254-4220-ACE3-B3A1270EAE53}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JoF.Rail.Service.LiveDepartureBoards", "Services\JoF.Rail.Service.LiveDepartureBoards\JoF.Rail.Service.LiveDepartureBoards.csproj", "{B540FF06-18E2-4734-AC3D-0DE2B62E6A5B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "JoF.Rail.Service.LiveDepartureBoards", "Services\JoF.Rail.Service.LiveDepartureBoards\JoF.Rail.Service.LiveDepartureBoards.csproj", "{B540FF06-18E2-4734-AC3D-0DE2B62E6A5B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JoF.Rail.Tests.xUnit", "Tests\JoF.Rail.Tests.xUnit\JoF.Rail.Tests.xUnit.csproj", "{A9598202-F1A1-4DF8-BAD1-03AC450DB4D1}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "JoF.Rail.Tests.xUnit", "Tests\JoF.Rail.Tests.xUnit\JoF.Rail.Tests.xUnit.csproj", "{A9598202-F1A1-4DF8-BAD1-03AC450DB4D1}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{4F627AD7-774F-4A48-AD31-C3324EBFF5FB}"
 EndProject

@@ -17,7 +17,7 @@
         <link rel="stylesheet" href="~/css/combined.min.css" asp-append-version="true" />
     </environment>
 </head>
-<body>
+<body class="@ViewBag.BodyClass">
     <header>
         <nav class="navbar navbar-expand-md navbar-light fixed-top bg-light">
             <a class="navbar-brand" asp-controller="Boards" asp-action="Index">JoF.Rail</a>
@@ -38,7 +38,7 @@
         <partial name="_CookieConsentPartial" />
     </header>
 
-    <main role="main" class="pb-5 pt-4">
+    <main role="main" class="container pb-5 pt-4">
         @RenderBody()
     </main>
 
