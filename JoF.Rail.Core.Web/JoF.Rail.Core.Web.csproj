@@ -37,7 +37,7 @@
   </ItemGroup>
 
   <Target Name="PostBuild" AfterTargets="PostBuildEvent">
-    <Exec Command="gulp" />
+    <Exec Command="if $(ConfigurationName)==Debug gulp" />
   </Target>
 
 </Project>
