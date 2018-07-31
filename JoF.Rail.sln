@@ -23,6 +23,10 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "JoF.Rail.Tests.xUnit", "Tes
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{4F627AD7-774F-4A48-AD31-C3324EBFF5FB}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JoF.Rail.Standard.Imports", "Core\JoF.Rail.Standard.Imports\JoF.Rail.Standard.Imports.csproj", "{46BD1B35-7C4F-4B19-AC60-B8EDCB62ADA3}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Core", "Core", "{A296BBE7-4436-4E42-9F25-18813B51A8C4}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -45,6 +49,10 @@ Global
 		{A9598202-F1A1-4DF8-BAD1-03AC450DB4D1}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A9598202-F1A1-4DF8-BAD1-03AC450DB4D1}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A9598202-F1A1-4DF8-BAD1-03AC450DB4D1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{46BD1B35-7C4F-4B19-AC60-B8EDCB62ADA3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{46BD1B35-7C4F-4B19-AC60-B8EDCB62ADA3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{46BD1B35-7C4F-4B19-AC60-B8EDCB62ADA3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{46BD1B35-7C4F-4B19-AC60-B8EDCB62ADA3}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -52,6 +60,7 @@ Global
 	GlobalSection(NestedProjects) = preSolution
 		{B540FF06-18E2-4734-AC3D-0DE2B62E6A5B} = {3FB53660-B254-4220-ACE3-B3A1270EAE53}
 		{A9598202-F1A1-4DF8-BAD1-03AC450DB4D1} = {4F627AD7-774F-4A48-AD31-C3324EBFF5FB}
+		{46BD1B35-7C4F-4B19-AC60-B8EDCB62ADA3} = {A296BBE7-4436-4E42-9F25-18813B51A8C4}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {5E1C079A-58AA-4CDF-9B5B-5102A38DA2EC}
