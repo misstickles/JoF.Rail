@@ -2,8 +2,6 @@ namespace JoF.Rail.Core.Web
 {
     using AutoMapper;
     using FluentValidation.AspNetCore;
-    using HtmlTags;
-//    using JoF.Rail.Core.Web.Infrastructure;
     using MediatR;
     using Microsoft.AspNetCore.Builder;
     using Microsoft.AspNetCore.Hosting;
@@ -70,12 +68,6 @@ namespace JoF.Rail.Core.Web
             app.UseStaticFiles();
             // app.UseCookiePolicy();
             app.UseMvcWithDefaultRoute();
-            //app.UseMvc(routes =>
-            //{
-            //    routes.MapRoute(
-            //        "default",
-            //        "{controller}/{action=Index}");
-            //});
         }
     }
 }

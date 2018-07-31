@@ -7831,3 +7831,40 @@ hr {
 
 .indent {
   padding-left: 15px; }
+
+.bs-callout {
+  padding: 20px;
+  margin: 20px 0;
+  border-style: solid;
+  border: solid 1px #EEE;
+  border-left-width: 5px;
+  border-radius: 3px; }
+
+*.bs-callout:empty {
+  padding: 20px;
+  margin: 0px;
+  border: none; }
+
+.bs-callout p:last-child {
+  margin-bottom: 0; }
+
+.bs-callout code {
+  border-radius: 3px; }
+
+.bs-callout + .bs-callout {
+  margin-top: -5px; }
+
+.bs-callout-primary {
+  border-left-color: #007bff; }
+
+.bs-callout-success {
+  border-left-color: #28a745; }
+
+.bs-callout-danger {
+  border-left-color: #dc3545; }
+
+.bs-callout-warning {
+  border-left-color: #ffc107; }
+
+.bs-callout-info {
+  border-left-color: #17a2b8; }

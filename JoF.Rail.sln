@@ -21,7 +21,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "JoF.Rail.Service.LiveDepart
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "JoF.Rail.Tests.xUnit", "Tests\JoF.Rail.Tests.xUnit\JoF.Rail.Tests.xUnit.csproj", "{A9598202-F1A1-4DF8-BAD1-03AC450DB4D1}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{4F627AD7-774F-4A48-AD31-C3324EBFF5FB}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "_Tests", "_Tests", "{4F627AD7-774F-4A48-AD31-C3324EBFF5FB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JoF.Rail.Standard.Core", "Core\JoF.Rail.Standard.Core\JoF.Rail.Standard.Core.csproj", "{974C5CF4-1163-4E71-B37B-14A372BD0B8A}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Core", "Core", "{D499E75F-F0CD-4512-B712-8EDC2364096C}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -45,6 +49,10 @@ Global
 		{A9598202-F1A1-4DF8-BAD1-03AC450DB4D1}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A9598202-F1A1-4DF8-BAD1-03AC450DB4D1}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A9598202-F1A1-4DF8-BAD1-03AC450DB4D1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{974C5CF4-1163-4E71-B37B-14A372BD0B8A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{974C5CF4-1163-4E71-B37B-14A372BD0B8A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{974C5CF4-1163-4E71-B37B-14A372BD0B8A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{974C5CF4-1163-4E71-B37B-14A372BD0B8A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -52,6 +60,7 @@ Global
 	GlobalSection(NestedProjects) = preSolution
 		{B540FF06-18E2-4734-AC3D-0DE2B62E6A5B} = {3FB53660-B254-4220-ACE3-B3A1270EAE53}
 		{A9598202-F1A1-4DF8-BAD1-03AC450DB4D1} = {4F627AD7-774F-4A48-AD31-C3324EBFF5FB}
+		{974C5CF4-1163-4E71-B37B-14A372BD0B8A} = {D499E75F-F0CD-4512-B712-8EDC2364096C}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {5E1C079A-58AA-4CDF-9B5B-5102A38DA2EC}

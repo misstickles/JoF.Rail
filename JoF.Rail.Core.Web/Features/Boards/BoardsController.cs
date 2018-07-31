@@ -1,6 +1,7 @@
 ﻿namespace JoF.Rail.Core.Web.Features.Boards
 {
     using System.Threading.Tasks;
+    using JoF.Rail.Core.Web.Consts;
     using JoF.Rail.Standard.Enums;
     using MediatR;
     using Microsoft.AspNetCore.Mvc;
@@ -19,8 +20,7 @@
         {
             this.mediator = mediator;
 
-            // TODO: strongly type
-            this.accessToken = configuration["NatRail:AccessToken"];
+            this.accessToken = configuration[ConfigKey.NatRail.AccessToken];
         }
 
         [HttpGet]

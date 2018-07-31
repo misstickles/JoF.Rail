@@ -4,8 +4,7 @@
 
 @font-face {
     font-family: "led";
-    src:    url("../fonts/LED6X8.woff") format("woff"),
-            url("../fonts/LED6X8.TTF") format("truetype");
+    src: url("../fonts/LED6X8.woff") format("woff"), url("../fonts/LED6X8.TTF") format("truetype");
 }
 
 @font-face {
@@ -164,4 +163,55 @@ hr {
 
 .indent {
     padding-left: 15px;
+}
+
+
+
+
+.bs-callout {
+    padding: 20px;
+    margin: 20px 0;
+    border-style: solid;
+    border: solid 1px #EEE;
+    border-left-width: 5px;
+    border-radius: 3px;
+}
+
+
+*.bs-callout:empty {
+    padding: 20px;
+    margin: 0px;
+    border: none;
+}
+
+.bs-callout p:last-child {
+    margin-bottom: 0;
+}
+
+.bs-callout code {
+    border-radius: 3px;
+}
+
+.bs-callout + .bs-callout {
+    margin-top: -5px;
+}
+
+.bs-callout-primary {
+    border-left-color: $primary;
+}
+
+.bs-callout-success {
+    border-left-color: $success;
+}
+
+.bs-callout-danger {
+    border-left-color: $danger;
+}
+
+.bs-callout-warning {
+    border-left-color: $warning;
+}
+
+.bs-callout-info {
+    border-left-color: $info;
 }
