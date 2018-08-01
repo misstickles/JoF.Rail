@@ -1,16 +1,56 @@
 ﻿namespace JoF.Rail.Core.Web.Features.NetworkOverview
 {
-    using System;
-    using System.Collections.Generic;
-    using System.Linq;
     using System.Threading.Tasks;
+    using JoF.Rail.Core.Web.Consts;
+    using MediatR;
     using Microsoft.AspNetCore.Mvc;
+    using Microsoft.Extensions.Configuration;
 
     public class NetworkOverviewController : Controller
     {
+        private readonly IMediator mediator;
+
+        private readonly IConfiguration configuration;
+
+        public NetworkOverviewController(IMediator mediator, IConfiguration configuration)
+        {
+            this.mediator = mediator;
+
+            this.configuration = configuration;
+        }
+
         public async Task<IActionResult> Index()
         {
-            return View();
+            //if (string.IsNullOrEmpty(Request.Cookies["KbToken"]))
+            //{
+                var token = await this.mediator.Send(new Index.Token
+                {
+                    Key = this.configuration[ConfigKey.NatRail.Key],
+                    Url = this.configuration[ConfigKey.NatRail.KbTokenUrl],
+                    User = this.configuration[ConfigKey.NatRail.User]
+                });
+
+                //var cookieOptions = new CookieOptions
+                //{
+                //    Expires = DateTime.Now.AddMinutes(59),
+                //    HttpOnly = true
+                //};
+
+                //// strip out username and store in cookie
+                //this.Response.Cookies.Append(
+                //    "KbToken",
+                //    // token.Token.Contains(token.UserName + ":") ? token.Token.Replace(token.UserName + ":", string.Empty) : string.Empty,
+                //    "test",
+                //    cookieOptions);
+            //}
+
+            var network = await this.mediator.Send(new Index.Query
+            {
+                Token = token.Token, // this.configuration[ConfigKey.NatRail.User] + ":" + Request.Cookies["KbToken"],
+                Url = this.configuration[ConfigKey.NatRail.KbUrl] + this.configuration[ConfigKey.NatRail.ServiceIndicator]
+            });
+
+            return View(network);
         }
     }
 }

@@ -15,10 +15,10 @@
         {
             var endpoint = default(LDBServiceSoapClient.EndpointConfiguration);
             var svc = new LDBServiceSoapClient(endpoint);
-            var board = await svc.GetArrDepBoardWithDetailsAsync(Mapper.Map<GetArrDepBoardWithDetailsRequest>(query));
+            //var board = await svc.GetArrDepBoardWithDetailsAsync(Mapper.Map<GetArrDepBoardWithDetailsRequest>(query));
 
             // TODO: TEST PROPERLY!!  (with unit tests)
-            // var board = GetFromJson();
+            var board = GetFromJson();
 
             return Mapper.Map<StationBoardModel>(board);
         }

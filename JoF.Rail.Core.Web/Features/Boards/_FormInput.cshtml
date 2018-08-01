@@ -12,14 +12,14 @@
         </div>
     </div>
     <div class="row">
-        <div class="col-6">
+        <div class="col-md-6 col-12">
             <div class="form-group">
                 <label asp-for="StationName" class="col-form-label">Station</label>
                 <input asp-for="StationName" type="text" autocomplete="on" class="form-control ui-autocomplete-input station" data-target="crs" />
                 <div><span asp-validation-for="Crs" class="text-danger"></span></div>
             </div>
         </div>
-        <div class="col-6">
+        <div class="col-md-6 col-12">
             <div class="form-group">
                 <label asp-for="FilterStationName" class="col-form-label">Stopping at (optional)</label>
                 <input asp-for="FilterStationName" type="text" autocomplete="on" class="form-control ui-autocomplete-input station" data-target="filterCrs" />
@@ -28,13 +28,15 @@
         </div>
     </div>
 
-    <div class="row text-center pt-4">
-        <div class="col-12">
-            <div class="form-group">
-                <button type="submit" asp-action="Departures" class="btn btn-outline-primary mr-4">Departures</button>
-                <button type="submit" asp-action="Arrivals" class="btn btn-outline-primary mr-4">Arrivals</button>
-                <button type="submit" asp-action="Fastest" class="btn btn-outline-primary mr-4">Next Fastest</button>
-            </div>
+    <div class="row pt-4 text-center">
+        <div class="col-sm-4 col-12">
+            <button type="submit" asp-action="Departures" class="btn btn-outline-primary mr-4 mb-sm-0 mb-2">Departures</button>
+        </div>
+        <div class="col-sm-4 col-12">
+            <button type="submit" asp-action="Arrivals" class="btn btn-outline-primary mr-4 mb-sm-0 mb-2">Arrivals</button>
+        </div>
+        <div class="col-sm-4 col-12">
+            <button type="submit" asp-action="Fastest" class="btn btn-outline-primary mr-4">Next Fastest</button>
         </div>
     </div>
 </form>

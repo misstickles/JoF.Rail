@@ -1,7 +1,7 @@
-﻿using System;
-
-namespace JoF.Rail.Standard.Extensions
+﻿namespace JoF.Rail.Standard.Extensions
 {
+    using System;
+
     public static class StringExtensions
     {
         /// <summary>

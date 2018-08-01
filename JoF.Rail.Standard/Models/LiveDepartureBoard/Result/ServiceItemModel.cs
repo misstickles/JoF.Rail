@@ -59,7 +59,7 @@
 
         public string ServiceId { get; set; }
 
-        public Guid Guid { get; set; }
+        public int Id { get; set; }
 
         public Collection<string> AdhocAlerts { get; set; }
 
