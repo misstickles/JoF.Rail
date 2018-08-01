@@ -4,32 +4,32 @@
 
 @font-face {
     font-family: "led";
-    src: url("../fonts/LED6X8.woff") format("woff"), url("../fonts/LED6X8.TTF") format("truetype");
+    src: url("../../fonts/LED6X8.woff") format("woff"), url("../fonts/LED6X8.TTF") format("truetype");
 }
 
 @font-face {
     font-family: "Dot-Matrix";
-        src:    url("../fonts/LED Dot-Matrix.woff2") format("woff2"),
-                url("../fonts/LED Dot-Matrix.woff") format("woff"),
-                url("../fonts/LED Dot-Matrix.ttf") format("truetype");
+    src:    url("../../fonts/LED Dot-Matrix.woff2") format("woff2"),
+            url("../../fonts/LED Dot-Matrix.woff") format("woff"),
+            url("../../fonts/LED Dot-Matrix.ttf") format("truetype");
     font-weight: normal;
     font-style: normal;
 }
 
 @font-face {
     font-family: "Merchant";
-    src:    url("../fonts/MerchantCopy.woff2") format("woff2"),
-            url("../fonts/MerchantCopy.woff") format("woff"),
-            url("../fonts/MerchantCopy.ttf") format("truetype");
+    src:    url("../../fonts/MerchantCopy.woff2") format("woff2"),
+            url("../../fonts/MerchantCopy.woff") format("woff"),
+            url("../../fonts/MerchantCopy.ttf") format("truetype");
     font-weight: normal;
     font-style: normal;
 }
 
 @font-face {
     font-family: "SubwayLondon";
-    src:    url("../fonts/SubwayLondon.woff2") format("woff2"), 
-            url("../fonts/SubwayLondon.woff") format("woff"),
-            url("../fonts/SubwayLondon.ttf") format("truetype");
+    src:    url("../../fonts/SubwayLondon.woff2") format("woff2"), 
+            url("../../fonts/SubwayLondon.woff") format("woff"),
+            url("../../fonts/SubwayLondon.ttf") format("truetype");
     font-weight: normal;
     font-style: normal;
 }
@@ -158,7 +158,7 @@ hr {
 
 .bg-text {
     background-repeat: repeat;
-    background-image: url("../images/TicketBackground.svg");
+    background-image: url("../../images/TicketBackground.svg");
 }
 
 .indent {

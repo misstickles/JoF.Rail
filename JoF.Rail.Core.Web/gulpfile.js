@@ -15,22 +15,25 @@ gulp.task("sass", function () {
 });
 
 gulp.task("minify-css", ["sass"], () => {
-    gulp.src(["wwwroot/lib/jquery-ui/themes/base/jquery-ui.css", "wwwroot/css/site.css", "wwwroot/scss/site.css"])
+    gulp.src([
+        "wwwroot/lib/jquery-ui/themes/base/jquery-ui.css",
+        "wwwroot/css/site.css",
+        "wwwroot/scss/site.css"])
         .pipe(concat("combined.css"))
-        .pipe(gulp.dest("wwwroot/css"))
+        .pipe(gulp.dest("wwwroot/dist/css"))
         .pipe(cleanCss({ debug: true }, (details) => {
             console.log(`${details.name}: ${details.stats.originalSize}`);
             console.log(`${details.name}: ${details.stats.minifiedSize}`);
         }))
         .pipe(rename({ suffix: ".min" }))
-        .pipe(gulp.dest("wwwroot/css"));
+        .pipe(gulp.dest("wwwroot/dist/css"));
 });
 
 gulp.task("minify-js", function () {
     gulp.src("wwwroot/js/site.js")
         .pipe(uglify())
         .pipe(rename({ suffix: ".min" }))
-        .pipe(gulp.dest("wwwroot/js"));
+        .pipe(gulp.dest("wwwroot/dist/js"));
 });
 
 gulp.task("watch", function () {

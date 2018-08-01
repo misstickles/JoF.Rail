@@ -36,6 +36,11 @@
     <ProjectReference Include="..\JoF.Rail.Standard\JoF.Rail.Standard.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="wwwroot\dist\css\" />
+    <Folder Include="wwwroot\dist\js\" />
+  </ItemGroup>
+
   <Target Name="PostBuild" AfterTargets="PostBuildEvent">
     <Exec Command="if $(ConfigurationName)==Debug gulp" />
   </Target>
