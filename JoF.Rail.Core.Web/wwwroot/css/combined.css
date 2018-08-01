@@ -7787,8 +7787,9 @@ footer {
   color: #2A2014;
   background-color: #fdfefb; }
 
-hr {
-  border-color: #fdfefb; }
+.departure-board hr {
+  border: dotted 1px #fdfefb;
+  opacity: 0.4; }
 
 .bg-danger a {
   color: #fdfefb;

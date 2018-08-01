@@ -55,7 +55,7 @@
                 .ForMember(dest => dest.EstimatedTimeDeparture, opt => opt.MapFrom(src => src.etd))
                 .ForMember(dest => dest.EstimatedTimeDepartureDelay, opt => opt.MapFrom(src => src.etd.ToTimeDelay(src.std)))
                 .ForMember(dest => dest.Formation, opt => opt.MapFrom(src => src.formation))
-                .ForMember(dest => dest.Id, opt => opt.MapFrom(src => this.RandomNumber()))
+                .ForMember(dest => dest.Id, opt => opt.MapFrom(src => RandomNumber()))
                 .ForMember(dest => dest.IsCancelled, opt => opt.MapFrom(src => src.isCancelled))
                 .ForMember(dest => dest.HasChangedDestination, opt => opt.MapFrom(src => src.currentDestinations.Length > 0))
                 .ForMember(dest => dest.HasChangedOrigin, opt => opt.MapFrom(src => src.currentOrigins.Length > 0))
@@ -131,7 +131,7 @@
                 .ForSourceMember(src => src.FilterStationName, opt => opt.Ignore());
         }
 
-        private ServiceItemWithCallingPoints1[] MergeServices(StationBoardWithDetails1 board)
+        private static ServiceItemWithCallingPoints1[] MergeServices(StationBoardWithDetails1 board)
         {
             // TODO: we're not dealing with big numbers (10), but this is pretty pants...
             var trains = board.trainServices ?? new ServiceItemWithCallingPoints1[0];
@@ -148,10 +148,11 @@
             return array;
         }
 
-        private int RandomNumber()
+        private static string RandomNumber()
         {
             var rand = new Random(DateTime.Now.Millisecond);
-            return rand.Next(0, 1000);
+
+            return $"a{Guid.NewGuid()}"; // (char)rand.Next(65, 90)}{rand.Next(0, 10000)}";
         }
     }
 }

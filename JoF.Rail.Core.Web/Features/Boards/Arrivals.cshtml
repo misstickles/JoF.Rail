@@ -70,9 +70,11 @@
             <div class="col-1 text-center d-sm-none"><strong>P</strong></div>
             <div class="col-1 text-center d-sm-none"><strong>#</strong></div>
         </div>
+
+        <div id="accordion">
         @foreach (var service in @Model.Services)
         {
-            <div class="pb-3">
+            <div class="pb-3" role="button" data-toggle="collapse" data-target="#@service.Id" aria-expanded="false" aria-controls="#@service.Id">
                 <div class="row pb-2 align-items-center">
                     <div class="col-2 text-center">@service.ScheduledTimeArrival</div>
                     <div class="col-3">
@@ -123,7 +125,7 @@
                     </div>
                 }
 
-                <div class="collapse" id="@service.Id">
+                <div class="collapse" id="@service.Id" aria-labelledby="@service.Id" data-parent="#accordion">
                     @{
                         ViewData["Here"] = Model.Location;
                         ViewData["There"] = Model.FilterLocation;
@@ -132,6 +134,7 @@
                 </div>
             </div>
         }
+        </div>
 
         <div class="row py-3">
             <small class="col text-right">@Model.GeneratedAt</small>
