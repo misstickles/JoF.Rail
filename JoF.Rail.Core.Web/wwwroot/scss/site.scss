@@ -105,8 +105,9 @@ footer {
     background-color: $off-white;
 }
 
-hr {
-    border-color: $off-white;
+.departure-board hr {
+    border: dotted 1px $off-white;
+    opacity: 0.4;
 }
 
 .bg-danger a {
@@ -164,9 +165,6 @@ hr {
 .indent {
     padding-left: 15px;
 }
-
-
-
 
 .bs-callout {
     padding: 20px;

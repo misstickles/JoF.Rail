@@ -18,7 +18,7 @@
             var board = await svc.GetArrDepBoardWithDetailsAsync(Mapper.Map<GetArrDepBoardWithDetailsRequest>(query));
 
             // TODO: TEST PROPERLY!!  (with unit tests)
-            // var board = GetFromJson();
+            //var board = GetFromJson();
 
             return Mapper.Map<StationBoardModel>(board);
         }

@@ -71,9 +71,10 @@
             <div class="col-1 text-center d-sm-none"><strong>#</strong></div>
         </div>
 
+        <div id="accordion">
         @foreach (var service in Model.Services)
         {
-            <div class="pb-3">
+            <div class="pb-3" role="button" data-toggle="collapse" data-target="#@service.Id" aria-expanded="false" aria-controls="#@service.Id">
                 <div class="row pb-2 align-items-center">
                     <div class="col-2 text-center">@service.ScheduledTimeDeparture</div>
                     <div class="col-3">
@@ -93,7 +94,7 @@
                     <div class="col-1 text-center">@service.Platform</div>
                     <div class="col-1 text-center">@service.TrainLength</div>
                     <div class="col-1 text-center">
-                        <button class="btn btn-dark" data-toggle="collapse" data-target="#@service.Guid" aria-expanded="false" aria-controls="collapseExample">
+                        <button class="btn btn-dark" data-toggle="collapse" data-target="#@service.Id" aria-expanded="false" aria-controls="collapseExample">
                             <i class="fas fa-info"></i>
                         </button>
                     </div>
@@ -123,27 +124,27 @@
                         </div>
                     </div>
                 }
-
-                <div class="collapse" id="@service.Guid">
-                    @{
-                        ViewData["Here"] = Model.Location;
-                        ViewData["There"] = Model.FilterLocation;
-                    }
-                    <partial name="_TrainServiceDetails" model="service" , view-data="ViewData" />
-                </div>
+            </div>
+            <div id="@service.Id" class="collapse" aria-labelledby="@service.Id" data-parent="#accordion">
+                @{
+                    ViewData["Here"] = Model.Location;
+                    ViewData["There"] = Model.FilterLocation;
+                }
+                <partial name="_TrainServiceDetails" model="service" , view-data="ViewData" />
             </div>
         }
-
+        </div>
+        
         <small class="row py-3">
-            <div class="col text-right">@Model.GeneratedAt</div>
+            <span class="col text-right">@Model.GeneratedAt</span>
         </small>
 
         <small class="row d-sm-none pb-3">
-            <div class="col">
+            <span class="col">
                 <i class="fas fa-clock"></i> - Delay, minutes
-                <div>P - Platform number</div>
-                <div># - Number of coaches</div>
-            </div>
+                <span class="d-block">P - Platform number</span>
+                <span class="d-block"># - Number of coaches</span>
+            </span>
         </small>
     </div>
 }

@@ -6,6 +6,13 @@
     })
     .attr('target', '_blank');
 
+    //$(".collapse").on("shown.bs.collapse", function (e) {
+    //    var $card = $(this).closest(".dummy");
+    //    $("html,body").animate({
+    //        scrollTop: $card.offset().top - 80
+    //    }, 500);
+    //});
+
     $("input.station")
         .autocomplete({
             source: function (request, response) {

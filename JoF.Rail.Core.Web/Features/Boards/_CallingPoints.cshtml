@@ -25,7 +25,7 @@
 
                 @if (p.Location.Equals(there))
                 {
-                    <div class="row">
+                    <div class="row align-items-center">
                         <div class="col-4 offset-sm-1 font-weight-bold">@p.Location</div>
                         <div class="col-2 font-weight-bold">@p.ScheduledTime</div>
                         @if (p.ActualTime != null)
@@ -42,7 +42,7 @@
                 }
                 else
                 {
-                    <div class="row">
+                    <div class="row align-items-center">
                         <div class="col-sm-1 d-none d-sm-inline text-right" style="top:-11px;">
                             @if (p.ActualTime == null && !bDisplayedTrain)
                             {
@@ -130,7 +130,7 @@
 
                 @if (p.Location.Equals(there))
                 {
-                    <div class="row">
+                    <div class="row align-items-center">
                         <div class="col-4 offset-sm-1 font-weight-bold">@p.Location</div>
                         <div class="col-2 font-weight-bold">@p.ScheduledTime</div>
                         <div class="col-2 font-weight-bold font-italic">@p.EstimatedTime</div>
@@ -140,7 +140,7 @@
                 }
                 else
                 {
-                    <div class="row">
+                    <div class="row align-items-center">
                         <div class="col-4 offset-sm-1">@p.Location</div>
                         <div class="col-2">@p.ScheduledTime</div>
                         <div class="col-2 font-italic">@p.EstimatedTime</div>

@@ -3,20 +3,21 @@
 @{
     var service = Model;
 
+    <div class="border-top border-bottom mb-4 pt-2">
     <div class="row pb-3">
-        <div class="col-4">
+        <div class="offset-1 col-4">
             @foreach (var o in service.Origins)
             {
-                <div>@o.Location (@o.Crs) <small>@o.Via</small></div>
+                <div>@o.Location (@o.Crs) <small class="d-block">@o.Via</small></div>
             }
         </div>
         <div class="col-4">
             @foreach (var d in service.Destinations)
             {
-                <div>@d.Location (@d.Crs) <small>@d.Via</small></div>
+                <div>@d.Location (@d.Crs) <small class="d-block">@d.Via</small></div>
             }
         </div>
-        <div class="col-4 text-right">
+        <div class="offset-1 col-10 text-right">
             Operated by @service.Operator (@service.ServiceType)
         </div>
     </div>
@@ -32,5 +33,5 @@
             <partial name="_CallingPoints" model="service" view-data="ViewData" />
         </div>
     }
-
+    </div>
 }
