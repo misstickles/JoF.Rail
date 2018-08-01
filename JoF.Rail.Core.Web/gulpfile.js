@@ -11,14 +11,15 @@ var gulp = require("gulp"),
 gulp.task("sass", function () {
     return gulp.src("wwwroot/scss/site.scss")
         .pipe(sass())
-        .pipe(gulp.dest('wwwroot/scss'));
+        .pipe(rename("site_scss.css"))
+        .pipe(gulp.dest('wwwroot/dist/css'));
 });
 
 gulp.task("minify-css", ["sass"], () => {
     gulp.src([
         "wwwroot/lib/jquery-ui/themes/base/jquery-ui.css",
         "wwwroot/css/site.css",
-        "wwwroot/scss/site.css"])
+        "wwwroot/dist/css/site_scss.css"])
         .pipe(concat("combined.css"))
         .pipe(gulp.dest("wwwroot/dist/css"))
         .pipe(cleanCss({ debug: true }, (details) => {
@@ -47,4 +48,4 @@ gulp.task("watch", function () {
 //        .pipe(gulp.dest('wwwroot/scss'))
 //});
 
-gulp.task("default", ["minify-js", "minify-css"], function (callback) {});
+gulp.task("default", ["minify-js", "minify-css"], function (callback) { });
