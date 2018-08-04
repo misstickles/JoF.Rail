@@ -3,7 +3,7 @@
     using System.Threading.Tasks;
     using JoF.Rail.Standard.Models.KnowledgeBase;
 
-    public interface IKnowledgeBase<T>
+    public interface IKnowledgeBaseService<T>
         where T : class
     {
         Task<T> Get(KnowledgeBaseQuery query);

@@ -14,6 +14,8 @@
 
   <ItemGroup>
     <Compile Remove="Services\DeparturesBoardHandler.cs" />
+    <Compile Remove="Services\KnowledgeBase\NetworkOverviewService.cs" />
+    <Compile Remove="Services\KnowledgeBase\StationsService.cs" />
   </ItemGroup>
 
   <ItemGroup>

@@ -4,7 +4,7 @@
     using System.Threading.Tasks;
     using JoF.Rail.Standard.Models;
     using JoF.Rail.Standard.Models.KnowledgeBase;
-    using JoF.Rail.Standard.Services;
+    using JoF.Rail.Standard.Services.KnowledgeBase;
     using MediatR;
 
     public class Index
@@ -31,7 +31,7 @@
         {
             public async Task<NetworkOverviewModel> Handle(Query request, CancellationToken cancellationToken)
             {
-                var service = new NetworkOverviewService();
+                var service = new KnowledgeBaseService<NetworkOverviewModel>();
                 return await service.Get(request);
             }
         }

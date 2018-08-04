@@ -1,5 +1,6 @@
 ﻿namespace JoF.Rail.Standard.Core.Extensions
 {
+    using System;
     using System.IO;
     using System.Xml.Serialization;
     using Newtonsoft.Json;
@@ -25,6 +26,13 @@
             where T : class
         {
             return JsonConvert.DeserializeObject<T>(json);
+        }
+
+        public static string ToJson(this object model, Formatting formatting = Formatting.None)
+        {
+            if (model == null) return null;
+
+            return JsonConvert.SerializeObject(model, formatting);
         }
     }
 }

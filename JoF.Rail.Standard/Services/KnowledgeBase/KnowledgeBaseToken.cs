@@ -1,4 +1,4 @@
-﻿namespace JoF.Rail.Standard.Services
+﻿namespace JoF.Rail.Standard.Services.KnowledgeBase
 {
     using System.Collections.Generic;
     using System.Net.Http;

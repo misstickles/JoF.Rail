@@ -46,7 +46,7 @@
 
             var network = await this.mediator.Send(new Index.Query
             {
-                Token = token.Token, // this.configuration[ConfigKey.NatRail.User] + ":" + Request.Cookies["KbToken"],
+                Token = token.Token,
                 Url = this.configuration[ConfigKey.NatRail.KbUrl] + this.configuration[ConfigKey.NatRail.ServiceIndicator]
             });
 
