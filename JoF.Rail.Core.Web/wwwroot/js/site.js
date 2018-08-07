@@ -15,6 +15,7 @@
 
     $("input.station")
         .autocomplete({
+            minLength: 2,
             source: function (request, response) {
                 $.ajax({
                     url: "/api/CrsSearch",
