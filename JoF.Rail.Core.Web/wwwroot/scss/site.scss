@@ -71,6 +71,13 @@ $font-family-sans-serif: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', s
 
 @import "../lib/bootstrap/scss/bootstrap";
 
+
+/********  Sticky footer  *******/
+html {
+    position: relative;
+    min-height: 100%;
+}
+
 body {
     padding-top: 80px;
     padding-bottom: 70px;
@@ -212,4 +219,9 @@ footer {
 
 .bs-callout-info {
     border-left-color: $info;
+}
+
+#stationMap {
+    width: 600px;
+    height: 600px;
 }

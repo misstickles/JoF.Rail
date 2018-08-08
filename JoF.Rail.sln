@@ -23,7 +23,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "JoF.Rail.Tests.xUnit", "Tes
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "_Tests", "_Tests", "{4F627AD7-774F-4A48-AD31-C3324EBFF5FB}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JoF.Rail.Standard.Core", "Core\JoF.Rail.Standard.Core\JoF.Rail.Standard.Core.csproj", "{974C5CF4-1163-4E71-B37B-14A372BD0B8A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "JoF.Rail.Standard.Core", "Core\JoF.Rail.Standard.Core\JoF.Rail.Standard.Core.csproj", "{974C5CF4-1163-4E71-B37B-14A372BD0B8A}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Core", "Core", "{D499E75F-F0CD-4512-B712-8EDC2364096C}"
 EndProject

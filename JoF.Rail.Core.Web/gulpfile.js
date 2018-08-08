@@ -1,4 +1,6 @@
-﻿"use strict";
+﻿/// <reference path="wwwroot/lib/markerclustererplus/dist/markerclusterer.min.js" />
+/// <reference path="wwwroot/lib/markerclustererplus/dist/markerclusterer.min.js" />
+"use strict";
 
 var gulp = require("gulp"),
     sass = require("gulp-sass"),
@@ -31,9 +33,15 @@ gulp.task("minify-css", ["sass"], () => {
 });
 
 gulp.task("minify-js", function () {
-    gulp.src("wwwroot/js/site.js")
+    gulp.src([
+        "wwwroot/js/site.js"])
         .pipe(uglify())
         .pipe(rename({ suffix: ".min" }))
+        .pipe(gulp.dest("wwwroot/dist/js"));
+});
+
+gulp.task("move-js", function () {
+    gulp.src(["wwwroot/lib/markerclustererplus/dist/markerclusterer.min.js"])
         .pipe(gulp.dest("wwwroot/dist/js"));
 });
 
@@ -41,11 +49,4 @@ gulp.task("watch", function () {
     gulp.watch("wwwroot/scss/*.scss", ["minify-css"]);
 });
 
-//gulp.task("bootstrap", function () {
-//    return gulp.src("wwwroot/lib/bootstrap/scss/*.scss")
-//        .pipe(sass())
-//        .pipe(concatCss("wwwroot/scss/bootstrap.css"))
-//        .pipe(gulp.dest('wwwroot/scss'))
-//});
-
-gulp.task("default", ["minify-js", "minify-css"], function (callback) { });
+gulp.task("default", ["minify-js", "minify-css", "move-js"], function (callback) { });

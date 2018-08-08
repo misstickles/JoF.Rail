@@ -6381,6 +6381,11 @@ a.text-dark:hover, a.text-dark:focus {
     color: inherit;
     border-color: #dee2e6; } }
 
+/********  Sticky footer  *******/
+html {
+  position: relative;
+  min-height: 100%; }
+
 body {
   padding-top: 80px;
   padding-bottom: 70px; }
@@ -6490,3 +6495,7 @@ footer {
 
 .bs-callout-info {
   border-left-color: #17a2b8; }
+
+#stationMap {
+  width: 600px;
+  height: 600px; }

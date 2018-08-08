@@ -16,6 +16,7 @@
 
   <ItemGroup>
     <Content Remove="bundleconfig.json" />
+    <Content Remove="Data\NatRailStations.json" />
   </ItemGroup>
 
   <ItemGroup>
@@ -39,6 +40,12 @@
   <ItemGroup>
     <Folder Include="wwwroot\dist\css\" />
     <Folder Include="wwwroot\dist\js\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="Data\NatRailStations.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
 
   <Target Name="PostBuild" AfterTargets="PostBuildEvent">

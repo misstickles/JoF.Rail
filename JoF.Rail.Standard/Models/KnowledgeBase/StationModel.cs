@@ -1,4 +1,4 @@
-﻿namespace JoF.Rail.Standard.Models.KnowledgeBase
+﻿namespace JoF.Rail.Standard.Core.Models.KnowledgeBase
 {
     using System;
     using System.Collections.Generic;

@@ -49,18 +49,3 @@
     font-size: 1em;
 }
 
-.navbar-rail {
-    background-color: #ecfdaa;
-    color: #2a2014;
-}
-
-
-/********  Sticky footer  *******/
-html {
-    position: relative;
-    min-height: 100%;
-}
-
-body {
-    margin-bottom: 60px;
-}
