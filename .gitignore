@@ -28,7 +28,8 @@ bld/
 .vs/
 
 **/wwwroot/lib/
-# **/wwwroot/dist/
+#**/wwwroot/dist/
+**/wwwroot/build/
 
 # Visual Studio 2017 auto generated files
 Generated\ Files/
