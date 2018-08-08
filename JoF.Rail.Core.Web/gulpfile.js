@@ -23,21 +23,20 @@ gulp.task("sass", function () {
     return gulp.src("wwwroot/scss/site.scss")
         .pipe(sass())
         .pipe(rename("site_scss.css"))
-        .pipe(gulp.dest('wwwroot/build/css'));
+        .pipe(gulp.dest("wwwroot/build/css"));
 });
 
 gulp.task("copy-css", ["sass"], function () {
     return gulp.src([
         "wwwroot/lib/Font-Awesome/web-fonts-with-css/css/fontawesome-all.css",
-        "wwwroot/css/site.css",
-        "wwwroot/build/css/site_scss.css"])
+        "wwwroot/css/site.css"])
         .pipe(gulp.dest("wwwroot/build/css"));
 });
 
 gulp.task("concat-css", ["copy-css"], function () {
     return gulp.src([
-        "wwwroot/build/site.css",
-        "wwwroot/build/site_scss.css"])
+        "wwwroot/build/css/site.css",
+        "wwwroot/build/css/site_scss.css"])
         .pipe(concat("combined.css"))
         .pipe(gulp.dest("wwwroot/build/css"))
 });
