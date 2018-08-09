@@ -20,7 +20,7 @@
         {
             IEnumerable<StationLocation> stations;
 
-            using (StreamReader r = File.OpenText(@"E:\Git\JoF.Rail\Data\KbStations.xml"))
+            using (StreamReader r = File.OpenText(@"~/../Data/KbStations.xml"))
             {
                 var data = r.ReadToEnd();
                 stations = data.DeserialiseJson<IEnumerable<StationLocation>>();
@@ -33,7 +33,7 @@
         [HttpGet("All")]
         public async Task<StationLocation> All()
         {
-            using (StreamReader r = File.OpenText(@"E:\Git\JoF.Rail\JoF.Rail.Core.Web\Data\NatRailStations.json"))
+            using (StreamReader r = File.OpenText(@"~/../Data/NatRailStations.json"))
             {
                 var data = r.ReadToEnd();
                 return data.DeserialiseJson<StationLocation>();

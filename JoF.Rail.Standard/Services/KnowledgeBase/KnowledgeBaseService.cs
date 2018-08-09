@@ -27,7 +27,7 @@
         // TODO: REMOVE
         private T GetFromXml()
         {
-            using (StreamReader r = File.OpenText(@"E:\Git\JoF.Rail\Data\KbStations.xml"))
+            using (StreamReader r = File.OpenText(@"~/../Data/KbStations.xml"))
             {
                 var xml = r.ReadToEnd();
                 return xml.DeserialiseXml<T>();
