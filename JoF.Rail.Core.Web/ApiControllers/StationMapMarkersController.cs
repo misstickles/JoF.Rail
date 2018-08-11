@@ -8,7 +8,7 @@
     using JoF.Rail.Standard.Models.Map;
     using Microsoft.AspNetCore.Mvc;
 
-    [Route("api/StationMapMarkers")]
+    [Route("api/[Controller]")]
     [ApiController]
     public class StationMapMarkersController
     {

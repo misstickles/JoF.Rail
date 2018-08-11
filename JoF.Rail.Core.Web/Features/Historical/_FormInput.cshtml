@@ -1,0 +1,78 @@
+﻿@model MetricsViewModel
+
+<form method="POST">
+    <span style="position:absolute;top:0;left:-1000px;">
+        <input asp-for="CrsFrom" id="crsFrom" type="text" />
+        <input asp-for="CrsTo" id="crsTo" type="text" />
+    </span>
+
+    <div class="row text-danger">
+        <div class="col-12">
+            <div asp-validation-summary="ModelOnly"></div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-6 col-12">
+            <div class="form-group">
+                <label asp-for="From" class="col-form-label">Station</label>
+                <input asp-for="From" type="text" autocomplete="on" class="form-control ui-autocomplete-input station" data-target="crsFrom" />
+                <div><span asp-validation-for="CrsFrom" class="text-danger"></span></div>
+            </div>
+        </div>
+        <div class="col-md-6 col-12">
+            <div class="form-group">
+                <label asp-for="To" class="col-form-label">Stopping at (optional)</label>
+                <input asp-for="To" type="text" autocomplete="on" class="form-control ui-autocomplete-input station" data-target="crsTo" />
+                <div><span asp-validation-for="CrsTo" class="text-danger"></span></div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row pt-4 text-center">
+        <div class="col-sm-4 col-12">
+            <button type="submit" asp-action="Metrics" class="btn btn-outline-primary mr-4 mb-sm-0 mb-2">Metrics</button>
+        </div>
+        @*<div class="col-sm-4 col-12">
+            <button type="submit" asp-action="Arrivals" class="btn btn-outline-primary mr-4 mb-sm-0 mb-2">Arrivals</button>
+        </div>
+        <div class="col-sm-4 col-12">
+            <button type="submit" asp-action="Fastest" class="btn btn-outline-primary mr-4">Next Fastest</button>
+        </div>*@
+    </div>
+</form>
+
+
+@*<div class="row">
+        <div class="col">
+            <div class="form-group">
+                @{
+                    var offsetList = new List<SelectListItem>();
+                    var offsetGroups = Model.TimeOffsets.GroupBy(g => g.group);
+
+                    foreach (var group in offsetGroups)
+                    {
+                        var groupName = new SelectListGroup { Name = group.Key };
+                        offsetList.AddRange(group.Select(item => new SelectListItem
+                        {
+                            Text = item.text,
+                            Value = item.value,
+                            Group = groupName
+                        }));
+                    }
+                }
+                <label asp-for="TimeOffset" class="col-form-label">Time Offset</label>
+                <select asp-for="TimeOffset" asp-items="offsetList" class="form-control"></select>
+                <div><span asp-validation-for="TimeOffset" class="text-danger"></span></div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col">
+            <div class="form-group">
+                <label asp-for="TimeWindow" class="col-form-label">Time Window (minutes)</label>
+                <select asp-for="TimeWindow" asp-items="Model.TimeWindows.Select(w => new SelectListItem(w.value, w.text))" class="form-control"></select>
+                <div><span asp-validation-for="TimeWindow" class="text-danger"></span></div>
+            </div>
+        </div>
+    </div>*@
+

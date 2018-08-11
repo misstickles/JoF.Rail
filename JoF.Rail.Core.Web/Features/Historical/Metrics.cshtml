@@ -1,0 +1,93 @@
+﻿@model JoF.Rail.Standard.Models.HistoricalPerformance.MetricsModel
+@{
+    ViewBag.Title = "Historical Service Performance";
+}
+
+@{
+<div class="container">
+    <div id="accordion">
+        <table class="table table-striped table-hover">
+            <caption>List of train services for selected criteria, showing basic service metrics and delay tolerances.</caption>
+            <thead>
+                <tr class="text-center">
+                    <th colspan="5">&nbsp;</th>
+                    <th class="text-center" colspan="@Model.Services.First().Metrics.Count()">
+                        Arrived Within (mins)
+                    </th>
+                </tr>
+                <tr class="text-center">
+                    <th class="align-middle text-left">TOC</th>
+                    <th class="text-left">
+                        <span class="d-block">From</span>
+                        <span class="d-block">To</span>
+                    </th>
+                    <th class="align-middle">@Model.Header.From</th>
+                    <th class="align-middle">@Model.Header.To</th>
+                    <th class="align-middle"># Services</th>
+                    @foreach (var metric in Model.Services.First().Metrics)
+                    {
+                        <th class="align-middle">@metric.Tolerance</th>
+                    }
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var service in Model.Services)
+                {
+                    var id = @service.ServiceMetrics.Origin + @service.ServiceMetrics.OriginDepartureTime;
+                    <tr class="text-center" role="button" data-toggle="collapse" data-target="#id" aria-expanded="false" aria-controls="#@id">
+                        <td class="align-middle text-left">@service.ServiceMetrics.Toc</td>
+                        <td class="align-middle text-left">
+                            <span class="d-block">@service.ServiceMetrics.Origin</span>
+                            <span class="d-block">@service.ServiceMetrics.Destination</span>
+                        </td>
+                        <td class="align-middle">@service.ServiceMetrics.OriginDepartureTime</td>
+                        <td class="align-middle">@service.ServiceMetrics.DestinationArrivalTime</td>
+                        <td class="align-middle">@service.ServiceMetrics.ServicesCount</td>
+                        @foreach (var metric in service.Metrics)
+                        {
+                            <td class="align-middle">
+                                <span class="d-block">
+                                    <span class="text-success font-weight-bold">@metric.InToleranceCount</span>
+                                    <span class="text-danger pl-1">(@metric.NotInToleranceCount)</span>
+                                </span>
+                                <span class="d-block font-weight-bold">@metric.InTolerancePercent%</span>
+                            </td>
+                        }
+                    </tr>
+                    <tr class="collapse" id="@id" aria-labelledby="@id">
+                        <td colspan="12">
+                            @foreach (var r in service.ServiceMetrics.Rids)
+                            {
+                                <span class="col-4">@r</span>
+                            }
+                        </td>
+                    </tr>
+                }
+                </tbody>
+        </table>
+    </div>
+    ---
+
+    @foreach (var service in Model.Services)
+    {
+        <div class="row">
+            <span class="col-4">Origin: @service.ServiceMetrics.Origin</span>
+            <span class="col-4">Destination: @service.ServiceMetrics.Destination</span>
+        </div>
+        <div>@Model.Header.From, @service.ServiceMetrics.OriginDepartureTime to @Model.Header.To, @service.ServiceMetrics.DestinationArrivalTime (@service.ServiceMetrics.Toc) @service.ServiceMetrics.ServicesCount services run in period</div>
+        <div class="row">
+            @foreach (var m in service.Metrics)
+            {
+                <div class="col-7">Trains arrived within @m.Tolerance mins of scheduled time:</div>
+                <div class="col"><span class="text-success font-weight-bold">@m.InToleranceCount</span> (<span class="text-danger">@m.NotInToleranceCount missed</span>) : @m.InTolerancePercent% on time</div>
+            }
+        </div>
+        <div class="row mb-2">
+            @foreach (var r in service.ServiceMetrics.Rids)
+            {
+                <span class="col-3">@r</span>
+            }
+        </div>
+    }
+</div>
+}

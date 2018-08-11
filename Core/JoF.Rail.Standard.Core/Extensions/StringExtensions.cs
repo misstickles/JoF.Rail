@@ -28,11 +28,11 @@
             return JsonConvert.DeserializeObject<T>(json);
         }
 
-        public static string ToJson(this object model, Formatting formatting = Formatting.None)
+        public static string ToJson(this object model, JsonSerializerSettings settings = null)
         {
             if (model == null) return null;
 
-            return JsonConvert.SerializeObject(model, formatting);
+            return JsonConvert.SerializeObject(model, settings);
         }
     }
 }

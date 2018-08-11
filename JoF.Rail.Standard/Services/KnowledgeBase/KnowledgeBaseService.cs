@@ -1,6 +1,5 @@
 ﻿namespace JoF.Rail.Standard.Services.KnowledgeBase
 {
-    using System.IO;
     using System.Net.Http;
     using System.Threading.Tasks;
     using JoF.Rail.Standard.Core.Extensions;
@@ -18,21 +17,12 @@
             request.Headers.Add("Accept", "application/xhtml+xml");
             request.Headers.Add("X-Auth-Token", query.Token);
 
+            // return ReadFile<T>.GetFromXml(@"~/../Data/KbStations.xml");
+
             var response = await httpClient.SendAsync(request);
 
             return (await response.Content.ReadAsStringAsync())
                 .DeserialiseXml<T>();
         }
-
-        // TODO: REMOVE
-        private T GetFromXml()
-        {
-            using (StreamReader r = File.OpenText(@"~/../Data/KbStations.xml"))
-            {
-                var xml = r.ReadToEnd();
-                return xml.DeserialiseXml<T>();
-            }
-        }
-
     }
 }

@@ -15,6 +15,12 @@
             public const string KbTokenUrl = "NatRail:KbTokenUrl";
 
             public const string ServiceIndicator = "NatRail:ServiceIndicator";
+
+            public const string HspBaseUrl = "NatRail:HspUrl";
+
+            public const string HspDetailsUrl = "NatRail:HspDetails";
+
+            public const string HspMetricsUrl = "NatRail:HspMetrics";
         }
     }
 }

@@ -34,6 +34,14 @@
     font-style: normal;
 }
 
+@font-face {
+    font-family: "vt323";
+    src:    url("../../fonts/vt323.woff2") format("woff2"),
+            url("../../fonts/vt323.woff") format("woff")
+            url("../../fonts/vt323.ttf") format("truetype");
+    font-weight: normal;
+    font-style: normal;
+}
 /*
 orange #FE6005
     f94e06
@@ -150,6 +158,10 @@ footer {
 
 .text-subway {
     font-family: SubwayLondon, $font-family-sans-serif;
+}
+
+text-mono {
+    font-family: "vt323", monospace;
 }
 
 .rounded-1 {

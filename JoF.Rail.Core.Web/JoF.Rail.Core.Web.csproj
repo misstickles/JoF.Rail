@@ -48,6 +48,12 @@
     </None>
   </ItemGroup>
 
+  <ItemGroup>
+    <Content Update="Features\Historical\_FormInput.cshtml">
+      <Pack>$(IncludeRazorContentInPack)</Pack>
+    </Content>
+  </ItemGroup>
+
   <Target Name="PostBuild" AfterTargets="PostBuildEvent">
     <Exec Command="if $(ConfigurationName)==Debug gulp" />
   </Target>

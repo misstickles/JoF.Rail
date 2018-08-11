@@ -1,0 +1,49 @@
+﻿<div class="container">
+    <div class="row">
+        <div class="col">
+            <h2 class="text-mono">Historical Data</h2>
+            <div>Historical service performance data - basic information for any train in the past year.</div>
+        </div>
+        <div class="col-1">
+            <button type="button" class="btn btn-primary float-right font-weight-bold text-off-white" data-toggle="modal" data-target="#hspModal">?</button>
+        </div>
+    </div>
+
+    <div class="row text-merchant">
+        <div class="col-lg-8 offset-lg-2 col-12">
+            <div class="card rounded-1 border-0 shadow-lg mt-4">
+                <h3 class="card-header rounded-1-top bg-primary text-off-white pt-3 pb-3">
+                    Departure / Arrival Stations
+                </h3>
+                <div id="ticket" class="card-body bg-text text-secondary">
+                    <partial name="_FormInput" />
+                </div>
+                <h4 class="card-footer rounded-1-bottom mb-0 bg-primary text-off-white">
+                    <span class="d-block">Start typing then select station from the list presented.</span>
+                    <small id="printedOn" class="float-right d-block"></small>
+                </h4>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal fade" id="hspModal" tabindex="-1" role="dialog" aria-labelledby="depBoardModalTitle" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content bg-off-white text-secondary">
+            <div class="modal-header">
+                <h5 class="modal-title" id="hspModalTitle">Historical Service Performance - Help</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <ul>
+                    <li>Data is as provided by <abbr title="See footer for details" class="initialism">National Rail</abbr></li>
+                </ul>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
