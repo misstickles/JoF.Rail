@@ -28,16 +28,28 @@
         </div>
     </div>
 
+    <div class="row">
+        <div class="col-12">
+            <div id="dateRange" class="form-group">
+                <label asp-for="FromDate" class="col-form-label">Date Range</label>
+                <input id="dateFrom" asp-for="FromDate" type="text" class="form-control" />
+                <div><span asp-validation-for="FromDate" class="text-danger"></span></div>
+                <input id="dateTo" asp-for="ToDate" type="text" class="form-control" />
+                <div><span asp-validation-for="ToDate" class="text-danger"></span></div>
+            </div>
+        </div>
+    </div>
+
     <div class="row pt-4 text-center">
         <div class="col-sm-4 col-12">
             <button type="submit" asp-action="Metrics" class="btn btn-outline-primary mr-4 mb-sm-0 mb-2">Metrics</button>
         </div>
         @*<div class="col-sm-4 col-12">
-            <button type="submit" asp-action="Arrivals" class="btn btn-outline-primary mr-4 mb-sm-0 mb-2">Arrivals</button>
-        </div>
-        <div class="col-sm-4 col-12">
-            <button type="submit" asp-action="Fastest" class="btn btn-outline-primary mr-4">Next Fastest</button>
-        </div>*@
+                <button type="submit" asp-action="Arrivals" class="btn btn-outline-primary mr-4 mb-sm-0 mb-2">Arrivals</button>
+            </div>
+            <div class="col-sm-4 col-12">
+                <button type="submit" asp-action="Fastest" class="btn btn-outline-primary mr-4">Next Fastest</button>
+            </div>*@
     </div>
 </form>
 
@@ -75,4 +87,3 @@
             </div>
         </div>
     </div>*@
-

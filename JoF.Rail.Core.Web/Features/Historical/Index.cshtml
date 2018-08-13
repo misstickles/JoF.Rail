@@ -47,3 +47,57 @@
         </div>
     </div>
 </div>
+
+@section Styles {
+    <environment include="Development">
+        <link rel="stylesheet" href="~/build/css/daterangepicker.css" />
+    </environment>
+    <environment exclude="Development">
+        <link rel="stylesheet" href="~/dist/css/daterangepicker.min.css" />
+    </environment>
+}
+
+@section Scripts {
+    <environment include="Development">
+        <script type="text/javascript" src="~/lib/moment/moment.js"></script>
+        <script type="text/javascript" src="~/lib/jquery-date-range-picker/dist/jquery.daterangepicker.min.js"></script>
+    </environment>
+    <environment exclude="Development">
+        <script type="text/javascript" src="~/dist/js/moment.min.js"></script>
+        <script type="text/javascript" src="~/dist/js/jquery.daterangepicker.min.js"></script>
+    </environment>
+
+    <script>
+        (function () {
+            $("#dateRange").dateRangePicker({
+                separator: " to ",
+                getValue: function () {
+                    if ($("#dateFrom").val() && $("#dateTo").val()) {
+                        return $("#dateFrom").val() + " to " + $("#dateTo").val();
+                    } else {
+                        return "";
+                    }
+                },
+                setValue: function (s, s1, s2) {
+                    $("#dateFrom").val(s1);
+                    $("#dateTo").val(s2);
+                },
+                format: "dd MMM yyyy",
+                endDate: Date.now(),
+                startOfWeek: 'monday',
+                time: {
+                    enabled: true
+                },
+                showShortcuts: true,
+                shortcuts: {
+                    'prev-days': [7, 14, 21],
+                    'prev': ['week', 'month'],
+                    'next-days': null,
+                    'next': null
+                },
+                autoClose: true,
+                hoveringTooltip: true
+            });
+        })();
+    </script>
+}

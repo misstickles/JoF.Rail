@@ -14,11 +14,6 @@ gulp.task("fa-fonts", function () {
         .pipe(gulp.dest("wwwroot/dist/webfonts"));
 });
 
-gulp.task("move-js", function () {
-    gulp.src([""])
-        .pipe(gulp.dest("wwwroot/dist/js"));
-});
-
 gulp.task("sass", function () {
     return gulp.src("wwwroot/scss/site.scss")
         .pipe(sass())
@@ -29,6 +24,7 @@ gulp.task("sass", function () {
 gulp.task("copy-css", ["sass"], function () {
     return gulp.src([
         "wwwroot/lib/Font-Awesome/web-fonts-with-css/css/fontawesome-all.css",
+        "wwwroot/lib/jquery-date-range-picker/dist/daterangepicker.css",
         "wwwroot/css/site.css"])
         .pipe(gulp.dest("wwwroot/build/css"));
 });
@@ -44,6 +40,7 @@ gulp.task("concat-css", ["copy-css"], function () {
 gulp.task("minify-css", ["concat-css"], function () {
     return gulp.src([
         "wwwroot/build/css/fontawesome-all.css",
+        "wwwroot/lib/jquery-date-range-picker/dist/daterangepicker.css",
         "wwwroot/build/css/combined.css"])
         .pipe(cleanCss())
         .pipe(rename({ suffix: ".min" }))
@@ -55,7 +52,9 @@ gulp.task("copy-js", function () {
         "wwwroot/lib/jquery/dist/jquery.min.js",
         "wwwroot/lib/jquery-ui/dist/jquery-ui.min.js",
         "wwwroot/lib/bootstrap/dist/js/bootstrap.min.js",
-        "wwwroot/lib/markerclustererplus/dist/markerclusterer.min.js"])
+        "wwwroot/lib/markerclustererplus/dist/markerclusterer.min.js",
+        "wwwroot/lib/jquery-date-range-picker/dist/jquery.daterangepicker.min.js",
+        "wwwroot/lib/moment/min/moment.min.js"])
         .pipe(gulp.dest("wwwroot/dist/js"));
 });
 

@@ -16,6 +16,8 @@
               asp-fallback-href="~/dist/fontawesome-all.min.css" />
         <link rel="stylesheet" href="~/dist/css/combined.min.css" asp-append-version="true" />
     </environment>
+
+    @RenderSection("Styles", required: false)
 </head>
 <body class="@ViewBag.BodyClass">
     <header>
