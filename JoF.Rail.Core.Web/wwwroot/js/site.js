@@ -6,12 +6,9 @@
     })
     .attr('target', '_blank');
 
-    //$(".collapse").on("shown.bs.collapse", function (e) {
-    //    var $card = $(this).closest(".dummy");
-    //    $("html,body").animate({
-    //        scrollTop: $card.offset().top - 80
-    //    }, 500);
-    //});
+    $("nav ul.navbar-nav a").filter(function () {
+        return this.href == window.location;
+    }).parent().addClass("active");
 
     $("input.station")
         .autocomplete({

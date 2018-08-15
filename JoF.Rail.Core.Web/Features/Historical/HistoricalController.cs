@@ -2,7 +2,6 @@
 {
     using System.Threading.Tasks;
     using JoF.Rail.Core.Web.Consts;
-    using JoF.Rail.Standard.Core.Extensions;
     using MediatR;
     using Microsoft.AspNetCore.Mvc;
     using Microsoft.Extensions.Configuration;
@@ -42,18 +41,23 @@
 
             var metrics = await this.mediator.Send(query);
 
-            return View("Metrics", metrics);
+            return View(metrics);
         }
 
-        public async Task<IActionResult> Detail(Index.QueryDetails query)
+        [HttpPost]
+        public async Task<IActionResult> Detail(string rid)
         {
-            query.User = this.user;
-            query.Key = this.password;
-            query.Url = this.baseUrl + this.configuration[ConfigKey.NatRail.HspDetailsUrl];
+            var query = new Index.QueryDetails
+            {
+                Rid = rid,
+                User = this.user,
+                Key = this.password,
+                Url = this.baseUrl + this.configuration[ConfigKey.NatRail.HspDetailsUrl]
+            };
 
             var details = await this.mediator.Send(query);
 
-            return Json(details);
+            return PartialView(details);
         }
     }
 }

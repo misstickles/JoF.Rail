@@ -41,7 +41,7 @@
         public string Days { get; set; } = Enums.DayTypes.WEEKDAY.ToString();
 
         [JsonProperty(PropertyName = "tolerance")]
-        public int[] Tolerances { get; set; } = new[] { 5 };
+        public int[] Tolerances { get; set; } = new[] { 5, 10 };
 
         [JsonProperty(PropertyName = "toc_filter")]
         public string[] TocFilter { get; set; }

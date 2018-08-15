@@ -21,18 +21,14 @@
             var byteArray = Encoding.ASCII.GetBytes($"{query.User}:{query.Key}");
 
             httpClient.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue(
-                "Basic", 
+                "Basic",
                 Convert.ToBase64String(byteArray));
 
-            var request = new HttpRequestMessage(HttpMethod.Post, query.Url)
-            {
-                Content = new ObjectContent<DetailQuery>(
-                    query,
-                    new JsonMediaTypeFormatter(),
-                    (MediaTypeHeaderValue)null),
-            };
+            var content = new StringContent(query.ToJson(new JsonSerializerSettings() { NullValueHandling = NullValueHandling.Ignore }), Encoding.UTF8, "application/json");
 
-            var results = await httpClient.SendAsync(request);
+            // return ReadFile<DetailModel>.GetFromJson(@"~/../../Data/HspDetail.json");
+
+            var results = await httpClient.PostAsync(query.Url, content);
 
             return (await results.Content.ReadAsStringAsync())
                 .DeserialiseJson<DetailModel>();
@@ -48,7 +44,7 @@
 
             var content = new StringContent(query.ToJson(new JsonSerializerSettings() { NullValueHandling = NullValueHandling.Ignore }), Encoding.UTF8, "application/json");
 
-            return ReadFile<MetricsModel>.GetFromJson(@"~/../../Data/HspMetrics.json");
+            // return ReadFile<MetricsModel>.GetFromJson(@"~/../../Data/HspMetrics.json");
 
             var results = await httpClient.PostAsync(query.Url, content);
 

@@ -62,6 +62,8 @@ $board-grey: #111;
 $ticket-grey: #2A2014;
 $off-white: #fdfefb;
 $nre-blue: #003364;
+$br-red: #FF4200;
+$br-blue: #1489C7;
 
 $enable-gradients:  true;
 
@@ -89,6 +91,16 @@ html {
 body {
     padding-top: 80px;
     padding-bottom: 70px;
+}
+
+nav ul.navbar-nav li.active, 
+nav ul.navbar-nav li.active:hover
+{
+    border-bottom: solid 5px $br-red;
+}
+
+nav ul.navbar-nav li:hover {
+    border-bottom: solid 5px $br-blue;
 }
 
 .departure-board {

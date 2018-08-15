@@ -38,5 +38,24 @@
 
             return $"{(60 * delay.Hours) + delay.Minutes}";
         }
+
+        public static string ToTimeDelay(this string estimatedTime, string actualTime, bool hasColon)
+        {
+            if (!hasColon)
+            {
+                var bEst = Int32.TryParse(estimatedTime, out var est);
+                var bAct = Int32.TryParse(actualTime, out var ac);
+
+                if (!bEst || !bAct)
+                {
+                    return "-";
+                }
+
+                estimatedTime = $"{estimatedTime.Substring(0, 2)}:{estimatedTime.Substring(2, 2)}";
+                actualTime = $"{actualTime.Substring(0, 2)}:{actualTime.Substring(2, 2)}";
+            }
+
+            return actualTime.ToTimeDelay(estimatedTime);
+        }
     }
 }

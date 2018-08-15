@@ -4,90 +4,156 @@
 }
 
 @{
-<div class="container">
-    <div id="accordion">
-        <table class="table table-striped table-hover">
-            <caption>List of train services for selected criteria, showing basic service metrics and delay tolerances.</caption>
-            <thead>
-                <tr class="text-center">
-                    <th colspan="5">&nbsp;</th>
-                    <th class="text-center" colspan="@Model.Services.First().Metrics.Count()">
-                        Arrived Within (mins)
-                    </th>
-                </tr>
-                <tr class="text-center">
-                    <th class="align-middle text-left">TOC</th>
-                    <th class="text-left">
-                        <span class="d-block">From</span>
-                        <span class="d-block">To</span>
-                    </th>
-                    <th class="align-middle">@Model.Header.From</th>
-                    <th class="align-middle">@Model.Header.To</th>
-                    <th class="align-middle"># Services</th>
-                    @foreach (var metric in Model.Services.First().Metrics)
-                    {
-                        <th class="align-middle">@metric.Tolerance</th>
-                    }
-                </tr>
-            </thead>
-            <tbody>
-                @foreach (var service in Model.Services)
-                {
-                    var id = @service.ServiceMetrics.Origin + @service.ServiceMetrics.OriginDepartureTime;
-                    <tr class="text-center" role="button" data-toggle="collapse" data-target="#id" aria-expanded="false" aria-controls="#@id">
-                        <td class="align-middle text-left">@service.ServiceMetrics.Toc</td>
-                        <td class="align-middle text-left">
-                            <span class="d-block">@service.ServiceMetrics.Origin</span>
-                            <span class="d-block">@service.ServiceMetrics.Destination</span>
-                        </td>
-                        <td class="align-middle">@service.ServiceMetrics.OriginDepartureTime</td>
-                        <td class="align-middle">@service.ServiceMetrics.DestinationArrivalTime</td>
-                        <td class="align-middle">@service.ServiceMetrics.ServicesCount</td>
-                        @foreach (var metric in service.Metrics)
-                        {
-                            <td class="align-middle">
-                                <span class="d-block">
-                                    <span class="text-success font-weight-bold">@metric.InToleranceCount</span>
-                                    <span class="text-danger pl-1">(@metric.NotInToleranceCount)</span>
-                                </span>
-                                <span class="d-block font-weight-bold">@metric.InTolerancePercent%</span>
-                            </td>
-                        }
-                    </tr>
-                    <tr class="collapse" id="@id" aria-labelledby="@id">
-                        <td colspan="12">
-                            @foreach (var r in service.ServiceMetrics.Rids)
+    <div class="container">
+        @*<div id="accordion">
+                @{ var metrics = Model.Services.First().Metrics; }
+                <table class="table table-hover">
+                    <caption>List of train services for selected criteria, showing basic service metrics and delay tolerances.</caption>
+                    <thead>
+                        <tr class="text-center">
+                            <th colspan="5">&nbsp;</th>
+                            <th class="text-center" colspan="@Model.Services.First().Metrics.Count()">
+                                Arrived Within (mins)
+                            </th>
+                        </tr>
+                        <tr class="text-center">
+                            <th class="align-middle text-left">TOC</th>
+                            <th class="text-left">
+                                <span class="d-block">From</span>
+                                <span class="d-block">To</span>
+                            </th>
+                            <th class="align-middle">@Model.Header.From</th>
+                            <th class="align-middle">@Model.Header.To</th>
+                            <th class="align-middle">#</th>
+                            @foreach (var metric in Model.Services.First().Metrics)
                             {
-                                <span class="col-4">@r</span>
+                                <th class="align-middle">@metric.Tolerance</th>
                             }
-                        </td>
-                    </tr>
-                }
-                </tbody>
-        </table>
-    </div>
-    ---
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach (var service in Model.Services)
+                        {
+                            var id = @service.ServiceMetrics.Origin + @service.ServiceMetrics.OriginDepartureTime;
+                            <tr class="text-center" role="button" data-toggle="collapse" data-target="#@id" aria-expanded="false" aria-controls="#@id">
+                                <td class="align-middle text-left">@service.ServiceMetrics.Toc</td>
+                                <td class="align-middle text-left">
+                                    <span class="d-block">@service.ServiceMetrics.Origin</span>
+                                    <span class="d-block">@service.ServiceMetrics.Destination</span>
+                                </td>
+                                <td class="align-middle">@service.ServiceMetrics.OriginDepartureTime</td>
+                                <td class="align-middle">@service.ServiceMetrics.DestinationArrivalTime</td>
+                                <td class="align-middle">@service.ServiceMetrics.ServicesCount</td>
+                                @foreach (var metric in service.Metrics)
+                                {
+                                    <td class="align-middle">
+                                        <span class="d-block">
+                                            <span class="text-success font-weight-bold">@metric.InToleranceCount</span>
+                                            <span class="text-danger pl-1">(@metric.NotInToleranceCount)</span>
+                                        </span>
+                                        <span class="d-block font-weight-bold">@metric.InTolerancePercent%</span>
+                                    </td>
+                                }
+                            </tr>
+                            <tr class="collapse" id="@id" aria-labelledby="@id" data-parent="#accordion">
+                                <td colspan="@(5 + metrics.Count() * 2)">
+                                    <div class="row">
+                                        <div>List of services run, format yyyyMMddnnnnnnn.  Select a service to see timings and any late reasons.</div>
+                                        @foreach (var r in service.ServiceMetrics.Rids)
+                                        {
+                                            <span class="col-4">@r</span>
+                                        }
+                                    </div>
+                                </td>
+                            </tr>
+                        }
+                    </tbody>
+                </table>
+            </div>*@
 
-    @foreach (var service in Model.Services)
-    {
-        <div class="row">
-            <span class="col-4">Origin: @service.ServiceMetrics.Origin</span>
-            <span class="col-4">Destination: @service.ServiceMetrics.Destination</span>
-        </div>
-        <div>@Model.Header.From, @service.ServiceMetrics.OriginDepartureTime to @Model.Header.To, @service.ServiceMetrics.DestinationArrivalTime (@service.ServiceMetrics.Toc) @service.ServiceMetrics.ServicesCount services run in period</div>
-        <div class="row">
-            @foreach (var m in service.Metrics)
+        <div id="accordion">
+            @{ var metrics = Model.Services.First().Metrics; }
+
+            <div class="row font-weight-bold align-items-center">
+                <div class="offset-5 col-@(metrics.Count() * 2) text-left">
+                    Arrived Within (mins)
+                </div>
+            </div>
+
+            <div class="row font-weight-bold align-items-center">
+                <div class="col-sm-1 d-none d-sm-block">TOC</div>
+                <div class="col-1">
+                    <span class="d-block">From</span>
+                    <span class="d-block">To</span>
+                </div>
+                <div class="col-2 col-sm-1">@Model.Header.From</div>
+                <div class="col-2 col-sm-1">@Model.Header.To</div>
+                <div class="col-1 text-center">#</div>
+                @foreach (var metric in metrics)
+                {
+                    <div class="col-2 text-center">@metric.Tolerance</div>
+                }
+            </div>
+
+            @foreach (var service in Model.Services)
             {
-                <div class="col-7">Trains arrived within @m.Tolerance mins of scheduled time:</div>
-                <div class="col"><span class="text-success font-weight-bold">@m.InToleranceCount</span> (<span class="text-danger">@m.NotInToleranceCount missed</span>) : @m.InTolerancePercent% on time</div>
+                var id = @service.ServiceMetrics.Origin + @service.ServiceMetrics.OriginDepartureTime;
+                <div class="row align-items-center py-3 border-bottom" role="button" data-toggle="collapse" data-target="#@id" aria-expanded="false" aria-controls="#@id">
+                    <div class="col-sm-1 d-none d-sm-block text-left">@service.ServiceMetrics.Toc</div>
+                    <div class="col-1 text-left">
+                        <span class="d-block">@service.ServiceMetrics.Origin</span>
+                        <span class="d-block">@service.ServiceMetrics.Destination</span>
+                    </div>
+                    <div class="col-2 col-sm-1 text-center">@service.ServiceMetrics.OriginDepartureTime</div>
+                    <div class="col-2 col-sm-1 text-center">@service.ServiceMetrics.DestinationArrivalTime</div>
+                    <div class="col-1 text-center">@service.ServiceMetrics.ServicesCount</div>
+                    @foreach (var metric in service.Metrics)
+                    {
+                        <div class="col-2 text-center">
+                            <span class="text-success font-weight-bold">@metric.InToleranceCount</span>
+                            <span class="text-danger pl-sm-1">(@metric.NotInToleranceCount)</span>
+                            <span class="d-block font-weight-bold">@metric.InTolerancePercent%</span>
+                        </div>
+                    }
+                </div>
+                <div id="@id" class="collapse" aria-labelledby="@id" data-parent="#accordion">
+                    <div class="row border-bottom">
+                        <div>List of services run, format yyyyMMddnnnnnnn.  Select a service to see timings and any late reasons.</div>
+                        @foreach (var r in service.ServiceMetrics.Rids)
+                        {
+                            <span class="rid col-4" role="button" data-toggle="modal" data-target="#serviceInfoModal" data-id="@r">@r</span>
+                        }
+                    </div>
+                </div>
             }
         </div>
-        <div class="row mb-2">
-            @foreach (var r in service.ServiceMetrics.Rids)
-            {
-                <span class="col-3">@r</span>
-            }
-        </div>
-    }
+    </div>
+}
+
+<div class="modal" id="serviceInfoModal" tabindex="-1" role="dialog" aria-labelledby="serviceInfoTitle" aria-hidden="true">
 </div>
+
+@section Scripts {
+    <script>
+        (function () {
+            $("#serviceInfoModal")
+                .on("show.bs.modal", function (e) {
+                    var $this = $(this);
+                    var rid = $(e.relatedTarget).data("id");
+
+                    $.ajax({
+                        url: "/Historical/Detail",
+                        data: { rid: rid },
+                        type: "POST",
+                        dataType: "text",
+                        success: function (data) {
+                            $("#serviceInfoModal").html(data)
+                        },
+                        error: function (data, type) {
+                            alert("Error");
+                        }
+                    });
+                });
+        })();
+    </script>
 }

@@ -1,5 +1,7 @@
 ﻿@model MetricsViewModel
 
+@using JoF.Rail.Standard.Enums
+
 <form method="POST">
     <span style="position:absolute;top:0;left:-1000px;">
         <input asp-for="CrsFrom" id="crsFrom" type="text" />
@@ -29,13 +31,50 @@
     </div>
 
     <div class="row">
-        <div class="col-12">
-            <div id="dateRange" class="form-group">
+        <div class="col-md-6 col-12">
+            <div class="form-group">
+                <label asp-for="FromDate" class="col-form-label">From Date</label>
+                <input asp-for="FromDate" type="text" class="form-control" />
+                <div><span asp-validation-for="FromDate" class="text-danger"></span></div>
+            </div>
+        </div>
+        <div class="col-md-6 col-12">
+            <div class="form-group">
+                <label asp-for="ToDate" class="col-form-label">To Date</label>
+                <input asp-for="ToDate" type="text" class="form-control" />
+                <div><span asp-validation-for="ToDate" class="text-danger"></span></div>
+            </div>
+        </div>
+        @*<div id="dateRange" class="form-group">
                 <label asp-for="FromDate" class="col-form-label">Date Range</label>
                 <input id="dateFrom" asp-for="FromDate" type="text" class="form-control" />
                 <div><span asp-validation-for="FromDate" class="text-danger"></span></div>
                 <input id="dateTo" asp-for="ToDate" type="text" class="form-control" />
                 <div><span asp-validation-for="ToDate" class="text-danger"></span></div>
+            </div>*@
+    </div>
+    <div class="row">
+        <div class="col-md-6 col-12">
+            <div class="form-group">
+                <label asp-for="FromTime" class="col-form-label">From Time</label>
+                <input asp-for="FromTime" type="text" class="form-control" />
+                <div><span asp-validation-for="FromTime" class="text-danger"></span></div>
+            </div>
+        </div>
+        <div class="col-md-6 col-12">
+            <div class="form-group">
+                <label asp-for="ToTime" class="col-form-label">To Time</label>
+                <input asp-for="ToTime" type="text" class="form-control" />
+                <div><span asp-validation-for="ToTime" class="text-danger"></span></div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col">
+            <div class="form-group">
+                <label asp-for="Days" class="col-form-label">Time Window (minutes)</label>
+                <select asp-for="Days" asp-items="Enum.GetNames(typeof(DayTypes)).Select(d => new SelectListItem(d.ToString(), d.ToString()))" class="form-control"></select>
+                <div><span asp-validation-for="Days" class="text-danger"></span></div>
             </div>
         </div>
     </div>
@@ -44,46 +83,5 @@
         <div class="col-sm-4 col-12">
             <button type="submit" asp-action="Metrics" class="btn btn-outline-primary mr-4 mb-sm-0 mb-2">Metrics</button>
         </div>
-        @*<div class="col-sm-4 col-12">
-                <button type="submit" asp-action="Arrivals" class="btn btn-outline-primary mr-4 mb-sm-0 mb-2">Arrivals</button>
-            </div>
-            <div class="col-sm-4 col-12">
-                <button type="submit" asp-action="Fastest" class="btn btn-outline-primary mr-4">Next Fastest</button>
-            </div>*@
     </div>
 </form>
-
-
-@*<div class="row">
-        <div class="col">
-            <div class="form-group">
-                @{
-                    var offsetList = new List<SelectListItem>();
-                    var offsetGroups = Model.TimeOffsets.GroupBy(g => g.group);
-
-                    foreach (var group in offsetGroups)
-                    {
-                        var groupName = new SelectListGroup { Name = group.Key };
-                        offsetList.AddRange(group.Select(item => new SelectListItem
-                        {
-                            Text = item.text,
-                            Value = item.value,
-                            Group = groupName
-                        }));
-                    }
-                }
-                <label asp-for="TimeOffset" class="col-form-label">Time Offset</label>
-                <select asp-for="TimeOffset" asp-items="offsetList" class="form-control"></select>
-                <div><span asp-validation-for="TimeOffset" class="text-danger"></span></div>
-            </div>
-        </div>
-    </div>
-    <div class="row">
-        <div class="col">
-            <div class="form-group">
-                <label asp-for="TimeWindow" class="col-form-label">Time Window (minutes)</label>
-                <select asp-for="TimeWindow" asp-items="Model.TimeWindows.Select(w => new SelectListItem(w.value, w.text))" class="form-control"></select>
-                <div><span asp-validation-for="TimeWindow" class="text-danger"></span></div>
-            </div>
-        </div>
-    </div>*@
