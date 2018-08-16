@@ -6,14 +6,19 @@
     })
     .attr('target', '_blank');
 
-    $("nav ul.navbar-nav a").filter(function () {
-        return this.href == window.location;
-    }).parent().addClass("active");
+    var location = this.location.pathname;
+
+    $("nav ul.navbar-nav a").each((idx, el) => {
+        if (location.includes(el.href.replace(el.origin, ""))) {
+            $(el.parentElement).addClass("active");
+            return;
+        }
+    });
 
     $("input.station")
         .autocomplete({
             minLength: 2,
-            source: function (request, response) {
+            source: (request, response) => {
                 $.ajax({
                     url: "/api/CrsSearch",
                     dataType: "json",
