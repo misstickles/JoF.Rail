@@ -8,7 +8,7 @@
 
     var location = this.location.pathname;
 
-    $("nav ul.navbar-nav a").each((idx, el) => {
+    $("nav ul.navbar-nav a").each(function (idx, el) {
         if (location.includes(el.href.replace(el.origin, ""))) {
             $(el.parentElement).addClass("active");
             return;
@@ -18,7 +18,7 @@
     $("input.station")
         .autocomplete({
             minLength: 2,
-            source: (request, response) => {
+            source: function (request, response) {
                 $.ajax({
                     url: "/api/CrsSearch",
                     dataType: "json",
