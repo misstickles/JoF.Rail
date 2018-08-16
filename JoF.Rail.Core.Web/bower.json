@@ -9,7 +9,8 @@
     "bootstrap": "4.1.3",
     "Font-Awesome": "5.1.0",
     "markerclustererplus": "2.1.4",
-    "jquery-date-range-picker": "v0.18.0"
+    "jquery-date-range-picker": "v0.18.0",
+    "popper.js": "v1.14.4"
   },
   "ignore": [
     "**/.*",

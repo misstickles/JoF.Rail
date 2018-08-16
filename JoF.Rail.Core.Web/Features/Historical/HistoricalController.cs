@@ -57,7 +57,7 @@
 
             var details = await this.mediator.Send(query);
 
-            return PartialView(details);
+            return PartialView("_Detail", details);
         }
     }
 }

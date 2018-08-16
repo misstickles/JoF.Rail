@@ -51,6 +51,7 @@ gulp.task("copy-js", function () {
     return gulp.src([
         "wwwroot/lib/jquery/dist/jquery.min.js",
         "wwwroot/lib/jquery-ui/dist/jquery-ui.min.js",
+        "wwwroot/lib/popper.js/dist/umd/popper.min.js",
         "wwwroot/lib/bootstrap/dist/js/bootstrap.min.js",
         "wwwroot/lib/markerclustererplus/dist/markerclusterer.min.js",
         "wwwroot/lib/jquery-date-range-picker/dist/jquery.daterangepicker.min.js",
