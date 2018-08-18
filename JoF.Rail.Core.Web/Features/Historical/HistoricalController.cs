@@ -70,6 +70,8 @@
 
         private string CreateChart(MetricsModel model)
         {
+            return model.ToJson();
+
             var objs = new List<object>();
 
             var cols = new List<object>();
