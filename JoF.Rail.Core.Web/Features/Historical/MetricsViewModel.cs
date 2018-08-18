@@ -1,9 +1,11 @@
 ﻿namespace JoF.Rail.Core.Web.Features.Historical
 {
-    public class MetricsViewModel : Index.QueryMetrics
-    {
-        public string From { get; set; }
+    using JoF.Rail.Standard.Models.HistoricalPerformance;
 
-        public string To { get; set; }
+    public class MetricsViewModel
+    {
+        public MetricsModel Data { get; set; }
+
+        public string Chart { get; set; }
     }
 }

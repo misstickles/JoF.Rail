@@ -1,85 +1,116 @@
-﻿@model JoF.Rail.Standard.Models.HistoricalPerformance.MetricsModel
+﻿@model MetricsViewModel
 @{
     ViewBag.Title = "Historical Service Performance";
 }
 
 @{
-<div class="container">
-    <div class="row mb-5">
-        <div class="col">
-            <h2>Historical Service Performance</h2>
-            <div>Details of service performance - for any service across the past year.</div>
-        </div>
-        <div class="col-1">
-            <button type="button" class="btn btn-primary float-right font-weight-bold text-off-white" data-toggle="modal" data-target="#depBoardModal">?</button>
-        </div>
-    </div>
+    var data = Model.Data;
+    var chart = Model.Chart;
 
-    <div id="accordion">
-        @{ var metrics = Model.Services.First().Metrics; }
+    <div id="chart"></div>
 
-        <div class="row font-weight-bold align-items-center">
-            <div class="offset-6 col-@(metrics.Count() * 2) text-left">
-                Arrived Within (mins)
+    <div class="container">
+        <div class="row mb-5">
+            <div class="col">
+                <h2>Historical Service Performance</h2>
+                <div class="lead">Details of service performance - for any service across the past year.</div>
             </div>
-        </div>
-
-        <div class="row font-weight-bold align-items-center">
-            <div class="col-sm-1 d-none d-sm-block">TOC</div>
             <div class="col-1">
-                <span class="d-block">From</span>
-                <span class="d-block">To</span>
+                <button type="button" class="btn btn-primary float-right font-weight-bold text-off-white" data-toggle="modal" data-target="#depBoardModal">?</button>
             </div>
-            <div class="col-2 col-sm-1">@Model.Header.From</div>
-            <div class="col-2 col-sm-1">@Model.Header.To</div>
-            <div class="col-1 text-center">#</div>
-            @foreach (var metric in metrics)
-            {
-                <div class="col-2 text-center">@metric.Tolerance</div>
-            }
         </div>
 
-        @foreach (var service in Model.Services)
-        {
-            var id = @service.ServiceMetrics.Origin + @service.ServiceMetrics.OriginDepartureTime;
-            <div class="row align-items-center py-3 border-bottom" role="button" data-toggle="collapse" data-target="#@id" aria-expanded="false" aria-controls="#@id">
-                <div class="col-sm-1 d-none d-sm-block text-left">@service.ServiceMetrics.Toc</div>
-                <div class="col-1 text-left">
-                    <span class="d-block">@service.ServiceMetrics.Origin</span>
-                    <span class="d-block">@service.ServiceMetrics.Destination</span>
+        <div id="accordion" class="small">
+            @{ var metrics = data.Services.First().Metrics; }
+
+            <div class="row font-weight-bold align-items-center">
+                <div class="offset-5 col-5 text-center">
+                    Arrived Within (mins)
                 </div>
-                <div class="col-2 col-sm-1 text-center">@service.ServiceMetrics.OriginDepartureTime</div>
-                <div class="col-2 col-sm-1 text-center">@service.ServiceMetrics.DestinationArrivalTime</div>
-                <div class="col-1 text-center">@service.ServiceMetrics.ServicesCount</div>
-                @foreach (var metric in service.Metrics)
-                {
-                    <div class="col-2 text-center">
-                        <span class="text-success font-weight-bold">@metric.InToleranceCount</span>
-                        <span class="text-danger pl-sm-1">(@metric.NotInToleranceCount)</span>
-                        <span class="d-block font-weight-bold">@metric.InTolerancePercent%</span>
-                    </div>
-                }
             </div>
-            <div id="@id" class="collapse" aria-labelledby="@id" data-parent="#accordion">
-                <div class="row border-bottom">
-                    <div>List of services run, format yyyyMMddnnnnnnn.  Select a service to see timings and any late reasons.</div>
-                    @foreach (var r in service.ServiceMetrics.Rids)
+
+            <div class="row font-weight-bold align-items-center">
+                <div class="col-1">TOC</div>
+                <div class="col-1">
+                    <span class="d-block">From</span>
+                    <span class="d-block">To</span>
+                </div>
+                <div class="col-2 col-sm-1 text-center">@data.Header.From</div>
+                <div class="col-2 col-sm-1" text-center>@data.Header.To</div>
+                <div class="col-1 text-center">#</div>
+                <div class="col-5 text-center">
+                    @foreach (var metric in metrics)
                     {
-                        <span class="rid col-4" role="button" data-toggle="modal" data-target="#serviceInfoModal" data-id="@r">@r</span>
+                        <div class="float-left w-25">@metric.Tolerance</div>
                     }
                 </div>
             </div>
-        }
+
+            @foreach (var service in data.Services)
+            {
+                var id = @service.ServiceMetrics.Origin + service.ServiceMetrics.Destination + @service.ServiceMetrics.OriginDepartureTime + service.ServiceMetrics.DestinationArrivalTime;
+                <div class="row align-items-center py-3 border-bottom" role="button" data-toggle="collapse" data-target="#@id" aria-expanded="false" aria-controls="#@id">
+                    <div class="col-1 text-left">@service.ServiceMetrics.Toc</div>
+                    <div class="col-1 text-left">
+                        <span class="d-block">@service.ServiceMetrics.Origin</span>
+                        <span class="d-block">@service.ServiceMetrics.Destination</span>
+                    </div>
+                    <div class="col-2 col-sm-1 text-center">@service.ServiceMetrics.OriginDepartureTime</div>
+                    <div class="col-2 col-sm-1 text-center">@service.ServiceMetrics.DestinationArrivalTime</div>
+                    <div class="col-1 text-center">@service.ServiceMetrics.ServicesCount</div>
+                    <div class="col-5 text-center">
+                        @foreach (var metric in service.Metrics)
+                        {
+                            <div class="float-left w-25">
+                                <span class="text-success font-weight-bold">@metric.InToleranceCount</span>
+                                <span class="text-danger pl-sm-1">(@metric.NotInToleranceCount)</span>
+                                <span class="d-block font-weight-bold">@metric.InTolerancePercent%</span>
+                            </div>
+                        }
+                    </div>
+                </div>
+                <div id="@id" class="collapse" aria-labelledby="@id" data-parent="#accordion">
+                    <div class="row border-bottom">
+                        <div>List of services run, format yyyyMMddnnnnnnn.  Select a service to see timings and any late reasons.</div>
+                        @foreach (var r in service.ServiceMetrics.Rids)
+                        {
+                            <span class="rid col-4" role="button" data-toggle="modal" data-target="#serviceInfoModal" data-id="@r">@r</span>
+                        }
+                    </div>
+                </div>
+            }
+        </div>
     </div>
-</div>
 }
 
-<div class="modal" id="serviceInfoModal" tabindex="-1" role="dialog" aria-labelledby="serviceInfoTitle" aria-hidden="true">
+<div class="modal small" id="serviceInfoModal" tabindex="-1" role="dialog" aria-labelledby="serviceInfoTitle" aria-hidden="true">
 </div>
 
 @section Scripts {
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+
     <script>
         (function () {
+            google.charts.load('current', { 'packages': ['line'] });
+            google.charts.setOnLoadCallback(drawChart);
+
+            function drawChart() {
+                var data = @Html.Raw(chart);
+
+                var dt = google.visualization.arrayToDataTable(data, false);
+
+                var options = {
+                    title: "Delay tolerances for services in chosen date/time",
+                    subtitle: "in %",
+                    vAxis: {
+                        title: "Arrived within tolerance, %"                    
+                    }
+                };
+
+                var gchart = new google.charts.Line($("#chart")[0]);
+                gchart.draw(dt, google.charts.Line.convertOptions(options));
+            }
+
             $("#serviceInfoModal")
                 .on("show.bs.modal", function (e) {
                     var $this = $(this);

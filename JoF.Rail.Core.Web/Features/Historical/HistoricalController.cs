@@ -1,7 +1,11 @@
 ﻿namespace JoF.Rail.Core.Web.Features.Historical
 {
+    using System.Collections.Generic;
+    using System.Linq;
     using System.Threading.Tasks;
     using JoF.Rail.Core.Web.Consts;
+    using JoF.Rail.Standard.Core.Extensions;
+    using JoF.Rail.Standard.Models.HistoricalPerformance;
     using MediatR;
     using Microsoft.AspNetCore.Mvc;
     using Microsoft.Extensions.Configuration;
@@ -41,7 +45,11 @@
 
             var metrics = await this.mediator.Send(query);
 
-            return View(metrics);
+            return View(new MetricsViewModel
+                {
+                    Data = metrics,
+                    Chart = this.CreateChart(metrics)
+                });
         }
 
         [HttpPost]
@@ -58,6 +66,40 @@
             var details = await this.mediator.Send(query);
 
             return PartialView("_Detail", details);
+        }
+
+        private string CreateChart(MetricsModel model)
+        {
+            var objs = new List<object>();
+
+            var cols = new List<object>();
+
+            cols.Add(new[] { "string", "Time" });
+
+            foreach (var m in model.Services.First().Metrics)
+            {
+                cols.Add(new[] { "number", $"Within {m.Tolerance} mins" });
+            }
+
+            cols.Add(new[] { "type: 'string'", "role: 'tooltip'" });
+
+            objs.Add(cols);
+
+            foreach (var s in model.Services)
+            {
+                var row = new List<object>();
+
+                row.Add($"d.{s.ServiceMetrics.OriginDepartureTime}\na.{s.ServiceMetrics.DestinationArrivalTime}");
+
+                foreach (var m in s.Metrics)
+                {
+                    row.Add(m.InTolerancePercent);
+                }
+
+                objs.Add(row.ToArray());
+            }
+
+            return objs.ToJson();
         }
     }
 }
