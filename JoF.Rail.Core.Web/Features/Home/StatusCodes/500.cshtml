@@ -1,0 +1,29 @@
+﻿@{ 
+    var url = $"{ViewData["ErrorUrl"]}{ViewData["ErrorQueryString"]}";
+    ViewBag.BodyClass = "track-bg";
+}
+
+<div class="container">
+    <h1 class="text-danger">Uh-Oh</h1>
+    <p class="lead">An error has occurred during your request to @url.</p>
+    <p>Please ensure you consider the following:</p>
+    <ul>
+        <li>Routes for Departure Boards must be direct
+            <ul>
+                <li>These only display destinations that you would see on boards at the station</li>
+            </ul>
+        </li>
+        <li>Currently, you must select stations from the 'autocomplete' list presented
+            <ul>
+                <li>This will hopefully change in the future</li>
+            </ul>
+        </li>
+        <li>If a form has 'placeholder' data, please ensure it is in the suggested format
+            <ul>
+                <li>Validation should improve with future versions</li>
+            </ul>
+        </li>
+        <li>Ensure you have a connection to the internet</li>
+        <li>It may have been some weirdness, please use the menu above to try again</li>
+    </ul>
+</div>

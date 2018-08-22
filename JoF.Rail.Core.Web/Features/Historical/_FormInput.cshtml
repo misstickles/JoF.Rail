@@ -72,7 +72,7 @@
     <div class="row">
         <div class="col">
             <div class="form-group">
-                <label asp-for="Days" class="col-form-label">Time Window (minutes)</label>
+                <label asp-for="Days" class="col-form-label">Service Days</label>
                 <select asp-for="Days" asp-items="Enum.GetNames(typeof(DayTypes)).Select(d => new SelectListItem(d.ToString(), d.ToString()))" class="form-control"></select>
                 <div><span asp-validation-for="Days" class="text-danger"></span></div>
             </div>

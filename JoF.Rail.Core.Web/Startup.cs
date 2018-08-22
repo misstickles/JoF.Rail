@@ -2,6 +2,9 @@ namespace JoF.Rail.Core.Web
 {
     using AutoMapper;
     using FluentValidation.AspNetCore;
+    using HtmlTags;
+    using JoF.Rail.Core.Web.Infrastructure.Tags;
+    using JoF.Rail.Standard.Middlewares;
     using MediatR;
     using Microsoft.AspNetCore.Builder;
     using Microsoft.AspNetCore.Hosting;
@@ -33,7 +36,7 @@ namespace JoF.Rail.Core.Web
 
             services.AddMediatR();
 
-            //services.AddHtmlTags(new TagConventions());
+            services.AddHtmlTags(new TagConventions());
 
             services.AddMvc(
                 opt =>
@@ -59,7 +62,8 @@ namespace JoF.Rail.Core.Web
             }
             else
             {
-                app.UseExceptionHandler("/Error");
+                app.UseExceptionHandler("/Home/Error");
+                app.UseStatusCodePagesWithReExecute("/Home/Error", "?statusCode={0}");
                 app.UseHsts();
             }
 

@@ -4,7 +4,15 @@
     ViewBag.BodyClass = "bg-departure-board text-departure-board";
 }
 
-@{
+@if (Model.Departures.First().Service == null)
+{
+<div class="container">
+    <div class="d-block text-center">No services found.  Please ensure stations are a direct route.</div>
+    <div class="d-block text-center"><a class="btn btn-primary" asp-action="Index"><i class="fas fa-map-marker-alt"></i> Change Station</a></div>
+</div>
+}
+else
+{
     // tiresomly, response does not contain the FilterStation...  CANNOT get flippin Linq to work...
     var callingPoints = Model.Departures.First().Service.SubsequentCallingPoints.First().CallingPoints;
     var filtered = new JoF.Rail.Standard.Models.LiveDepartureBoard.Result.CallingPointModel();
@@ -16,7 +24,6 @@
             filtered = p;
         }
     }
-}
 
 <div class="container">
     <div class="row align-content-center">
@@ -126,7 +133,7 @@
                     <partial name="_TrainServiceDetails" model="service" , view-data="ViewData" />
                 </div>
             </div>
-        }
+                        }
         </div>
 
         <div class="row py-3">
@@ -141,3 +148,4 @@
             </div>
         </small>
     </div>
+}
