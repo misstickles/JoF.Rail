@@ -2,9 +2,6 @@ namespace JoF.Rail.Core.Web
 {
     using AutoMapper;
     using FluentValidation.AspNetCore;
-    using HtmlTags;
-    using JoF.Rail.Core.Web.Infrastructure.Tags;
-    using JoF.Rail.Standard.Middlewares;
     using MediatR;
     using Microsoft.AspNetCore.Builder;
     using Microsoft.AspNetCore.Hosting;
@@ -35,8 +32,6 @@ namespace JoF.Rail.Core.Web
             services.AddAutoMapper(typeof(Standard.Profiles.LiveDeparturesMappingProfile).Assembly);
 
             services.AddMediatR();
-
-            services.AddHtmlTags(new TagConventions());
 
             services.AddMvc(
                 opt =>
