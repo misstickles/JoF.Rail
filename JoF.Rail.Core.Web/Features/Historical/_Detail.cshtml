@@ -1,20 +1,26 @@
-﻿@model JoF.Rail.Standard.Models.HistoricalPerformance.DetailModel
+﻿@model MetricsViewModel
 
 @using JoF.Rail.Standard.Extensions
+
+@{ 
+    if (Model.Detail != null)
+    {
+        var detail = Model.Detail.Detail;
+        var reasons = Model.Reasons;
 
 <div class="modal-dialog modal-dialog-centered" role="document">
     <div class="modal-content bg-off-white text-secondary">
         <div class="modal-header">
-            <h5 class="modal-title" id="serviceInfoTitle">Service Details for @Model.Detail.Rid</h5>
+            <h5 class="modal-title" id="serviceInfoTitle">Service Details for @detail.Rid</h5>
             <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                 <span aria-hidden="true">&times;</span>
             </button>
         </div>
         <div class="modal-body">
-            <div>Date: @Model.Detail.DateOfService</div>
-            <div>Toc: @Model.Detail.Toc</div>
-            <div>Rid: @Model.Detail.Rid</div>
-            @foreach (var l in Model.Detail.Locations)
+            <div>Date: @detail.DateOfService</div>
+            <div>Toc: @detail.Toc</div>
+            <div>Rid: @detail.Rid</div>
+            @foreach (var l in detail.Locations)
             {
                 var delayArr = @l.TimeArrivalPublic.ToTimeDelay(l.TimeArrivalActual, false);
                 var delayDep = @l.TimeDeparturePublic.ToTimeDelay(l.TimeDepartureActual, false);
@@ -49,16 +55,20 @@
                             </small>
                         </span>
                     </div>
-                    <div class="col-2">
-                        @if (l.LateCode != "")
-                        {
-                            <a tabindex="0" role="button" class="fas fa-exclamation-triangle text-danger"
-                               data-toggle="popover"
-                               title="Delay code @l.LateCode"
-                               data-content="Train was delayed and/or cancelled.  Coz."
-                               data-trigger="focus"></a>
-                        }
-                        @l.LateCode
+                    <div class="col-2 delay-code"
+                         data-ta="@l.TimeArrivalActual"
+                         data-code="@l.LateCode">
+                        <span tabindex="0" role="button"
+                            data-toggle="popover"
+                            title="Delay code @l.LateCode"
+                            data-content="@reasons.FirstOrDefault(r => r.code == int.Parse(l.LateCode)).reason"
+                            data-trigger="focus">
+                            @if (l.LateCode != "")
+                            {
+                                <i class="fas fa-exclamation-triangle text-danger"></i>
+                                @l.LateCode
+                            }
+                        </span>
                     </div>
                 </div>
             }
@@ -68,3 +78,6 @@
         </div>
     </div>
 </div>
+
+    }
+}

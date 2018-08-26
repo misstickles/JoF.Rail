@@ -1,8 +1,10 @@
 ﻿namespace JoF.Rail.Core.Web.Features.Historical
 {
+    using System;
     using System.Collections.Generic;
     using System.Linq;
     using System.Threading.Tasks;
+    using JoF.Rail.Core.Web.ApiControllers;
     using JoF.Rail.Core.Web.Consts;
     using JoF.Rail.Standard.Core.Extensions;
     using JoF.Rail.Standard.Models.HistoricalPerformance;
@@ -34,7 +36,7 @@
 
         public IActionResult Index()
         {
-            return View();
+            return View(new Index.QueryMetrics());
         }
 
         public async Task<IActionResult> Metrics(Index.QueryMetrics query)
@@ -46,9 +48,10 @@
             var metrics = await this.mediator.Send(query);
 
             return View(new MetricsViewModel
-                {
-                    Data = metrics,
-                    Chart = this.CreateChart(metrics)
+            {
+                Data = metrics,
+                Chart = metrics.ToJson(),
+                Query = query
                 });
         }
 
@@ -65,43 +68,15 @@
 
             var details = await this.mediator.Send(query);
 
-            return PartialView("_Detail", details);
-        }
+            var delayCodes = details.Detail.Locations.Where(d => d.LateCode != null && d.TimeArrivalActual != string.Empty).Distinct().Select(d => (int.Parse(d.LateCode), false));
+            var cancelCodes = details.Detail.Locations.Where(c => c.LateCode != null && c.TimeArrivalActual == string.Empty).Distinct().Select(c => (int.Parse(c.LateCode), true));
 
-        private string CreateChart(MetricsModel model)
-        {
-            return model.ToJson();
+            var reasons = new DelayController().Codes(delayCodes.Concat(cancelCodes));
 
-            var objs = new List<object>();
-
-            var cols = new List<object>();
-
-            cols.Add(new[] { "string", "Time" });
-
-            foreach (var m in model.Services.First().Metrics)
-            {
-                cols.Add(new[] { "number", $"Within {m.Tolerance} mins" });
-            }
-
-            cols.Add(new[] { "type: 'string'", "role: 'tooltip'" });
-
-            objs.Add(cols);
-
-            foreach (var s in model.Services)
-            {
-                var row = new List<object>();
-
-                row.Add($"d.{s.ServiceMetrics.OriginDepartureTime}\na.{s.ServiceMetrics.DestinationArrivalTime}");
-
-                foreach (var m in s.Metrics)
-                {
-                    row.Add(m.InTolerancePercent);
-                }
-
-                objs.Add(row.ToArray());
-            }
-
-            return objs.ToJson();
+            return PartialView("_Detail", new MetricsViewModel {
+                Detail = details,
+                Reasons = reasons
+            });
         }
     }
 }

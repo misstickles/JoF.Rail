@@ -1,0 +1,3970 @@
+{
+	"lateReasons": [{
+		"code": 100,
+		"reason": "This train has been delayed by a broken down train"
+	},
+	{
+		"code": 101,
+		"reason": "This train has been delayed by a delay on a previous journey"
+	},
+	{
+		"code": 102,
+		"reason": "This train has been delayed by a derailed train"
+	},
+	{
+		"code": 104,
+		"reason": "This train has been delayed by a fire at a station"
+	},
+	{
+		"code": 105,
+		"reason": "This train has been delayed by a fire at a station earlier"
+	},
+	{
+		"code": 106,
+		"reason": "This train has been delayed by a landslip"
+	},
+	{
+		"code": 107,
+		"reason": "This train has been delayed by a line-side fire"
+	},
+	{
+		"code": 108,
+		"reason": "This train has been delayed by a member of train crew being unavailable"
+	},
+	{
+		"code": 109,
+		"reason": "This train has been delayed by a passenger being taken ill"
+	},
+	{
+		"code": 110,
+		"reason": "This train has been delayed by a passenger having been taken ill earlier"
+	},
+	{
+		"code": 111,
+		"reason": "This train has been delayed by a person hit by a train"
+	},
+	{
+		"code": 112,
+		"reason": "This train has been delayed by a person hit by a train earlier"
+	},
+	{
+		"code": 113,
+		"reason": "This train has been delayed by a problem at a level crossing"
+	},
+	{
+		"code": 114,
+		"reason": "This train has been delayed by a problem currently under investigation"
+	},
+	{
+		"code": 115,
+		"reason": "This train has been delayed by a problem near the railway"
+	},
+	{
+		"code": 116,
+		"reason": "This train has been delayed by a problem with a river bridge"
+	},
+	{
+		"code": 117,
+		"reason": "This train has been delayed by a problem with line side equipment"
+	},
+	{
+		"code": 118,
+		"reason": "This train has been delayed by a security alert"
+	},
+	{
+		"code": 119,
+		"reason": "This train has been delayed by a train derailed earlier"
+	},
+	{
+		"code": 120,
+		"reason": "This train has been delayed by a train fault"
+	},
+	{
+		"code": 121,
+		"reason": "This train has been delayed by a train late from the depot"
+	},
+	{
+		"code": 122,
+		"reason": "This train has been delayed by a train late from the depot earlier"
+	},
+	{
+		"code": 123,
+		"reason": "This train has been delayed by a trespass incident"
+	},
+	{
+		"code": 124,
+		"reason": "This train has been delayed by a vehicle striking a bridge"
+	},
+	{
+		"code": 125,
+		"reason": "This train has been delayed by a vehicle striking a bridge earlier"
+	},
+	{
+		"code": 126,
+		"reason": "This train has been delayed by an earlier broken down train"
+	},
+	{
+		"code": 128,
+		"reason": "This train has been delayed by an earlier landslip"
+	},
+	{
+		"code": 129,
+		"reason": "This train has been delayed by an earlier line-side fire"
+	},
+	{
+		"code": 130,
+		"reason": "This train has been delayed by an earlier operating incident"
+	},
+	{
+		"code": 131,
+		"reason": "This train has been delayed by an earlier problem at a level crossing"
+	},
+	{
+		"code": 132,
+		"reason": "This train has been delayed by an earlier problem near the railway"
+	},
+	{
+		"code": 133,
+		"reason": "This train has been delayed by an earlier problem with a river bridge"
+	},
+	{
+		"code": 134,
+		"reason": "This train has been delayed by an earlier problem with line side equipment"
+	},
+	{
+		"code": 135,
+		"reason": "This train has been delayed by an earlier security alert"
+	},
+	{
+		"code": 136,
+		"reason": "This train has been delayed by an earlier train fault"
+	},
+	{
+		"code": 137,
+		"reason": "This train has been delayed by an earlier trespass incident"
+	},
+	{
+		"code": 138,
+		"reason": "This train has been delayed by an obstruction on the line"
+	},
+	{
+		"code": 139,
+		"reason": "This train has been delayed by an obstruction on the line earlier"
+	},
+	{
+		"code": 140,
+		"reason": "This train has been delayed by an operating incident"
+	},
+	{
+		"code": 141,
+		"reason": "This train has been delayed by an unusually large passenger flow"
+	},
+	{
+		"code": 142,
+		"reason": "This train has been delayed by an unusually large passenger flow earlier"
+	},
+	{
+		"code": 143,
+		"reason": "This train has been delayed by animals on the line"
+	},
+	{
+		"code": 144,
+		"reason": "This train has been delayed by animals on the line earlier"
+	},
+	{
+		"code": 145,
+		"reason": "This train has been delayed by congestion caused by earlier delays"
+	},
+	{
+		"code": 146,
+		"reason": "This train has been delayed by disruptive passengers"
+	},
+	{
+		"code": 147,
+		"reason": "This train has been delayed by disruptive passengers earlier"
+	},
+	{
+		"code": 148,
+		"reason": "This train has been delayed by earlier electrical supply problems"
+	},
+	{
+		"code": 149,
+		"reason": "This train has been delayed by earlier emergency engineering works"
+	},
+	{
+		"code": 150,
+		"reason": "This train has been delayed by earlier industrial action"
+	},
+	{
+		"code": 151,
+		"reason": "This train has been delayed by earlier overhead wire problems"
+	},
+	{
+		"code": 152,
+		"reason": "This train has been delayed by earlier over-running engineering works"
+	},
+	{
+		"code": 153,
+		"reason": "This train has been delayed by earlier signalling problems"
+	},
+	{
+		"code": 154,
+		"reason": "This train has been delayed by earlier vandalism"
+	},
+	{
+		"code": 155,
+		"reason": "This train has been delayed by electrical supply problems"
+	},
+	{
+		"code": 156,
+		"reason": "This train has been delayed by emergency engineering works"
+	},
+	{
+		"code": 157,
+		"reason": "This train has been delayed by emergency services dealing with a prior incident"
+	},
+	{
+		"code": 158,
+		"reason": "This train has been delayed by emergency services dealing with an incident"
+	},
+	{
+		"code": 159,
+		"reason": "This train has been delayed by fire alarms sounding at a station"
+	},
+	{
+		"code": 160,
+		"reason": "This train has been delayed by fire alarms sounding earlier at a station"
+	},
+	{
+		"code": 161,
+		"reason": "This train has been delayed by flooding"
+	},
+	{
+		"code": 162,
+		"reason": "This train has been delayed by flooding earlier"
+	},
+	{
+		"code": 163,
+		"reason": "This train has been delayed by fog"
+	},
+	{
+		"code": 164,
+		"reason": "This train has been delayed by fog earlier"
+	},
+	{
+		"code": 165,
+		"reason": "This train has been delayed by high winds"
+	},
+	{
+		"code": 166,
+		"reason": "This train has been delayed by high winds earlier"
+	},
+	{
+		"code": 167,
+		"reason": "This train has been delayed by industrial action"
+	},
+	{
+		"code": 168,
+		"reason": "This train has been delayed by lightning having damaged equipment"
+	},
+	{
+		"code": 169,
+		"reason": "This train has been delayed by overhead wire problems"
+	},
+	{
+		"code": 170,
+		"reason": "This train has been delayed by over-running engineering works"
+	},
+	{
+		"code": 171,
+		"reason": "This train has been delayed by passengers transferring between trains"
+	},
+	{
+		"code": 172,
+		"reason": "This train has been delayed by passengers transferring between trains earlier"
+	},
+	{
+		"code": 173,
+		"reason": "This train has been delayed by poor rail conditions"
+	},
+	{
+		"code": 174,
+		"reason": "This train has been delayed by poor rail conditions earlier"
+	},
+	{
+		"code": 175,
+		"reason": "This train has been delayed by poor weather conditions"
+	},
+	{
+		"code": 176,
+		"reason": "This train has been delayed by poor weather conditions earlier"
+	},
+	{
+		"code": 177,
+		"reason": "This train has been delayed by safety checks being made"
+	},
+	{
+		"code": 178,
+		"reason": "This train has been delayed by safety checks having been made earlier"
+	},
+	{
+		"code": 179,
+		"reason": "This train has been delayed by signalling problems"
+	},
+	{
+		"code": 180,
+		"reason": "This train has been delayed by snow"
+	},
+	{
+		"code": 181,
+		"reason": "This train has been delayed by snow earlier"
+	},
+	{
+		"code": 182,
+		"reason": "This train has been delayed by speed restrictions having been imposed"
+	},
+	{
+		"code": 183,
+		"reason": "This train has been delayed by train crew having been unavailable earlier"
+	},
+	{
+		"code": 184,
+		"reason": "This train has been delayed by vandalism"
+	},
+	{
+		"code": 185,
+		"reason": "This train has been delayed by waiting earlier for a train crew member"
+	},
+	{
+		"code": 186,
+		"reason": "This train has been delayed by waiting for a train crew member"
+	},
+	{
+		"code": 187,
+		"reason": "This train has been delayed by engineering works"
+	},
+	{
+		"code": 501,
+		"reason": "This train has been delayed by a broken down train"
+	},
+	{
+		"code": 502,
+		"reason": "This train has been delayed by a broken windscreen on the train"
+	},
+	{
+		"code": 503,
+		"reason": "This train has been delayed by a shortage of trains because of accident damage"
+	},
+	{
+		"code": 504,
+		"reason": "This train has been delayed by a shortage of trains because of extra safety inspections"
+	},
+	{
+		"code": 505,
+		"reason": "This train has been delayed by a shortage of trains because of vandalism"
+	},
+	{
+		"code": 506,
+		"reason": "This train has been delayed by a shortage of trains following damage by snow and ice"
+	},
+	{
+		"code": 507,
+		"reason": "This train has been delayed by more trains than usual needing repairs at the same time"
+	},
+	{
+		"code": 508,
+		"reason": "This train has been delayed by the train for this service having broken down"
+	},
+	{
+		"code": 509,
+		"reason": "This train has been delayed by this train breaking down"
+	},
+	{
+		"code": 510,
+		"reason": "This train has been delayed by a collision between trains"
+	},
+	{
+		"code": 511,
+		"reason": "This train has been delayed by a collision with the buffers at a station"
+	},
+	{
+		"code": 512,
+		"reason": "This train has been delayed by a derailed train"
+	},
+	{
+		"code": 513,
+		"reason": "This train has been delayed by a derailment within the depot"
+	},
+	{
+		"code": 514,
+		"reason": "This train has been delayed by a low speed derailment"
+	},
+	{
+		"code": 515,
+		"reason": "This train has been delayed by a train being involved in an accident"
+	},
+	{
+		"code": 516,
+		"reason": "This train has been delayed by trains being involved in an accident"
+	},
+	{
+		"code": 517,
+		"reason": "This train has been delayed by a fire at a station"
+	},
+	{
+		"code": 518,
+		"reason": "This train has been delayed by a fire at a station earlier today"
+	},
+	{
+		"code": 519,
+		"reason": "This train has been delayed by a landslip"
+	},
+	{
+		"code": 520,
+		"reason": "This train has been delayed by a fire next to the track"
+	},
+	{
+		"code": 521,
+		"reason": "This train has been delayed by a fire on a train"
+	},
+	{
+		"code": 522,
+		"reason": "This train has been delayed by a member of on train staff being taken ill"
+	},
+	{
+		"code": 523,
+		"reason": "This train has been delayed by a shortage of on train staff"
+	},
+	{
+		"code": 524,
+		"reason": "This train has been delayed by a shortage of train conductors"
+	},
+	{
+		"code": 525,
+		"reason": "This train has been delayed by a shortage of train crew"
+	},
+	{
+		"code": 526,
+		"reason": "This train has been delayed by a shortage of train drivers"
+	},
+	{
+		"code": 527,
+		"reason": "This train has been delayed by a shortage of train guards"
+	},
+	{
+		"code": 528,
+		"reason": "This train has been delayed by a shortage of train managers"
+	},
+	{
+		"code": 529,
+		"reason": "This train has been delayed by severe weather preventing train crew getting to work"
+	},
+	{
+		"code": 530,
+		"reason": "This train has been delayed by the train conductor being taken ill"
+	},
+	{
+		"code": 531,
+		"reason": "This train has been delayed by the train driver being taken ill"
+	},
+	{
+		"code": 532,
+		"reason": "This train has been delayed by the train guard being taken ill"
+	},
+	{
+		"code": 533,
+		"reason": "This train has been delayed by the train manager being taken ill"
+	},
+	{
+		"code": 534,
+		"reason": "This train has been delayed by a passenger being taken ill at a station"
+	},
+	{
+		"code": 535,
+		"reason": "This train has been delayed by a passenger being taken ill on a train"
+	},
+	{
+		"code": 536,
+		"reason": "This train has been delayed by a passenger being taken ill on this train"
+	},
+	{
+		"code": 537,
+		"reason": "This train has been delayed by a passenger being taken ill at a station earlier today"
+	},
+	{
+		"code": 538,
+		"reason": "This train has been delayed by a passenger being taken ill on a train earlier today"
+	},
+	{
+		"code": 539,
+		"reason": "This train has been delayed by a passenger being taken ill on this train earlier in its journey"
+	},
+	{
+		"code": 540,
+		"reason": "This train has been delayed by a person being hit by a train"
+	},
+	{
+		"code": 541,
+		"reason": "This train has been delayed by a person being hit by a train earlier today"
+	},
+	{
+		"code": 542,
+		"reason": "This train has been delayed by a collision at a level crossing"
+	},
+	{
+		"code": 543,
+		"reason": "This train has been delayed by a fault with barriers at a level crossing"
+	},
+	{
+		"code": 544,
+		"reason": "This train has been delayed by a road accident at a level crossing"
+	},
+	{
+		"code": 545,
+		"reason": "This train has been delayed by a road vehicle colliding with level crossing barriers"
+	},
+	{
+		"code": 546,
+		"reason": "This train has been delayed by a road vehicle damaging track at a level crossing"
+	},
+	{
+		"code": 547,
+		"reason": "This train has been delayed by a problem currently under investigation"
+	},
+	{
+		"code": 548,
+		"reason": "This train has been delayed by a burst water main near the railway"
+	},
+	{
+		"code": 549,
+		"reason": "This train has been delayed by a chemical spillage near the railway"
+	},
+	{
+		"code": 550,
+		"reason": "This train has been delayed by a fire near the railway involving gas cylinders"
+	},
+	{
+		"code": 551,
+		"reason": "This train has been delayed by a fire near the railway suspected to involve gas cylinders"
+	},
+	{
+		"code": 552,
+		"reason": "This train has been delayed by a fire on property near the railway"
+	},
+	{
+		"code": 553,
+		"reason": "This train has been delayed by a gas leak near the railway"
+	},
+	{
+		"code": 554,
+		"reason": "This train has been delayed by a road accident near the railway"
+	},
+	{
+		"code": 555,
+		"reason": "This train has been delayed by a wartime bomb near the railway"
+	},
+	{
+		"code": 556,
+		"reason": "This train has been delayed by ambulance service dealing with an incident near the railway"
+	},
+	{
+		"code": 557,
+		"reason": "This train has been delayed by emergency services dealing with an incident near the railway"
+	},
+	{
+		"code": 558,
+		"reason": "This train has been delayed by fire brigade dealing with an incident near the railway"
+	},
+	{
+		"code": 559,
+		"reason": "This train has been delayed by police dealing with an incident near the railway"
+	},
+	{
+		"code": 560,
+		"reason": "This train has been delayed by a boat colliding with a bridge"
+	},
+	{
+		"code": 561,
+		"reason": "This train has been delayed by a fault with a swing bridge over a river"
+	},
+	{
+		"code": 562,
+		"reason": "This train has been delayed by a problem with a river bridge"
+	},
+	{
+		"code": 563,
+		"reason": "This train has been delayed by a problem with line-side equipment"
+	},
+	{
+		"code": 564,
+		"reason": "This train has been delayed by a security alert at a station"
+	},
+	{
+		"code": 565,
+		"reason": "This train has been delayed by a security alert on another train"
+	},
+	{
+		"code": 566,
+		"reason": "This train has been delayed by a security alert on this train"
+	},
+	{
+		"code": 567,
+		"reason": "This train has been delayed by a train derailment earlier today"
+	},
+	{
+		"code": 568,
+		"reason": "This train has been delayed by a train derailment yesterday"
+	},
+	{
+		"code": 569,
+		"reason": "This train has been delayed by a fault occurring when attaching a part of a train"
+	},
+	{
+		"code": 570,
+		"reason": "This train has been delayed by a fault occurring when attaching a part of this train"
+	},
+	{
+		"code": 571,
+		"reason": "This train has been delayed by a fault occurring when detaching a part of a train"
+	},
+	{
+		"code": 572,
+		"reason": "This train has been delayed by a fault occurring when detaching a part of this train"
+	},
+	{
+		"code": 573,
+		"reason": "This train has been delayed by a fault on a train in front of this one"
+	},
+	{
+		"code": 574,
+		"reason": "This train has been delayed by a fault on this train"
+	},
+	{
+		"code": 575,
+		"reason": "This train has been delayed by this train being late from the depot"
+	},
+	{
+		"code": 576,
+		"reason": "This train has been delayed by trespassers on the railway"
+	},
+	{
+		"code": 577,
+		"reason": "This train has been delayed by a bus colliding with a bridge"
+	},
+	{
+		"code": 578,
+		"reason": "This train has been delayed by a lorry colliding with a bridge"
+	},
+	{
+		"code": 579,
+		"reason": "This train has been delayed by a road vehicle colliding with a bridge"
+	},
+	{
+		"code": 580,
+		"reason": "This train has been delayed by a bus colliding with a bridge earlier on this train's journey"
+	},
+	{
+		"code": 581,
+		"reason": "This train has been delayed by a bus colliding with a bridge earlier today"
+	},
+	{
+		"code": 582,
+		"reason": "This train has been delayed by a lorry colliding with a bridge earlier on this train's journey"
+	},
+	{
+		"code": 583,
+		"reason": "This train has been delayed by a lorry colliding with a bridge earlier today"
+	},
+	{
+		"code": 584,
+		"reason": "This train has been delayed by a road vehicle colliding with a bridge earlier on this train's journey"
+	},
+	{
+		"code": 585,
+		"reason": "This train has been delayed by a road vehicle colliding with a bridge earlier today"
+	},
+	{
+		"code": 586,
+		"reason": "This train has been delayed by a broken down train earlier today"
+	},
+	{
+		"code": 587,
+		"reason": "This train has been delayed by an earlier landslip"
+	},
+	{
+		"code": 588,
+		"reason": "This train has been delayed by a fire next to the track earlier today"
+	},
+	{
+		"code": 589,
+		"reason": "This train has been delayed by a fire on a train earlier today"
+	},
+	{
+		"code": 590,
+		"reason": "This train has been delayed by a coach becoming uncoupled on a train earlier in its journey"
+	},
+	{
+		"code": 591,
+		"reason": "This train has been delayed by a coach becoming uncoupled on a train earlier today"
+	},
+	{
+		"code": 592,
+		"reason": "This train has been delayed by a coach becoming uncoupled on this train earlier in its journey"
+	},
+	{
+		"code": 593,
+		"reason": "This train has been delayed by a coach becoming uncoupled on this train earlier today"
+	},
+	{
+		"code": 594,
+		"reason": "This train has been delayed by a train not stopping at a station it was supposed to earlier in its journey"
+	},
+	{
+		"code": 595,
+		"reason": "This train has been delayed by a train not stopping at a station it was supposed to earlier today"
+	},
+	{
+		"code": 596,
+		"reason": "This train has been delayed by a train not stopping in the correct position at a station earlier in its journey"
+	},
+	{
+		"code": 597,
+		"reason": "This train has been delayed by a train not stopping in the correct position at a station earlier today"
+	},
+	{
+		"code": 598,
+		"reason": "This train has been delayed by a train's automatic braking system being activated earlier in its journey"
+	},
+	{
+		"code": 599,
+		"reason": "This train has been delayed by a train's automatic braking system being activated earlier today"
+	},
+	{
+		"code": 600,
+		"reason": "This train has been delayed by an operational incident earlier in its journey"
+	},
+	{
+		"code": 601,
+		"reason": "This train has been delayed by an operational incident earlier today"
+	},
+	{
+		"code": 602,
+		"reason": "This train has been delayed by this train not stopping at a station it was supposed to earlier in its journey"
+	},
+	{
+		"code": 603,
+		"reason": "This train has been delayed by this train not stopping at a station it was supposed to earlier today"
+	},
+	{
+		"code": 604,
+		"reason": "This train has been delayed by this train not stopping in the correct position at a station earlier in its journey"
+	},
+	{
+		"code": 605,
+		"reason": "This train has been delayed by this train not stopping in the correct position at a station earlier today"
+	},
+	{
+		"code": 606,
+		"reason": "This train has been delayed by this train's automatic braking system being activated earlier in its journey"
+	},
+	{
+		"code": 607,
+		"reason": "This train has been delayed by this train's automatic braking system being activated earlier today"
+	},
+	{
+		"code": 608,
+		"reason": "This train has been delayed by a collision at a level crossing earlier today"
+	},
+	{
+		"code": 609,
+		"reason": "This train has been delayed by a collision at a level crossing yesterday"
+	},
+	{
+		"code": 610,
+		"reason": "This train has been delayed by a fault with barriers at a level crossing earlier today"
+	},
+	{
+		"code": 611,
+		"reason": "This train has been delayed by a fault with barriers at a level crossing yesterday"
+	},
+	{
+		"code": 612,
+		"reason": "This train has been delayed by a road accident at a level crossing earlier today"
+	},
+	{
+		"code": 613,
+		"reason": "This train has been delayed by a road accident at a level crossing yesterday"
+	},
+	{
+		"code": 614,
+		"reason": "This train has been delayed by a road vehicle colliding with level crossing barriers earlier today"
+	},
+	{
+		"code": 615,
+		"reason": "This train has been delayed by a road vehicle colliding with level crossing barriers yesterday"
+	},
+	{
+		"code": 616,
+		"reason": "This train has been delayed by a road vehicle damaging track at a level crossing earlier today"
+	},
+	{
+		"code": 617,
+		"reason": "This train has been delayed by a road vehicle damaging track at a level crossing yesterday"
+	},
+	{
+		"code": 618,
+		"reason": "This train has been delayed by a burst water main near the railway earlier today"
+	},
+	{
+		"code": 619,
+		"reason": "This train has been delayed by a burst water main near the railway yesterday"
+	},
+	{
+		"code": 620,
+		"reason": "This train has been delayed by a chemical spillage near the railway earlier today"
+	},
+	{
+		"code": 621,
+		"reason": "This train has been delayed by a chemical spillage near the railway yesterday"
+	},
+	{
+		"code": 622,
+		"reason": "This train has been delayed by a fire near the railway involving gas cylinders earlier today"
+	},
+	{
+		"code": 623,
+		"reason": "This train has been delayed by a fire near the railway involving gas cylinders yesterday"
+	},
+	{
+		"code": 624,
+		"reason": "This train has been delayed by a fire near the railway suspected to involve gas cylinders earlier today"
+	},
+	{
+		"code": 625,
+		"reason": "This train has been delayed by a fire near the railway suspected to involve gas cylinders yesterday"
+	},
+	{
+		"code": 626,
+		"reason": "This train has been delayed by a fire on property near the railway earlier today"
+	},
+	{
+		"code": 627,
+		"reason": "This train has been delayed by a fire on property near the railway yesterday"
+	},
+	{
+		"code": 628,
+		"reason": "This train has been delayed by a gas leak near the railway earlier today"
+	},
+	{
+		"code": 629,
+		"reason": "This train has been delayed by a gas leak near the railway yesterday"
+	},
+	{
+		"code": 630,
+		"reason": "This train has been delayed by a road accident near the railway earlier today"
+	},
+	{
+		"code": 631,
+		"reason": "This train has been delayed by a road accident near the railway yesterday"
+	},
+	{
+		"code": 632,
+		"reason": "This train has been delayed by a wartime bomb near the railway earlier today"
+	},
+	{
+		"code": 633,
+		"reason": "This train has been delayed by a wartime bomb near the railway yesterday"
+	},
+	{
+		"code": 634,
+		"reason": "This train has been delayed by a wartime bomb which has now been made safe"
+	},
+	{
+		"code": 635,
+		"reason": "This train has been delayed by ambulance service dealing with an incident near the railway earlier today"
+	},
+	{
+		"code": 636,
+		"reason": "This train has been delayed by ambulance service dealing with an incident near the railway yesterday"
+	},
+	{
+		"code": 637,
+		"reason": "This train has been delayed by emergency services dealing with an incident near the railway earlier today"
+	},
+	{
+		"code": 638,
+		"reason": "This train has been delayed by emergency services dealing with an incident near the railway yesterday"
+	},
+	{
+		"code": 639,
+		"reason": "This train has been delayed by fire brigade dealing with an incident near the railway earlier today"
+	},
+	{
+		"code": 640,
+		"reason": "This train has been delayed by fire brigade dealing with an incident near the railway yesterday"
+	},
+	{
+		"code": 641,
+		"reason": "This train has been delayed by police dealing with an incident near the railway earlier today"
+	},
+	{
+		"code": 642,
+		"reason": "This train has been delayed by police dealing with an incident near the railway yesterday"
+	},
+	{
+		"code": 643,
+		"reason": "This train has been delayed by a boat colliding with a bridge earlier today"
+	},
+	{
+		"code": 644,
+		"reason": "This train has been delayed by a fault with a swing bridge over a river earlier today"
+	},
+	{
+		"code": 645,
+		"reason": "This train has been delayed by a problem with a river bridge earlier today"
+	},
+	{
+		"code": 646,
+		"reason": "This train has been delayed by an earlier problem with line-side equipment"
+	},
+	{
+		"code": 647,
+		"reason": "This train has been delayed by a security alert earlier today"
+	},
+	{
+		"code": 648,
+		"reason": "This train has been delayed by a fault on this train which is now fixed"
+	},
+	{
+		"code": 649,
+		"reason": "This train has been delayed by trespassers on the railway earlier in this train's journey"
+	},
+	{
+		"code": 650,
+		"reason": "This train has been delayed by trespassers on the railway earlier today"
+	},
+	{
+		"code": 651,
+		"reason": "This train has been delayed by a bicycle on the track"
+	},
+	{
+		"code": 652,
+		"reason": "This train has been delayed by a road vehicle blocking the railway"
+	},
+	{
+		"code": 653,
+		"reason": "This train has been delayed by a supermarket trolley on the track"
+	},
+	{
+		"code": 654,
+		"reason": "This train has been delayed by a train hitting an obstruction on the line"
+	},
+	{
+		"code": 655,
+		"reason": "This train has been delayed by a tree blocking the railway"
+	},
+	{
+		"code": 656,
+		"reason": "This train has been delayed by an obstruction on the track"
+	},
+	{
+		"code": 657,
+		"reason": "This train has been delayed by checking reports of an obstruction on the line"
+	},
+	{
+		"code": 658,
+		"reason": "This train has been delayed by this train hitting an obstruction on the line"
+	},
+	{
+		"code": 659,
+		"reason": "This train has been delayed by a bicycle on the track earlier on this train's journey"
+	},
+	{
+		"code": 660,
+		"reason": "This train has been delayed by a bicycle on the track earlier today"
+	},
+	{
+		"code": 661,
+		"reason": "This train has been delayed by a road vehicle blocking the railway earlier on this train's journey"
+	},
+	{
+		"code": 662,
+		"reason": "This train has been delayed by a road vehicle blocking the railway earlier today"
+	},
+	{
+		"code": 663,
+		"reason": "This train has been delayed by a supermarket trolley on the track earlier on this train's journey"
+	},
+	{
+		"code": 664,
+		"reason": "This train has been delayed by a supermarket trolley on the track earlier today"
+	},
+	{
+		"code": 665,
+		"reason": "This train has been delayed by a train hitting an obstruction on the line earlier on this train's journey"
+	},
+	{
+		"code": 666,
+		"reason": "This train has been delayed by a train hitting an obstruction on the line earlier today"
+	},
+	{
+		"code": 667,
+		"reason": "This train has been delayed by a tree blocking the railway earlier on this train's journey"
+	},
+	{
+		"code": 668,
+		"reason": "This train has been delayed by a tree blocking the railway earlier today"
+	},
+	{
+		"code": 669,
+		"reason": "This train has been delayed by an obstruction on the track earlier on this train's journey"
+	},
+	{
+		"code": 670,
+		"reason": "This train has been delayed by an obstruction on the track earlier today"
+	},
+	{
+		"code": 671,
+		"reason": "This train has been delayed by checking reports of an obstruction on the line earlier on this train's journey"
+	},
+	{
+		"code": 672,
+		"reason": "This train has been delayed by checking reports of an obstruction on the line earlier today"
+	},
+	{
+		"code": 673,
+		"reason": "This train has been delayed by this train hitting an obstruction on the line earlier in its journey"
+	},
+	{
+		"code": 674,
+		"reason": "This train has been delayed by this train hitting an obstruction on the line earlier on this train's journey"
+	},
+	{
+		"code": 675,
+		"reason": "This train has been delayed by this train hitting an obstruction on the line earlier today"
+	},
+	{
+		"code": 676,
+		"reason": "This train has been delayed by a coach becoming uncoupled on a train"
+	},
+	{
+		"code": 677,
+		"reason": "This train has been delayed by a coach becoming uncoupled on this train"
+	},
+	{
+		"code": 678,
+		"reason": "This train has been delayed by a train not stopping at a station it was supposed to"
+	},
+	{
+		"code": 679,
+		"reason": "This train has been delayed by a train not stopping in the correct position at a station"
+	},
+	{
+		"code": 680,
+		"reason": "This train has been delayed by a train's automatic braking system being activated"
+	},
+	{
+		"code": 681,
+		"reason": "This train has been delayed by an operational incident"
+	},
+	{
+		"code": 682,
+		"reason": "This train has been delayed by this train not stopping at a station it was supposed to"
+	},
+	{
+		"code": 683,
+		"reason": "This train has been delayed by this train not stopping in the correct position at a station"
+	},
+	{
+		"code": 684,
+		"reason": "This train has been delayed by this train's automatic braking system being activated"
+	},
+	{
+		"code": 685,
+		"reason": "This train has been delayed by overcrowding"
+	},
+	{
+		"code": 686,
+		"reason": "This train has been delayed by overcrowding as this train has fewer coaches than normal"
+	},
+	{
+		"code": 687,
+		"reason": "This train has been delayed by overcrowding because an earlier train had fewer coaches than normal"
+	},
+	{
+		"code": 688,
+		"reason": "This train has been delayed by overcrowding because of a concert"
+	},
+	{
+		"code": 689,
+		"reason": "This train has been delayed by overcrowding because of a football match"
+	},
+	{
+		"code": 690,
+		"reason": "This train has been delayed by overcrowding because of a marathon"
+	},
+	{
+		"code": 691,
+		"reason": "This train has been delayed by overcrowding because of a rugby match"
+	},
+	{
+		"code": 692,
+		"reason": "This train has been delayed by overcrowding because of a sporting event"
+	},
+	{
+		"code": 693,
+		"reason": "This train has been delayed by overcrowding because of an earlier cancellation"
+	},
+	{
+		"code": 694,
+		"reason": "This train has been delayed by overcrowding because of an event"
+	},
+	{
+		"code": 695,
+		"reason": "This train has been delayed by overcrowding earlier on this train's journey"
+	},
+	{
+		"code": 696,
+		"reason": "This train has been delayed by animals on the railway"
+	},
+	{
+		"code": 697,
+		"reason": "This train has been delayed by cattle on the railway"
+	},
+	{
+		"code": 698,
+		"reason": "This train has been delayed by horses on the railway"
+	},
+	{
+		"code": 699,
+		"reason": "This train has been delayed by sheep on the railway"
+	},
+	{
+		"code": 700,
+		"reason": "This train has been delayed by animals on the railway earlier today"
+	},
+	{
+		"code": 701,
+		"reason": "This train has been delayed by cattle on the railway earlier today"
+	},
+	{
+		"code": 702,
+		"reason": "This train has been delayed by horses on the railway earlier today"
+	},
+	{
+		"code": 703,
+		"reason": "This train has been delayed by sheep on the railway earlier today"
+	},
+	{
+		"code": 704,
+		"reason": "This train has been delayed by passengers causing a disturbance on a train"
+	},
+	{
+		"code": 705,
+		"reason": "This train has been delayed by passengers causing a disturbance on this train"
+	},
+	{
+		"code": 706,
+		"reason": "This train has been delayed by passengers causing a disturbance earlier in this train's journey"
+	},
+	{
+		"code": 707,
+		"reason": "This train has been delayed by passengers causing a disturbance on a train earlier today"
+	},
+	{
+		"code": 708,
+		"reason": "This train has been delayed by a fault with the electric third rail earlier on this train's journey"
+	},
+	{
+		"code": 709,
+		"reason": "This train has been delayed by a fault with the electric third rail earlier today"
+	},
+	{
+		"code": 710,
+		"reason": "This train has been delayed by damage to the electric third rail earlier on this train's journey"
+	},
+	{
+		"code": 711,
+		"reason": "This train has been delayed by damage to the electric third rail earlier today"
+	},
+	{
+		"code": 712,
+		"reason": "This train has been delayed by failure of the electricity supply earlier on this train's journey"
+	},
+	{
+		"code": 713,
+		"reason": "This train has been delayed by failure of the electricity supply earlier today"
+	},
+	{
+		"code": 714,
+		"reason": "This train has been delayed by the electricity being switched off for safety reasons earlier on this train's journey"
+	},
+	{
+		"code": 715,
+		"reason": "This train has been delayed by the electricity being switched off for safety reasons earlier today"
+	},
+	{
+		"code": 716,
+		"reason": "This train has been delayed by urgent repairs to a bridge earlier today"
+	},
+	{
+		"code": 717,
+		"reason": "This train has been delayed by urgent repairs to a tunnel earlier today"
+	},
+	{
+		"code": 718,
+		"reason": "This train has been delayed by urgent repairs to the railway earlier today"
+	},
+	{
+		"code": 719,
+		"reason": "This train has been delayed by urgent repairs to the track earlier today"
+	},
+	{
+		"code": 720,
+		"reason": "This train has been delayed by expected industrial action earlier today"
+	},
+	{
+		"code": 721,
+		"reason": "This train has been delayed by expected industrial action yesterday"
+	},
+	{
+		"code": 722,
+		"reason": "This train has been delayed by industrial action earlier today"
+	},
+	{
+		"code": 723,
+		"reason": "This train has been delayed by industrial action yesterday"
+	},
+	{
+		"code": 724,
+		"reason": "This train has been delayed by an object being caught on the overhead electric wires earlier on this train's journey"
+	},
+	{
+		"code": 725,
+		"reason": "This train has been delayed by an object being caught on the overhead electric wires earlier today"
+	},
+	{
+		"code": 726,
+		"reason": "This train has been delayed by damage to the overhead electric wires earlier on this train's journey"
+	},
+	{
+		"code": 727,
+		"reason": "This train has been delayed by damage to the overhead electric wires earlier today"
+	},
+	{
+		"code": 728,
+		"reason": "This train has been delayed by earlier engineering works not being finished on time"
+	},
+	{
+		"code": 729,
+		"reason": "This train has been delayed by a fault with the on train signalling system earlier on this train's journey"
+	},
+	{
+		"code": 730,
+		"reason": "This train has been delayed by a fault with the on train signalling system earlier today"
+	},
+	{
+		"code": 731,
+		"reason": "This train has been delayed by a fault with the radio system between the driver and the signaller earlier on this train's journey"
+	},
+	{
+		"code": 732,
+		"reason": "This train has been delayed by a fault with the radio system between the driver and the signaller earlier today"
+	},
+	{
+		"code": 733,
+		"reason": "This train has been delayed by a fault with the signalling system earlier on this train's journey"
+	},
+	{
+		"code": 734,
+		"reason": "This train has been delayed by a fault with the signalling system earlier today"
+	},
+	{
+		"code": 735,
+		"reason": "This train has been delayed by signalling staff being taken ill earlier on this train's journey"
+	},
+	{
+		"code": 736,
+		"reason": "This train has been delayed by signalling staff being taken ill earlier today"
+	},
+	{
+		"code": 737,
+		"reason": "This train has been delayed by the fire alarm sounding in a signalbox earlier on this train's journey"
+	},
+	{
+		"code": 738,
+		"reason": "This train has been delayed by the fire alarm sounding in a signalbox earlier today"
+	},
+	{
+		"code": 739,
+		"reason": "This train has been delayed by the fire alarm sounding in the signalling centre earlier on this train's journey"
+	},
+	{
+		"code": 740,
+		"reason": "This train has been delayed by the fire alarm sounding in the signalling centre earlier today"
+	},
+	{
+		"code": 741,
+		"reason": "This train has been delayed by attempted theft of overhead line electrification equipment earlier today"
+	},
+	{
+		"code": 742,
+		"reason": "This train has been delayed by attempted theft of overhead line electrification equipment yesterday"
+	},
+	{
+		"code": 743,
+		"reason": "This train has been delayed by attempted theft of railway equipment earlier today"
+	},
+	{
+		"code": 744,
+		"reason": "This train has been delayed by attempted theft of railway equipment yesterday"
+	},
+	{
+		"code": 745,
+		"reason": "This train has been delayed by attempted theft of signalling cables earlier today"
+	},
+	{
+		"code": 746,
+		"reason": "This train has been delayed by attempted theft of signalling cables yesterday"
+	},
+	{
+		"code": 747,
+		"reason": "This train has been delayed by attempted theft of third rail electrification equipment earlier today"
+	},
+	{
+		"code": 748,
+		"reason": "This train has been delayed by attempted theft of third rail electrification equipment yesterday"
+	},
+	{
+		"code": 749,
+		"reason": "This train has been delayed by theft of overhead line electrification equipment earlier today"
+	},
+	{
+		"code": 750,
+		"reason": "This train has been delayed by theft of overhead line electrification equipment yesterday"
+	},
+	{
+		"code": 751,
+		"reason": "This train has been delayed by theft of railway equipment earlier today"
+	},
+	{
+		"code": 752,
+		"reason": "This train has been delayed by theft of railway equipment yesterday"
+	},
+	{
+		"code": 753,
+		"reason": "This train has been delayed by theft of signalling cables earlier today"
+	},
+	{
+		"code": 754,
+		"reason": "This train has been delayed by theft of signalling cables yesterday"
+	},
+	{
+		"code": 755,
+		"reason": "This train has been delayed by theft of third rail electrification equipment earlier today"
+	},
+	{
+		"code": 756,
+		"reason": "This train has been delayed by theft of third rail electrification equipment yesterday"
+	},
+	{
+		"code": 757,
+		"reason": "This train has been delayed by vandalism at a station earlier today"
+	},
+	{
+		"code": 758,
+		"reason": "This train has been delayed by vandalism at a station yesterday"
+	},
+	{
+		"code": 759,
+		"reason": "This train has been delayed by vandalism of railway equipment earlier today"
+	},
+	{
+		"code": 760,
+		"reason": "This train has been delayed by vandalism of railway equipment yesterday"
+	},
+	{
+		"code": 761,
+		"reason": "This train has been delayed by vandalism on a train earlier today"
+	},
+	{
+		"code": 762,
+		"reason": "This train has been delayed by vandalism on a train yesterday"
+	},
+	{
+		"code": 763,
+		"reason": "This train has been delayed by vandalism on this train earlier today"
+	},
+	{
+		"code": 764,
+		"reason": "This train has been delayed by vandalism on this train yesterday"
+	},
+	{
+		"code": 765,
+		"reason": "This train has been delayed by a fault with the electric third rail"
+	},
+	{
+		"code": 766,
+		"reason": "This train has been delayed by damage to the electric third rail"
+	},
+	{
+		"code": 767,
+		"reason": "This train has been delayed by failure of the electricity supply"
+	},
+	{
+		"code": 768,
+		"reason": "This train has been delayed by the electricity being switched off for safety reasons"
+	},
+	{
+		"code": 769,
+		"reason": "This train has been delayed by urgent repairs to a bridge"
+	},
+	{
+		"code": 770,
+		"reason": "This train has been delayed by urgent repairs to a tunnel"
+	},
+	{
+		"code": 771,
+		"reason": "This train has been delayed by urgent repairs to the railway"
+	},
+	{
+		"code": 772,
+		"reason": "This train has been delayed by urgent repairs to the track"
+	},
+	{
+		"code": 773,
+		"reason": "This train has been delayed by the emergency services dealing with an incident earlier today"
+	},
+	{
+		"code": 774,
+		"reason": "This train has been delayed by ambulance service dealing with an incident"
+	},
+	{
+		"code": 775,
+		"reason": "This train has been delayed by fire brigade dealing with an incident"
+	},
+	{
+		"code": 776,
+		"reason": "This train has been delayed by police dealing with an incident"
+	},
+	{
+		"code": 777,
+		"reason": "This train has been delayed by the emergency services dealing with an incident"
+	},
+	{
+		"code": 778,
+		"reason": "This train has been delayed by the fire alarm sounding at a station"
+	},
+	{
+		"code": 779,
+		"reason": "This train has been delayed by the fire alarm sounding at a station earlier today"
+	},
+	{
+		"code": 780,
+		"reason": "This train has been delayed by a burst water main flooding the railway"
+	},
+	{
+		"code": 781,
+		"reason": "This train has been delayed by a river flooding the railway"
+	},
+	{
+		"code": 782,
+		"reason": "This train has been delayed by flood water making the railway potentially unsafe"
+	},
+	{
+		"code": 783,
+		"reason": "This train has been delayed by flooding"
+	},
+	{
+		"code": 784,
+		"reason": "This train has been delayed by heavy rain flooding the railway"
+	},
+	{
+		"code": 785,
+		"reason": "This train has been delayed by predicted flooding"
+	},
+	{
+		"code": 786,
+		"reason": "This train has been delayed by the sea flooding the railway"
+	},
+	{
+		"code": 787,
+		"reason": "This train has been delayed by a burst water main flooding the railway earlier today"
+	},
+	{
+		"code": 788,
+		"reason": "This train has been delayed by a river flooding the railway earlier today"
+	},
+	{
+		"code": 789,
+		"reason": "This train has been delayed by flood water making the railway potentially unsafe earlier today"
+	},
+	{
+		"code": 790,
+		"reason": "This train has been delayed by flooding earlier in this train's journey"
+	},
+	{
+		"code": 791,
+		"reason": "This train has been delayed by flooding earlier today"
+	},
+	{
+		"code": 792,
+		"reason": "This train has been delayed by heavy rain flooding the railway earlier today"
+	},
+	{
+		"code": 793,
+		"reason": "This train has been delayed by predicted flooding earlier today"
+	},
+	{
+		"code": 794,
+		"reason": "This train has been delayed by the sea flooding the railway earlier today"
+	},
+	{
+		"code": 795,
+		"reason": "This train has been delayed by thick fog"
+	},
+	{
+		"code": 796,
+		"reason": "This train has been delayed by thick fog earlier in this train's journey"
+	},
+	{
+		"code": 797,
+		"reason": "This train has been delayed by thick fog earlier today"
+	},
+	{
+		"code": 798,
+		"reason": "This train has been delayed by forecasted high winds"
+	},
+	{
+		"code": 799,
+		"reason": "This train has been delayed by high winds"
+	},
+	{
+		"code": 800,
+		"reason": "This train has been delayed by high winds earlier in this train's journey"
+	},
+	{
+		"code": 801,
+		"reason": "This train has been delayed by high winds earlier today"
+	},
+	{
+		"code": 802,
+		"reason": "This train has been delayed by expected industrial action"
+	},
+	{
+		"code": 803,
+		"reason": "This train has been delayed by industrial action"
+	},
+	{
+		"code": 804,
+		"reason": "This train has been delayed by lightning damaging a station"
+	},
+	{
+		"code": 805,
+		"reason": "This train has been delayed by lightning damaging a train"
+	},
+	{
+		"code": 806,
+		"reason": "This train has been delayed by lightning damaging equipment"
+	},
+	{
+		"code": 807,
+		"reason": "This train has been delayed by lightning damaging the electricity supply"
+	},
+	{
+		"code": 808,
+		"reason": "This train has been delayed by lightning damaging the signalling system"
+	},
+	{
+		"code": 809,
+		"reason": "This train has been delayed by lightning damaging this train"
+	},
+	{
+		"code": 810,
+		"reason": "This train has been delayed by an object being caught on the overhead electric wires"
+	},
+	{
+		"code": 811,
+		"reason": "This train has been delayed by damage to the overhead electric wires"
+	},
+	{
+		"code": 812,
+		"reason": "This train has been delayed by engineering works not being finished on time"
+	},
+	{
+		"code": 813,
+		"reason": "This train has been delayed by forecasted slippery rails"
+	},
+	{
+		"code": 814,
+		"reason": "This train has been delayed by ice preventing this train getting electricity from the third rail"
+	},
+	{
+		"code": 815,
+		"reason": "This train has been delayed by ice preventing trains getting electricity from the third rail"
+	},
+	{
+		"code": 816,
+		"reason": "This train has been delayed by slippery rails"
+	},
+	{
+		"code": 817,
+		"reason": "This train has been delayed by slippery rails earlier in this train's journey"
+	},
+	{
+		"code": 818,
+		"reason": "This train has been delayed by slippery rails earlier today"
+	},
+	{
+		"code": 819,
+		"reason": "This train has been delayed by forecasted severe weather"
+	},
+	{
+		"code": 820,
+		"reason": "This train has been delayed by severe weather"
+	},
+	{
+		"code": 821,
+		"reason": "This train has been delayed by severe weather earlier"
+	},
+	{
+		"code": 822,
+		"reason": "This train has been delayed by severe weather earlier in this train's journey"
+	},
+	{
+		"code": 823,
+		"reason": "This train has been delayed by severe weather earlier today"
+	},
+	{
+		"code": 824,
+		"reason": "This train has been delayed by a safety inspection of the track"
+	},
+	{
+		"code": 825,
+		"reason": "This train has been delayed by a safety inspection on a train"
+	},
+	{
+		"code": 826,
+		"reason": "This train has been delayed by a safety inspection on this train"
+	},
+	{
+		"code": 827,
+		"reason": "This train has been delayed by a safety inspection of the track earlier today"
+	},
+	{
+		"code": 828,
+		"reason": "This train has been delayed by a safety inspection on a train earlier today"
+	},
+	{
+		"code": 829,
+		"reason": "This train has been delayed by a safety inspection on this train earlier in its journey"
+	},
+	{
+		"code": 830,
+		"reason": "This train has been delayed by a fault with the on train signalling system"
+	},
+	{
+		"code": 831,
+		"reason": "This train has been delayed by a fault with the radio system between the driver and the signaller"
+	},
+	{
+		"code": 832,
+		"reason": "This train has been delayed by a fault with the signalling system"
+	},
+	{
+		"code": 833,
+		"reason": "This train has been delayed by signalling staff being taken ill"
+	},
+	{
+		"code": 834,
+		"reason": "This train has been delayed by the fire alarm sounding in a signalbox"
+	},
+	{
+		"code": 835,
+		"reason": "This train has been delayed by the fire alarm sounding in the signalling centre"
+	},
+	{
+		"code": 836,
+		"reason": "This train has been delayed by forecasted heavy snow"
+	},
+	{
+		"code": 837,
+		"reason": "This train has been delayed by heavy snow"
+	},
+	{
+		"code": 838,
+		"reason": "This train has been delayed by heavy snow earlier in this train's journey"
+	},
+	{
+		"code": 839,
+		"reason": "This train has been delayed by heavy snow earlier today"
+	},
+	{
+		"code": 840,
+		"reason": "This train has been delayed by heavy snow over recent days"
+	},
+	{
+		"code": 841,
+		"reason": "This train has been delayed by a speed restriction"
+	},
+	{
+		"code": 842,
+		"reason": "This train has been delayed by a speed restriction because of fog"
+	},
+	{
+		"code": 843,
+		"reason": "This train has been delayed by a speed restriction because of fog earlier on this train's journey"
+	},
+	{
+		"code": 844,
+		"reason": "This train has been delayed by a speed restriction because of fog earlier today"
+	},
+	{
+		"code": 845,
+		"reason": "This train has been delayed by a speed restriction because of heavy rain"
+	},
+	{
+		"code": 846,
+		"reason": "This train has been delayed by a speed restriction because of heavy rain earlier on this train's journey"
+	},
+	{
+		"code": 847,
+		"reason": "This train has been delayed by a speed restriction because of heavy rain earlier today"
+	},
+	{
+		"code": 848,
+		"reason": "This train has been delayed by a speed restriction because of high track temperatures"
+	},
+	{
+		"code": 849,
+		"reason": "This train has been delayed by a speed restriction because of high track temperatures earlier on this train's journey"
+	},
+	{
+		"code": 850,
+		"reason": "This train has been delayed by a speed restriction because of high track temperatures earlier today"
+	},
+	{
+		"code": 851,
+		"reason": "This train has been delayed by a speed restriction because of high winds"
+	},
+	{
+		"code": 852,
+		"reason": "This train has been delayed by a speed restriction because of high winds earlier on this train's journey"
+	},
+	{
+		"code": 853,
+		"reason": "This train has been delayed by a speed restriction because of high winds earlier today"
+	},
+	{
+		"code": 854,
+		"reason": "This train has been delayed by a speed restriction because of severe weather"
+	},
+	{
+		"code": 855,
+		"reason": "This train has been delayed by a speed restriction because of severe weather earlier on this train's journey"
+	},
+	{
+		"code": 856,
+		"reason": "This train has been delayed by a speed restriction because of severe weather earlier today"
+	},
+	{
+		"code": 857,
+		"reason": "This train has been delayed by a speed restriction because of snow and ice"
+	},
+	{
+		"code": 858,
+		"reason": "This train has been delayed by a speed restriction because of snow and ice earlier on this train's journey"
+	},
+	{
+		"code": 859,
+		"reason": "This train has been delayed by a speed restriction because of snow and ice earlier today"
+	},
+	{
+		"code": 860,
+		"reason": "This train has been delayed by a speed restriction earlier on this train's journey"
+	},
+	{
+		"code": 861,
+		"reason": "This train has been delayed by a speed restriction earlier today"
+	},
+	{
+		"code": 862,
+		"reason": "This train has been delayed by a speed restriction in a tunnel"
+	},
+	{
+		"code": 863,
+		"reason": "This train has been delayed by a speed restriction in a tunnel earlier on this train's journey"
+	},
+	{
+		"code": 864,
+		"reason": "This train has been delayed by a speed restriction in a tunnel earlier today"
+	},
+	{
+		"code": 865,
+		"reason": "This train has been delayed by a speed restriction over a bridge"
+	},
+	{
+		"code": 866,
+		"reason": "This train has been delayed by a speed restriction over a bridge earlier on this train's journey"
+	},
+	{
+		"code": 867,
+		"reason": "This train has been delayed by a speed restriction over a bridge earlier today"
+	},
+	{
+		"code": 868,
+		"reason": "This train has been delayed by a speed restriction over an embankment"
+	},
+	{
+		"code": 869,
+		"reason": "This train has been delayed by a speed restriction over an embankment earlier on this train's journey"
+	},
+	{
+		"code": 870,
+		"reason": "This train has been delayed by a speed restriction over an embankment earlier today"
+	},
+	{
+		"code": 871,
+		"reason": "This train has been delayed by a speed restriction over defective track"
+	},
+	{
+		"code": 872,
+		"reason": "This train has been delayed by a speed restriction over defective track earlier on this train's journey"
+	},
+	{
+		"code": 873,
+		"reason": "This train has been delayed by a speed restriction over defective track earlier today"
+	},
+	{
+		"code": 874,
+		"reason": "This train has been delayed by attempted theft of overhead line electrification equipment"
+	},
+	{
+		"code": 875,
+		"reason": "This train has been delayed by attempted theft of railway equipment"
+	},
+	{
+		"code": 876,
+		"reason": "This train has been delayed by attempted theft of signalling cables"
+	},
+	{
+		"code": 877,
+		"reason": "This train has been delayed by attempted theft of third rail electrification equipment"
+	},
+	{
+		"code": 878,
+		"reason": "This train has been delayed by theft of overhead line electrification equipment"
+	},
+	{
+		"code": 879,
+		"reason": "This train has been delayed by theft of railway equipment"
+	},
+	{
+		"code": 880,
+		"reason": "This train has been delayed by theft of signalling cables"
+	},
+	{
+		"code": 881,
+		"reason": "This train has been delayed by theft of third rail electrification equipment"
+	},
+	{
+		"code": 882,
+		"reason": "This train has been delayed by vandalism at a station"
+	},
+	{
+		"code": 883,
+		"reason": "This train has been delayed by vandalism of railway equipment"
+	},
+	{
+		"code": 884,
+		"reason": "This train has been delayed by vandalism on a train"
+	},
+	{
+		"code": 885,
+		"reason": "This train has been delayed by vandalism on this train"
+	},
+	{
+		"code": 886,
+		"reason": "This train has been delayed by train crew being delayed"
+	},
+	{
+		"code": 887,
+		"reason": "This train has been delayed by train crew being delayed by service disruption"
+	},
+	{
+		"code": 888,
+		"reason": "This train has been delayed by a bridge being damaged"
+	},
+	{
+		"code": 889,
+		"reason": "This train has been delayed by a bridge being damaged by a boat"
+	},
+	{
+		"code": 890,
+		"reason": "This train has been delayed by a bridge being damaged by a road vehicle"
+	},
+	{
+		"code": 891,
+		"reason": "This train has been delayed by a bridge having collapsed"
+	},
+	{
+		"code": 892,
+		"reason": "This train has been delayed by a broken rail"
+	},
+	{
+		"code": 893,
+		"reason": "This train has been delayed by a late departure while the train was cleaned specially"
+	},
+	{
+		"code": 894,
+		"reason": "This train has been delayed by a late running freight train"
+	},
+	{
+		"code": 895,
+		"reason": "This train has been delayed by a late running train being in front of this one"
+	},
+	{
+		"code": 896,
+		"reason": "This train has been delayed by a points failure"
+	},
+	{
+		"code": 897,
+		"reason": "This train has been delayed by a power cut at the station"
+	},
+	{
+		"code": 898,
+		"reason": "This train has been delayed by a problem with the station lighting"
+	},
+	{
+		"code": 899,
+		"reason": "This train has been delayed by a rail buckling in the heat"
+	},
+	{
+		"code": 900,
+		"reason": "This train has been delayed by a railway embankment being damaged"
+	},
+	{
+		"code": 901,
+		"reason": "This train has been delayed by a shortage of station staff"
+	},
+	{
+		"code": 902,
+		"reason": "This train has been delayed by a tunnel being closed for safety reasons"
+	},
+	{
+		"code": 903,
+		"reason": "This train has been delayed by an incident at the airport"
+	},
+	{
+		"code": 904,
+		"reason": "This train has been delayed by congestion"
+	},
+	{
+		"code": 905,
+		"reason": "This train has been delayed by the communication alarm being activated on a train"
+	},
+	{
+		"code": 906,
+		"reason": "This train has been delayed by the communication alarm being activated on this train"
+	},
+	{
+		"code": 907,
+		"reason": "This train has been delayed by the train departing late to maintain customer connections"
+	},
+	{
+		"code": 908,
+		"reason": "This train has been delayed by the train making extra stops because a train was cancelled"
+	},
+	{
+		"code": 909,
+		"reason": "This train has been delayed by the train making extra stops because of service disruption"
+	},
+	{
+		"code": 910,
+		"reason": "This train has been delayed by waiting for a part of the train to be attached"
+	}],
+	"cancelReasons": [{
+		"code": 100,
+		"reason": "This train has been cancelled because of a broken down train"
+	},
+	{
+		"code": 101,
+		"reason": "This train has been cancelled because of a delay on a previous journey"
+	},
+	{
+		"code": 102,
+		"reason": "This train has been cancelled because of a derailed train"
+	},
+	{
+		"code": 104,
+		"reason": "This train has been cancelled because of a fire at a station"
+	},
+	{
+		"code": 105,
+		"reason": "This train has been cancelled because of a fire at a station earlier"
+	},
+	{
+		"code": 106,
+		"reason": "This train has been cancelled because of a landslip"
+	},
+	{
+		"code": 107,
+		"reason": "This train has been cancelled because of a line-side fire"
+	},
+	{
+		"code": 108,
+		"reason": "This train has been cancelled because of a member of train crew being unavailable"
+	},
+	{
+		"code": 109,
+		"reason": "This train has been cancelled because of a passenger being taken ill"
+	},
+	{
+		"code": 110,
+		"reason": "This train has been cancelled because of a passenger having been taken ill earlier"
+	},
+	{
+		"code": 111,
+		"reason": "This train has been cancelled because of a person hit by a train"
+	},
+	{
+		"code": 112,
+		"reason": "This train has been cancelled because of a person hit by a train earlier"
+	},
+	{
+		"code": 113,
+		"reason": "This train has been cancelled because of a problem at a level crossing"
+	},
+	{
+		"code": 114,
+		"reason": "This train has been cancelled because of a problem currently under investigation"
+	},
+	{
+		"code": 115,
+		"reason": "This train has been cancelled because of a problem near the railway"
+	},
+	{
+		"code": 116,
+		"reason": "This train has been cancelled because of a problem with a river bridge"
+	},
+	{
+		"code": 117,
+		"reason": "This train has been cancelled because of a problem with line side equipment"
+	},
+	{
+		"code": 118,
+		"reason": "This train has been cancelled because of a security alert"
+	},
+	{
+		"code": 119,
+		"reason": "This train has been cancelled because of a train derailed earlier"
+	},
+	{
+		"code": 120,
+		"reason": "This train has been cancelled because of a train fault"
+	},
+	{
+		"code": 121,
+		"reason": "This train has been cancelled because of a train late from the depot"
+	},
+	{
+		"code": 122,
+		"reason": "This train has been cancelled because of a train late from the depot earlier"
+	},
+	{
+		"code": 123,
+		"reason": "This train has been cancelled because of a trespass incident"
+	},
+	{
+		"code": 124,
+		"reason": "This train has been cancelled because of a vehicle striking a bridge"
+	},
+	{
+		"code": 125,
+		"reason": "This train has been cancelled because of a vehicle striking a bridge earlier"
+	},
+	{
+		"code": 126,
+		"reason": "This train has been cancelled because of an earlier broken down train"
+	},
+	{
+		"code": 128,
+		"reason": "This train has been cancelled because of an earlier landslip"
+	},
+	{
+		"code": 129,
+		"reason": "This train has been cancelled because of an earlier line-side fire"
+	},
+	{
+		"code": 130,
+		"reason": "This train has been cancelled because of an earlier operating incident"
+	},
+	{
+		"code": 131,
+		"reason": "This train has been cancelled because of an earlier problem at a level crossing"
+	},
+	{
+		"code": 132,
+		"reason": "This train has been cancelled because of an earlier problem near the railway"
+	},
+	{
+		"code": 133,
+		"reason": "This train has been cancelled because of an earlier problem with a river bridge"
+	},
+	{
+		"code": 134,
+		"reason": "This train has been cancelled because of an earlier problem with line side equipment"
+	},
+	{
+		"code": 135,
+		"reason": "This train has been cancelled because of an earlier security alert"
+	},
+	{
+		"code": 136,
+		"reason": "This train has been cancelled because of an earlier train fault"
+	},
+	{
+		"code": 137,
+		"reason": "This train has been cancelled because of an earlier trespass incident"
+	},
+	{
+		"code": 138,
+		"reason": "This train has been cancelled because of an obstruction on the line"
+	},
+	{
+		"code": 139,
+		"reason": "This train has been cancelled because of an obstruction on the line earlier"
+	},
+	{
+		"code": 140,
+		"reason": "This train has been cancelled because of an operating incident"
+	},
+	{
+		"code": 141,
+		"reason": "This train has been cancelled because of an unusually large passenger flow"
+	},
+	{
+		"code": 142,
+		"reason": "This train has been cancelled because of an unusually large passenger flow earlier"
+	},
+	{
+		"code": 143,
+		"reason": "This train has been cancelled because of animals on the line"
+	},
+	{
+		"code": 144,
+		"reason": "This train has been cancelled because of animals on the line earlier"
+	},
+	{
+		"code": 145,
+		"reason": "This train has been cancelled because of congestion caused by earlier delays"
+	},
+	{
+		"code": 146,
+		"reason": "This train has been cancelled because of disruptive passengers"
+	},
+	{
+		"code": 147,
+		"reason": "This train has been cancelled because of disruptive passengers earlier"
+	},
+	{
+		"code": 148,
+		"reason": "This train has been cancelled because of earlier electrical supply problems"
+	},
+	{
+		"code": 149,
+		"reason": "This train has been cancelled because of earlier emergency engineering works"
+	},
+	{
+		"code": 150,
+		"reason": "This train has been cancelled because of earlier industrial action"
+	},
+	{
+		"code": 151,
+		"reason": "This train has been cancelled because of earlier overhead wire problems"
+	},
+	{
+		"code": 152,
+		"reason": "This train has been cancelled because of earlier over-running engineering works"
+	},
+	{
+		"code": 153,
+		"reason": "This train has been cancelled because of earlier signalling problems"
+	},
+	{
+		"code": 154,
+		"reason": "This train has been cancelled because of earlier vandalism"
+	},
+	{
+		"code": 155,
+		"reason": "This train has been cancelled because of electrical supply problems"
+	},
+	{
+		"code": 156,
+		"reason": "This train has been cancelled because of emergency engineering works"
+	},
+	{
+		"code": 157,
+		"reason": "This train has been cancelled because of emergency services dealing with a prior incident"
+	},
+	{
+		"code": 158,
+		"reason": "This train has been cancelled because of emergency services dealing with an incident"
+	},
+	{
+		"code": 159,
+		"reason": "This train has been cancelled because of fire alarms sounding at a station"
+	},
+	{
+		"code": 160,
+		"reason": "This train has been cancelled because of fire alarms sounding earlier at a station"
+	},
+	{
+		"code": 161,
+		"reason": "This train has been cancelled because of flooding"
+	},
+	{
+		"code": 162,
+		"reason": "This train has been cancelled because of flooding earlier"
+	},
+	{
+		"code": 163,
+		"reason": "This train has been cancelled because of fog"
+	},
+	{
+		"code": 164,
+		"reason": "This train has been cancelled because of fog earlier"
+	},
+	{
+		"code": 165,
+		"reason": "This train has been cancelled because of high winds"
+	},
+	{
+		"code": 166,
+		"reason": "This train has been cancelled because of high winds earlier"
+	},
+	{
+		"code": 167,
+		"reason": "This train has been cancelled because of industrial action"
+	},
+	{
+		"code": 168,
+		"reason": "This train has been cancelled because of lightning having damaged equipment"
+	},
+	{
+		"code": 169,
+		"reason": "This train has been cancelled because of overhead wire problems"
+	},
+	{
+		"code": 170,
+		"reason": "This train has been cancelled because of over-running engineering works"
+	},
+	{
+		"code": 171,
+		"reason": "This train has been cancelled because of passengers transferring between trains"
+	},
+	{
+		"code": 172,
+		"reason": "This train has been cancelled because of passengers transferring between trains earlier"
+	},
+	{
+		"code": 173,
+		"reason": "This train has been cancelled because of poor rail conditions"
+	},
+	{
+		"code": 174,
+		"reason": "This train has been cancelled because of poor rail conditions earlier"
+	},
+	{
+		"code": 175,
+		"reason": "This train has been cancelled because of poor weather conditions"
+	},
+	{
+		"code": 176,
+		"reason": "This train has been cancelled because of poor weather conditions earlier"
+	},
+	{
+		"code": 177,
+		"reason": "This train has been cancelled because of safety checks being made"
+	},
+	{
+		"code": 178,
+		"reason": "This train has been cancelled because of safety checks having been made earlier"
+	},
+	{
+		"code": 179,
+		"reason": "This train has been cancelled because of signalling problems"
+	},
+	{
+		"code": 180,
+		"reason": "This train has been cancelled because of snow"
+	},
+	{
+		"code": 181,
+		"reason": "This train has been cancelled because of snow earlier"
+	},
+	{
+		"code": 182,
+		"reason": "This train has been cancelled because of speed restrictions having been imposed"
+	},
+	{
+		"code": 183,
+		"reason": "This train has been cancelled because of train crew having been unavailable earlier"
+	},
+	{
+		"code": 184,
+		"reason": "This train has been cancelled because of vandalism"
+	},
+	{
+		"code": 185,
+		"reason": "This train has been cancelled because of waiting earlier for a train crew member"
+	},
+	{
+		"code": 186,
+		"reason": "This train has been cancelled because of waiting for a train crew member"
+	},
+	{
+		"code": 187,
+		"reason": "This train has been cancelled because of engineering works"
+	},
+	{
+		"code": 501,
+		"reason": "This train has been cancelled because of a broken down train"
+	},
+	{
+		"code": 502,
+		"reason": "This train has been cancelled because of a broken windscreen on the train"
+	},
+	{
+		"code": 503,
+		"reason": "This train has been cancelled because of a shortage of trains because of accident damage"
+	},
+	{
+		"code": 504,
+		"reason": "This train has been cancelled because of a shortage of trains because of extra safety inspections"
+	},
+	{
+		"code": 505,
+		"reason": "This train has been cancelled because of a shortage of trains because of vandalism"
+	},
+	{
+		"code": 506,
+		"reason": "This train has been cancelled because of a shortage of trains following damage by snow and ice"
+	},
+	{
+		"code": 507,
+		"reason": "This train has been cancelled because of more trains than usual needing repairs at the same time"
+	},
+	{
+		"code": 508,
+		"reason": "This train has been cancelled because of the train for this service having broken down"
+	},
+	{
+		"code": 509,
+		"reason": "This train has been cancelled because of this train breaking down"
+	},
+	{
+		"code": 510,
+		"reason": "This train has been cancelled because of a collision between trains"
+	},
+	{
+		"code": 511,
+		"reason": "This train has been cancelled because of a collision with the buffers at a station"
+	},
+	{
+		"code": 512,
+		"reason": "This train has been cancelled because of a derailed train"
+	},
+	{
+		"code": 513,
+		"reason": "This train has been cancelled because of a derailment within the depot"
+	},
+	{
+		"code": 514,
+		"reason": "This train has been cancelled because of a low speed derailment"
+	},
+	{
+		"code": 515,
+		"reason": "This train has been cancelled because of a train being involved in an accident"
+	},
+	{
+		"code": 516,
+		"reason": "This train has been cancelled because of trains being involved in an accident"
+	},
+	{
+		"code": 517,
+		"reason": "This train has been cancelled because of a fire at a station"
+	},
+	{
+		"code": 518,
+		"reason": "This train has been cancelled because of a fire at a station earlier today"
+	},
+	{
+		"code": 519,
+		"reason": "This train has been cancelled because of a landslip"
+	},
+	{
+		"code": 520,
+		"reason": "This train has been cancelled because of a fire next to the track"
+	},
+	{
+		"code": 521,
+		"reason": "This train has been cancelled because of a fire on a train"
+	},
+	{
+		"code": 522,
+		"reason": "This train has been cancelled because of a member of on train staff being taken ill"
+	},
+	{
+		"code": 523,
+		"reason": "This train has been cancelled because of a shortage of on train staff"
+	},
+	{
+		"code": 524,
+		"reason": "This train has been cancelled because of a shortage of train conductors"
+	},
+	{
+		"code": 525,
+		"reason": "This train has been cancelled because of a shortage of train crew"
+	},
+	{
+		"code": 526,
+		"reason": "This train has been cancelled because of a shortage of train drivers"
+	},
+	{
+		"code": 527,
+		"reason": "This train has been cancelled because of a shortage of train guards"
+	},
+	{
+		"code": 528,
+		"reason": "This train has been cancelled because of a shortage of train managers"
+	},
+	{
+		"code": 529,
+		"reason": "This train has been cancelled because of severe weather preventing train crew getting to work"
+	},
+	{
+		"code": 530,
+		"reason": "This train has been cancelled because of the train conductor being taken ill"
+	},
+	{
+		"code": 531,
+		"reason": "This train has been cancelled because of the train driver being taken ill"
+	},
+	{
+		"code": 532,
+		"reason": "This train has been cancelled because of the train guard being taken ill"
+	},
+	{
+		"code": 533,
+		"reason": "This train has been cancelled because of the train manager being taken ill"
+	},
+	{
+		"code": 534,
+		"reason": "This train has been cancelled because of a passenger being taken ill at a station"
+	},
+	{
+		"code": 535,
+		"reason": "This train has been cancelled because of a passenger being taken ill on a train"
+	},
+	{
+		"code": 536,
+		"reason": "This train has been cancelled because of a passenger being taken ill on this train"
+	},
+	{
+		"code": 537,
+		"reason": "This train has been cancelled because of a passenger being taken ill at a station earlier today"
+	},
+	{
+		"code": 538,
+		"reason": "This train has been cancelled because of a passenger being taken ill on a train earlier today"
+	},
+	{
+		"code": 539,
+		"reason": "This train has been cancelled because of a passenger being taken ill on this train earlier in its journey"
+	},
+	{
+		"code": 540,
+		"reason": "This train has been cancelled because of a person being hit by a train"
+	},
+	{
+		"code": 541,
+		"reason": "This train has been cancelled because of a person being hit by a train earlier today"
+	},
+	{
+		"code": 542,
+		"reason": "This train has been cancelled because of a collision at a level crossing"
+	},
+	{
+		"code": 543,
+		"reason": "This train has been cancelled because of a fault with barriers at a level crossing"
+	},
+	{
+		"code": 544,
+		"reason": "This train has been cancelled because of a road accident at a level crossing"
+	},
+	{
+		"code": 545,
+		"reason": "This train has been cancelled because of a road vehicle colliding with level crossing barriers"
+	},
+	{
+		"code": 546,
+		"reason": "This train has been cancelled because of a road vehicle damaging track at a level crossing"
+	},
+	{
+		"code": 547,
+		"reason": "This train has been cancelled because of a problem currently under investigation"
+	},
+	{
+		"code": 548,
+		"reason": "This train has been cancelled because of a burst water main near the railway"
+	},
+	{
+		"code": 549,
+		"reason": "This train has been cancelled because of a chemical spillage near the railway"
+	},
+	{
+		"code": 550,
+		"reason": "This train has been cancelled because of a fire near the railway involving gas cylinders"
+	},
+	{
+		"code": 551,
+		"reason": "This train has been cancelled because of a fire near the railway suspected to involve gas cylinders"
+	},
+	{
+		"code": 552,
+		"reason": "This train has been cancelled because of a fire on property near the railway"
+	},
+	{
+		"code": 553,
+		"reason": "This train has been cancelled because of a gas leak near the railway"
+	},
+	{
+		"code": 554,
+		"reason": "This train has been cancelled because of a road accident near the railway"
+	},
+	{
+		"code": 555,
+		"reason": "This train has been cancelled because of a wartime bomb near the railway"
+	},
+	{
+		"code": 556,
+		"reason": "This train has been cancelled because of ambulance service dealing with an incident near the railway"
+	},
+	{
+		"code": 557,
+		"reason": "This train has been cancelled because of emergency services dealing with an incident near the railway"
+	},
+	{
+		"code": 558,
+		"reason": "This train has been cancelled because of fire brigade dealing with an incident near the railway"
+	},
+	{
+		"code": 559,
+		"reason": "This train has been cancelled because of police dealing with an incident near the railway"
+	},
+	{
+		"code": 560,
+		"reason": "This train has been cancelled because of a boat colliding with a bridge"
+	},
+	{
+		"code": 561,
+		"reason": "This train has been cancelled because of a fault with a swing bridge over a river"
+	},
+	{
+		"code": 562,
+		"reason": "This train has been cancelled because of a problem with a river bridge"
+	},
+	{
+		"code": 563,
+		"reason": "This train has been cancelled because of a problem with line-side equipment"
+	},
+	{
+		"code": 564,
+		"reason": "This train has been cancelled because of a security alert at a station"
+	},
+	{
+		"code": 565,
+		"reason": "This train has been cancelled because of a security alert on another train"
+	},
+	{
+		"code": 566,
+		"reason": "This train has been cancelled because of a security alert on this train"
+	},
+	{
+		"code": 567,
+		"reason": "This train has been cancelled because of a train derailment earlier today"
+	},
+	{
+		"code": 568,
+		"reason": "This train has been cancelled because of a train derailment yesterday"
+	},
+	{
+		"code": 569,
+		"reason": "This train has been cancelled because of a fault occurring when attaching a part of a train"
+	},
+	{
+		"code": 570,
+		"reason": "This train has been cancelled because of a fault occurring when attaching a part of this train"
+	},
+	{
+		"code": 571,
+		"reason": "This train has been cancelled because of a fault occurring when detaching a part of a train"
+	},
+	{
+		"code": 572,
+		"reason": "This train has been cancelled because of a fault occurring when detaching a part of this train"
+	},
+	{
+		"code": 573,
+		"reason": "This train has been cancelled because of a fault on a train in front of this one"
+	},
+	{
+		"code": 574,
+		"reason": "This train has been cancelled because of a fault on this train"
+	},
+	{
+		"code": 575,
+		"reason": "This train has been cancelled because of this train being late from the depot"
+	},
+	{
+		"code": 576,
+		"reason": "This train has been cancelled because of trespassers on the railway"
+	},
+	{
+		"code": 577,
+		"reason": "This train has been cancelled because of a bus colliding with a bridge"
+	},
+	{
+		"code": 578,
+		"reason": "This train has been cancelled because of a lorry colliding with a bridge"
+	},
+	{
+		"code": 579,
+		"reason": "This train has been cancelled because of a road vehicle colliding with a bridge"
+	},
+	{
+		"code": 580,
+		"reason": "This train has been cancelled because of a bus colliding with a bridge earlier on this train's journey"
+	},
+	{
+		"code": 581,
+		"reason": "This train has been cancelled because of a bus colliding with a bridge earlier today"
+	},
+	{
+		"code": 582,
+		"reason": "This train has been cancelled because of a lorry colliding with a bridge earlier on this train's journey"
+	},
+	{
+		"code": 583,
+		"reason": "This train has been cancelled because of a lorry colliding with a bridge earlier today"
+	},
+	{
+		"code": 584,
+		"reason": "This train has been cancelled because of a road vehicle colliding with a bridge earlier on this train's journey"
+	},
+	{
+		"code": 585,
+		"reason": "This train has been cancelled because of a road vehicle colliding with a bridge earlier today"
+	},
+	{
+		"code": 586,
+		"reason": "This train has been cancelled because of a broken down train earlier today"
+	},
+	{
+		"code": 587,
+		"reason": "This train has been cancelled because of an earlier landslip"
+	},
+	{
+		"code": 588,
+		"reason": "This train has been cancelled because of a fire next to the track earlier today"
+	},
+	{
+		"code": 589,
+		"reason": "This train has been cancelled because of a fire on a train earlier today"
+	},
+	{
+		"code": 590,
+		"reason": "This train has been cancelled because of a coach becoming uncoupled on a train earlier in its journey"
+	},
+	{
+		"code": 591,
+		"reason": "This train has been cancelled because of a coach becoming uncoupled on a train earlier today"
+	},
+	{
+		"code": 592,
+		"reason": "This train has been cancelled because of a coach becoming uncoupled on this train earlier in its journey"
+	},
+	{
+		"code": 593,
+		"reason": "This train has been cancelled because of a coach becoming uncoupled on this train earlier today"
+	},
+	{
+		"code": 594,
+		"reason": "This train has been cancelled because of a train not stopping at a station it was supposed to earlier in its journey"
+	},
+	{
+		"code": 595,
+		"reason": "This train has been cancelled because of a train not stopping at a station it was supposed to earlier today"
+	},
+	{
+		"code": 596,
+		"reason": "This train has been cancelled because of a train not stopping in the correct position at a station earlier in its journey"
+	},
+	{
+		"code": 597,
+		"reason": "This train has been cancelled because of a train not stopping in the correct position at a station earlier today"
+	},
+	{
+		"code": 598,
+		"reason": "This train has been cancelled because of a train's automatic braking system being activated earlier in its journey"
+	},
+	{
+		"code": 599,
+		"reason": "This train has been cancelled because of a train's automatic braking system being activated earlier today"
+	},
+	{
+		"code": 600,
+		"reason": "This train has been cancelled because of an operational incident earlier in its journey"
+	},
+	{
+		"code": 601,
+		"reason": "This train has been cancelled because of an operational incident earlier today"
+	},
+	{
+		"code": 602,
+		"reason": "This train has been cancelled because of this train not stopping at a station it was supposed to earlier in its journey"
+	},
+	{
+		"code": 603,
+		"reason": "This train has been cancelled because of this train not stopping at a station it was supposed to earlier today"
+	},
+	{
+		"code": 604,
+		"reason": "This train has been cancelled because of this train not stopping in the correct position at a station earlier in its journey"
+	},
+	{
+		"code": 605,
+		"reason": "This train has been cancelled because of this train not stopping in the correct position at a station earlier today"
+	},
+	{
+		"code": 606,
+		"reason": "This train has been cancelled because of this train's automatic braking system being activated earlier in its journey"
+	},
+	{
+		"code": 607,
+		"reason": "This train has been cancelled because of this train's automatic braking system being activated earlier today"
+	},
+	{
+		"code": 608,
+		"reason": "This train has been cancelled because of a collision at a level crossing earlier today"
+	},
+	{
+		"code": 609,
+		"reason": "This train has been cancelled because of a collision at a level crossing yesterday"
+	},
+	{
+		"code": 610,
+		"reason": "This train has been cancelled because of a fault with barriers at a level crossing earlier today"
+	},
+	{
+		"code": 611,
+		"reason": "This train has been cancelled because of a fault with barriers at a level crossing yesterday"
+	},
+	{
+		"code": 612,
+		"reason": "This train has been cancelled because of a road accident at a level crossing earlier today"
+	},
+	{
+		"code": 613,
+		"reason": "This train has been cancelled because of a road accident at a level crossing yesterday"
+	},
+	{
+		"code": 614,
+		"reason": "This train has been cancelled because of a road vehicle colliding with level crossing barriers earlier today"
+	},
+	{
+		"code": 615,
+		"reason": "This train has been cancelled because of a road vehicle colliding with level crossing barriers yesterday"
+	},
+	{
+		"code": 616,
+		"reason": "This train has been cancelled because of a road vehicle damaging track at a level crossing earlier today"
+	},
+	{
+		"code": 617,
+		"reason": "This train has been cancelled because of a road vehicle damaging track at a level crossing yesterday"
+	},
+	{
+		"code": 618,
+		"reason": "This train has been cancelled because of a burst water main near the railway earlier today"
+	},
+	{
+		"code": 619,
+		"reason": "This train has been cancelled because of a burst water main near the railway yesterday"
+	},
+	{
+		"code": 620,
+		"reason": "This train has been cancelled because of a chemical spillage near the railway earlier today"
+	},
+	{
+		"code": 621,
+		"reason": "This train has been cancelled because of a chemical spillage near the railway yesterday"
+	},
+	{
+		"code": 622,
+		"reason": "This train has been cancelled because of a fire near the railway involving gas cylinders earlier today"
+	},
+	{
+		"code": 623,
+		"reason": "This train has been cancelled because of a fire near the railway involving gas cylinders yesterday"
+	},
+	{
+		"code": 624,
+		"reason": "This train has been cancelled because of a fire near the railway suspected to involve gas cylinders earlier today"
+	},
+	{
+		"code": 625,
+		"reason": "This train has been cancelled because of a fire near the railway suspected to involve gas cylinders yesterday"
+	},
+	{
+		"code": 626,
+		"reason": "This train has been cancelled because of a fire on property near the railway earlier today"
+	},
+	{
+		"code": 627,
+		"reason": "This train has been cancelled because of a fire on property near the railway yesterday"
+	},
+	{
+		"code": 628,
+		"reason": "This train has been cancelled because of a gas leak near the railway earlier today"
+	},
+	{
+		"code": 629,
+		"reason": "This train has been cancelled because of a gas leak near the railway yesterday"
+	},
+	{
+		"code": 630,
+		"reason": "This train has been cancelled because of a road accident near the railway earlier today"
+	},
+	{
+		"code": 631,
+		"reason": "This train has been cancelled because of a road accident near the railway yesterday"
+	},
+	{
+		"code": 632,
+		"reason": "This train has been cancelled because of a wartime bomb near the railway earlier today"
+	},
+	{
+		"code": 633,
+		"reason": "This train has been cancelled because of a wartime bomb near the railway yesterday"
+	},
+	{
+		"code": 634,
+		"reason": "This train has been cancelled because of a wartime bomb which has now been made safe"
+	},
+	{
+		"code": 635,
+		"reason": "This train has been cancelled because of ambulance service dealing with an incident near the railway earlier today"
+	},
+	{
+		"code": 636,
+		"reason": "This train has been cancelled because of ambulance service dealing with an incident near the railway yesterday"
+	},
+	{
+		"code": 637,
+		"reason": "This train has been cancelled because of emergency services dealing with an incident near the railway earlier today"
+	},
+	{
+		"code": 638,
+		"reason": "This train has been cancelled because of emergency services dealing with an incident near the railway yesterday"
+	},
+	{
+		"code": 639,
+		"reason": "This train has been cancelled because of fire brigade dealing with an incident near the railway earlier today"
+	},
+	{
+		"code": 640,
+		"reason": "This train has been cancelled because of fire brigade dealing with an incident near the railway yesterday"
+	},
+	{
+		"code": 641,
+		"reason": "This train has been cancelled because of police dealing with an incident near the railway earlier today"
+	},
+	{
+		"code": 642,
+		"reason": "This train has been cancelled because of police dealing with an incident near the railway yesterday"
+	},
+	{
+		"code": 643,
+		"reason": "This train has been cancelled because of a boat colliding with a bridge earlier today"
+	},
+	{
+		"code": 644,
+		"reason": "This train has been cancelled because of a fault with a swing bridge over a river earlier today"
+	},
+	{
+		"code": 645,
+		"reason": "This train has been cancelled because of a problem with a river bridge earlier today"
+	},
+	{
+		"code": 646,
+		"reason": "This train has been cancelled because of an earlier problem with line-side equipment"
+	},
+	{
+		"code": 647,
+		"reason": "This train has been cancelled because of a security alert earlier today"
+	},
+	{
+		"code": 648,
+		"reason": "This train has been cancelled because of a fault on this train which is now fixed"
+	},
+	{
+		"code": 649,
+		"reason": "This train has been cancelled because of trespassers on the railway earlier in this train's journey"
+	},
+	{
+		"code": 650,
+		"reason": "This train has been cancelled because of trespassers on the railway earlier today"
+	},
+	{
+		"code": 651,
+		"reason": "This train has been cancelled because of a bicycle on the track"
+	},
+	{
+		"code": 652,
+		"reason": "This train has been cancelled because of a road vehicle blocking the railway"
+	},
+	{
+		"code": 653,
+		"reason": "This train has been cancelled because of a supermarket trolley on the track"
+	},
+	{
+		"code": 654,
+		"reason": "This train has been cancelled because of a train hitting an obstruction on the line"
+	},
+	{
+		"code": 655,
+		"reason": "This train has been cancelled because of a tree blocking the railway"
+	},
+	{
+		"code": 656,
+		"reason": "This train has been cancelled because of an obstruction on the track"
+	},
+	{
+		"code": 657,
+		"reason": "This train has been cancelled because of checking reports of an obstruction on the line"
+	},
+	{
+		"code": 658,
+		"reason": "This train has been cancelled because of this train hitting an obstruction on the line"
+	},
+	{
+		"code": 659,
+		"reason": "This train has been cancelled because of a bicycle on the track earlier on this train's journey"
+	},
+	{
+		"code": 660,
+		"reason": "This train has been cancelled because of a bicycle on the track earlier today"
+	},
+	{
+		"code": 661,
+		"reason": "This train has been cancelled because of a road vehicle blocking the railway earlier on this train's journey"
+	},
+	{
+		"code": 662,
+		"reason": "This train has been cancelled because of a road vehicle blocking the railway earlier today"
+	},
+	{
+		"code": 663,
+		"reason": "This train has been cancelled because of a supermarket trolley on the track earlier on this train's journey"
+	},
+	{
+		"code": 664,
+		"reason": "This train has been cancelled because of a supermarket trolley on the track earlier today"
+	},
+	{
+		"code": 665,
+		"reason": "This train has been cancelled because of a train hitting an obstruction on the line earlier on this train's journey"
+	},
+	{
+		"code": 666,
+		"reason": "This train has been cancelled because of a train hitting an obstruction on the line earlier today"
+	},
+	{
+		"code": 667,
+		"reason": "This train has been cancelled because of a tree blocking the railway earlier on this train's journey"
+	},
+	{
+		"code": 668,
+		"reason": "This train has been cancelled because of a tree blocking the railway earlier today"
+	},
+	{
+		"code": 669,
+		"reason": "This train has been cancelled because of an obstruction on the track earlier on this train's journey"
+	},
+	{
+		"code": 670,
+		"reason": "This train has been cancelled because of an obstruction on the track earlier today"
+	},
+	{
+		"code": 671,
+		"reason": "This train has been cancelled because of checking reports of an obstruction on the line earlier on this train's journey"
+	},
+	{
+		"code": 672,
+		"reason": "This train has been cancelled because of checking reports of an obstruction on the line earlier today"
+	},
+	{
+		"code": 673,
+		"reason": "This train has been cancelled because of this train hitting an obstruction on the line earlier in its journey"
+	},
+	{
+		"code": 674,
+		"reason": "This train has been cancelled because of this train hitting an obstruction on the line earlier on this train's journey"
+	},
+	{
+		"code": 675,
+		"reason": "This train has been cancelled because of this train hitting an obstruction on the line earlier today"
+	},
+	{
+		"code": 676,
+		"reason": "This train has been cancelled because of a coach becoming uncoupled on a train"
+	},
+	{
+		"code": 677,
+		"reason": "This train has been cancelled because of a coach becoming uncoupled on this train"
+	},
+	{
+		"code": 678,
+		"reason": "This train has been cancelled because of a train not stopping at a station it was supposed to"
+	},
+	{
+		"code": 679,
+		"reason": "This train has been cancelled because of a train not stopping in the correct position at a station"
+	},
+	{
+		"code": 680,
+		"reason": "This train has been cancelled because of a train's automatic braking system being activated"
+	},
+	{
+		"code": 681,
+		"reason": "This train has been cancelled because of an operational incident"
+	},
+	{
+		"code": 682,
+		"reason": "This train has been cancelled because of this train not stopping at a station it was supposed to"
+	},
+	{
+		"code": 683,
+		"reason": "This train has been cancelled because of this train not stopping in the correct position at a station"
+	},
+	{
+		"code": 684,
+		"reason": "This train has been cancelled because of this train's automatic braking system being activated"
+	},
+	{
+		"code": 685,
+		"reason": "This train has been cancelled because of overcrowding"
+	},
+	{
+		"code": 686,
+		"reason": "This train has been cancelled because of overcrowding as this train has fewer coaches than normal"
+	},
+	{
+		"code": 687,
+		"reason": "This train has been cancelled because of overcrowding because an earlier train had fewer coaches than normal"
+	},
+	{
+		"code": 688,
+		"reason": "This train has been cancelled because of overcrowding because of a concert"
+	},
+	{
+		"code": 689,
+		"reason": "This train has been cancelled because of overcrowding because of a football match"
+	},
+	{
+		"code": 690,
+		"reason": "This train has been cancelled because of overcrowding because of a marathon"
+	},
+	{
+		"code": 691,
+		"reason": "This train has been cancelled because of overcrowding because of a rugby match"
+	},
+	{
+		"code": 692,
+		"reason": "This train has been cancelled because of overcrowding because of a sporting event"
+	},
+	{
+		"code": 693,
+		"reason": "This train has been cancelled because of overcrowding because of an earlier cancellation"
+	},
+	{
+		"code": 694,
+		"reason": "This train has been cancelled because of overcrowding because of an event"
+	},
+	{
+		"code": 695,
+		"reason": "This train has been cancelled because of overcrowding earlier on this train's journey"
+	},
+	{
+		"code": 696,
+		"reason": "This train has been cancelled because of animals on the railway"
+	},
+	{
+		"code": 697,
+		"reason": "This train has been cancelled because of cattle on the railway"
+	},
+	{
+		"code": 698,
+		"reason": "This train has been cancelled because of horses on the railway"
+	},
+	{
+		"code": 699,
+		"reason": "This train has been cancelled because of sheep on the railway"
+	},
+	{
+		"code": 700,
+		"reason": "This train has been cancelled because of animals on the railway earlier today"
+	},
+	{
+		"code": 701,
+		"reason": "This train has been cancelled because of cattle on the railway earlier today"
+	},
+	{
+		"code": 702,
+		"reason": "This train has been cancelled because of horses on the railway earlier today"
+	},
+	{
+		"code": 703,
+		"reason": "This train has been cancelled because of sheep on the railway earlier today"
+	},
+	{
+		"code": 704,
+		"reason": "This train has been cancelled because of passengers causing a disturbance on a train"
+	},
+	{
+		"code": 705,
+		"reason": "This train has been cancelled because of passengers causing a disturbance on this train"
+	},
+	{
+		"code": 706,
+		"reason": "This train has been cancelled because of passengers causing a disturbance earlier in this train's journey"
+	},
+	{
+		"code": 707,
+		"reason": "This train has been cancelled because of passengers causing a disturbance on a train earlier today"
+	},
+	{
+		"code": 708,
+		"reason": "This train has been cancelled because of a fault with the electric third rail earlier on this train's journey"
+	},
+	{
+		"code": 709,
+		"reason": "This train has been cancelled because of a fault with the electric third rail earlier today"
+	},
+	{
+		"code": 710,
+		"reason": "This train has been cancelled because of damage to the electric third rail earlier on this train's journey"
+	},
+	{
+		"code": 711,
+		"reason": "This train has been cancelled because of damage to the electric third rail earlier today"
+	},
+	{
+		"code": 712,
+		"reason": "This train has been cancelled because of failure of the electricity supply earlier on this train's journey"
+	},
+	{
+		"code": 713,
+		"reason": "This train has been cancelled because of failure of the electricity supply earlier today"
+	},
+	{
+		"code": 714,
+		"reason": "This train has been cancelled because of the electricity being switched off for safety reasons earlier on this train's journey"
+	},
+	{
+		"code": 715,
+		"reason": "This train has been cancelled because of the electricity being switched off for safety reasons earlier today"
+	},
+	{
+		"code": 716,
+		"reason": "This train has been cancelled because of urgent repairs to a bridge earlier today"
+	},
+	{
+		"code": 717,
+		"reason": "This train has been cancelled because of urgent repairs to a tunnel earlier today"
+	},
+	{
+		"code": 718,
+		"reason": "This train has been cancelled because of urgent repairs to the railway earlier today"
+	},
+	{
+		"code": 719,
+		"reason": "This train has been cancelled because of urgent repairs to the track earlier today"
+	},
+	{
+		"code": 720,
+		"reason": "This train has been cancelled because of expected industrial action earlier today"
+	},
+	{
+		"code": 721,
+		"reason": "This train has been cancelled because of expected industrial action yesterday"
+	},
+	{
+		"code": 722,
+		"reason": "This train has been cancelled because of industrial action earlier today"
+	},
+	{
+		"code": 723,
+		"reason": "This train has been cancelled because of industrial action yesterday"
+	},
+	{
+		"code": 724,
+		"reason": "This train has been cancelled because of an object being caught on the overhead electric wires earlier on this train's journey"
+	},
+	{
+		"code": 725,
+		"reason": "This train has been cancelled because of an object being caught on the overhead electric wires earlier today"
+	},
+	{
+		"code": 726,
+		"reason": "This train has been cancelled because of damage to the overhead electric wires earlier on this train's journey"
+	},
+	{
+		"code": 727,
+		"reason": "This train has been cancelled because of damage to the overhead electric wires earlier today"
+	},
+	{
+		"code": 728,
+		"reason": "This train has been cancelled because of earlier engineering works not being finished on time"
+	},
+	{
+		"code": 729,
+		"reason": "This train has been cancelled because of a fault with the on train signalling system earlier on this train's journey"
+	},
+	{
+		"code": 730,
+		"reason": "This train has been cancelled because of a fault with the on train signalling system earlier today"
+	},
+	{
+		"code": 731,
+		"reason": "This train has been cancelled because of a fault with the radio system between the driver and the signaller earlier on this train's journey"
+	},
+	{
+		"code": 732,
+		"reason": "This train has been cancelled because of a fault with the radio system between the driver and the signaller earlier today"
+	},
+	{
+		"code": 733,
+		"reason": "This train has been cancelled because of a fault with the signalling system earlier on this train's journey"
+	},
+	{
+		"code": 734,
+		"reason": "This train has been cancelled because of a fault with the signalling system earlier today"
+	},
+	{
+		"code": 735,
+		"reason": "This train has been cancelled because of signalling staff being taken ill earlier on this train's journey"
+	},
+	{
+		"code": 736,
+		"reason": "This train has been cancelled because of signalling staff being taken ill earlier today"
+	},
+	{
+		"code": 737,
+		"reason": "This train has been cancelled because of the fire alarm sounding in a signalbox earlier on this train's journey"
+	},
+	{
+		"code": 738,
+		"reason": "This train has been cancelled because of the fire alarm sounding in a signalbox earlier today"
+	},
+	{
+		"code": 739,
+		"reason": "This train has been cancelled because of the fire alarm sounding in the signalling centre earlier on this train's journey"
+	},
+	{
+		"code": 740,
+		"reason": "This train has been cancelled because of the fire alarm sounding in the signalling centre earlier today"
+	},
+	{
+		"code": 741,
+		"reason": "This train has been cancelled because of attempted theft of overhead line electrification equipment earlier today"
+	},
+	{
+		"code": 742,
+		"reason": "This train has been cancelled because of attempted theft of overhead line electrification equipment yesterday"
+	},
+	{
+		"code": 743,
+		"reason": "This train has been cancelled because of attempted theft of railway equipment earlier today"
+	},
+	{
+		"code": 744,
+		"reason": "This train has been cancelled because of attempted theft of railway equipment yesterday"
+	},
+	{
+		"code": 745,
+		"reason": "This train has been cancelled because of attempted theft of signalling cables earlier today"
+	},
+	{
+		"code": 746,
+		"reason": "This train has been cancelled because of attempted theft of signalling cables yesterday"
+	},
+	{
+		"code": 747,
+		"reason": "This train has been cancelled because of attempted theft of third rail electrification equipment earlier today"
+	},
+	{
+		"code": 748,
+		"reason": "This train has been cancelled because of attempted theft of third rail electrification equipment yesterday"
+	},
+	{
+		"code": 749,
+		"reason": "This train has been cancelled because of theft of overhead line electrification equipment earlier today"
+	},
+	{
+		"code": 750,
+		"reason": "This train has been cancelled because of theft of overhead line electrification equipment yesterday"
+	},
+	{
+		"code": 751,
+		"reason": "This train has been cancelled because of theft of railway equipment earlier today"
+	},
+	{
+		"code": 752,
+		"reason": "This train has been cancelled because of theft of railway equipment yesterday"
+	},
+	{
+		"code": 753,
+		"reason": "This train has been cancelled because of theft of signalling cables earlier today"
+	},
+	{
+		"code": 754,
+		"reason": "This train has been cancelled because of theft of signalling cables yesterday"
+	},
+	{
+		"code": 755,
+		"reason": "This train has been cancelled because of theft of third rail electrification equipment earlier today"
+	},
+	{
+		"code": 756,
+		"reason": "This train has been cancelled because of theft of third rail electrification equipment yesterday"
+	},
+	{
+		"code": 757,
+		"reason": "This train has been cancelled because of vandalism at a station earlier today"
+	},
+	{
+		"code": 758,
+		"reason": "This train has been cancelled because of vandalism at a station yesterday"
+	},
+	{
+		"code": 759,
+		"reason": "This train has been cancelled because of vandalism of railway equipment earlier today"
+	},
+	{
+		"code": 760,
+		"reason": "This train has been cancelled because of vandalism of railway equipment yesterday"
+	},
+	{
+		"code": 761,
+		"reason": "This train has been cancelled because of vandalism on a train earlier today"
+	},
+	{
+		"code": 762,
+		"reason": "This train has been cancelled because of vandalism on a train yesterday"
+	},
+	{
+		"code": 763,
+		"reason": "This train has been cancelled because of vandalism on this train earlier today"
+	},
+	{
+		"code": 764,
+		"reason": "This train has been cancelled because of vandalism on this train yesterday"
+	},
+	{
+		"code": 765,
+		"reason": "This train has been cancelled because of a fault with the electric third rail"
+	},
+	{
+		"code": 766,
+		"reason": "This train has been cancelled because of damage to the electric third rail"
+	},
+	{
+		"code": 767,
+		"reason": "This train has been cancelled because of failure of the electricity supply"
+	},
+	{
+		"code": 768,
+		"reason": "This train has been cancelled because of the electricity being switched off for safety reasons"
+	},
+	{
+		"code": 769,
+		"reason": "This train has been cancelled because of urgent repairs to a bridge"
+	},
+	{
+		"code": 770,
+		"reason": "This train has been cancelled because of urgent repairs to a tunnel"
+	},
+	{
+		"code": 771,
+		"reason": "This train has been cancelled because of urgent repairs to the railway"
+	},
+	{
+		"code": 772,
+		"reason": "This train has been cancelled because of urgent repairs to the track"
+	},
+	{
+		"code": 773,
+		"reason": "This train has been cancelled because of the emergency services dealing with an incident earlier today"
+	},
+	{
+		"code": 774,
+		"reason": "This train has been cancelled because of ambulance service dealing with an incident"
+	},
+	{
+		"code": 775,
+		"reason": "This train has been cancelled because of fire brigade dealing with an incident"
+	},
+	{
+		"code": 776,
+		"reason": "This train has been cancelled because of police dealing with an incident"
+	},
+	{
+		"code": 777,
+		"reason": "This train has been cancelled because of the emergency services dealing with an incident"
+	},
+	{
+		"code": 778,
+		"reason": "This train has been cancelled because of the fire alarm sounding at a station"
+	},
+	{
+		"code": 779,
+		"reason": "This train has been cancelled because of the fire alarm sounding at a station earlier today"
+	},
+	{
+		"code": 780,
+		"reason": "This train has been cancelled because of a burst water main flooding the railway"
+	},
+	{
+		"code": 781,
+		"reason": "This train has been cancelled because of a river flooding the railway"
+	},
+	{
+		"code": 782,
+		"reason": "This train has been cancelled because of flood water making the railway potentially unsafe"
+	},
+	{
+		"code": 783,
+		"reason": "This train has been cancelled because of flooding"
+	},
+	{
+		"code": 784,
+		"reason": "This train has been cancelled because of heavy rain flooding the railway"
+	},
+	{
+		"code": 785,
+		"reason": "This train has been cancelled because of predicted flooding"
+	},
+	{
+		"code": 786,
+		"reason": "This train has been cancelled because of the sea flooding the railway"
+	},
+	{
+		"code": 787,
+		"reason": "This train has been cancelled because of a burst water main flooding the railway earlier today"
+	},
+	{
+		"code": 788,
+		"reason": "This train has been cancelled because of a river flooding the railway earlier today"
+	},
+	{
+		"code": 789,
+		"reason": "This train has been cancelled because of flood water making the railway potentially unsafe earlier today"
+	},
+	{
+		"code": 790,
+		"reason": "This train has been cancelled because of flooding earlier in this train's journey"
+	},
+	{
+		"code": 791,
+		"reason": "This train has been cancelled because of flooding earlier today"
+	},
+	{
+		"code": 792,
+		"reason": "This train has been cancelled because of heavy rain flooding the railway earlier today"
+	},
+	{
+		"code": 793,
+		"reason": "This train has been cancelled because of predicted flooding earlier today"
+	},
+	{
+		"code": 794,
+		"reason": "This train has been cancelled because of the sea flooding the railway earlier today"
+	},
+	{
+		"code": 795,
+		"reason": "This train has been cancelled because of thick fog"
+	},
+	{
+		"code": 796,
+		"reason": "This train has been cancelled because of thick fog earlier in this train's journey"
+	},
+	{
+		"code": 797,
+		"reason": "This train has been cancelled because of thick fog earlier today"
+	},
+	{
+		"code": 798,
+		"reason": "This train has been cancelled because of forecasted high winds"
+	},
+	{
+		"code": 799,
+		"reason": "This train has been cancelled because of high winds"
+	},
+	{
+		"code": 800,
+		"reason": "This train has been cancelled because of high winds earlier in this train's journey"
+	},
+	{
+		"code": 801,
+		"reason": "This train has been cancelled because of high winds earlier today"
+	},
+	{
+		"code": 802,
+		"reason": "This train has been cancelled because of expected industrial action"
+	},
+	{
+		"code": 803,
+		"reason": "This train has been cancelled because of industrial action"
+	},
+	{
+		"code": 804,
+		"reason": "This train has been cancelled because of lightning damaging a station"
+	},
+	{
+		"code": 805,
+		"reason": "This train has been cancelled because of lightning damaging a train"
+	},
+	{
+		"code": 806,
+		"reason": "This train has been cancelled because of lightning damaging equipment"
+	},
+	{
+		"code": 807,
+		"reason": "This train has been cancelled because of lightning damaging the electricity supply"
+	},
+	{
+		"code": 808,
+		"reason": "This train has been cancelled because of lightning damaging the signalling system"
+	},
+	{
+		"code": 809,
+		"reason": "This train has been cancelled because of lightning damaging this train"
+	},
+	{
+		"code": 810,
+		"reason": "This train has been cancelled because of an object being caught on the overhead electric wires"
+	},
+	{
+		"code": 811,
+		"reason": "This train has been cancelled because of damage to the overhead electric wires"
+	},
+	{
+		"code": 812,
+		"reason": "This train has been cancelled because of engineering works not being finished on time"
+	},
+	{
+		"code": 813,
+		"reason": "This train has been cancelled because of forecasted slippery rails"
+	},
+	{
+		"code": 814,
+		"reason": "This train has been cancelled because of ice preventing this train getting electricity from the third rail"
+	},
+	{
+		"code": 815,
+		"reason": "This train has been cancelled because of ice preventing trains getting electricity from the third rail"
+	},
+	{
+		"code": 816,
+		"reason": "This train has been cancelled because of slippery rails"
+	},
+	{
+		"code": 817,
+		"reason": "This train has been cancelled because of slippery rails earlier in this train's journey"
+	},
+	{
+		"code": 818,
+		"reason": "This train has been cancelled because of slippery rails earlier today"
+	},
+	{
+		"code": 819,
+		"reason": "This train has been cancelled because of forecasted severe weather"
+	},
+	{
+		"code": 820,
+		"reason": "This train has been cancelled because of severe weather"
+	},
+	{
+		"code": 821,
+		"reason": "This train has been cancelled because of severe weather earlier"
+	},
+	{
+		"code": 822,
+		"reason": "This train has been cancelled because of severe weather earlier in this train's journey"
+	},
+	{
+		"code": 823,
+		"reason": "This train has been cancelled because of severe weather earlier today"
+	},
+	{
+		"code": 824,
+		"reason": "This train has been cancelled because of a safety inspection of the track"
+	},
+	{
+		"code": 825,
+		"reason": "This train has been cancelled because of a safety inspection on a train"
+	},
+	{
+		"code": 826,
+		"reason": "This train has been cancelled because of a safety inspection on this train"
+	},
+	{
+		"code": 827,
+		"reason": "This train has been cancelled because of a safety inspection of the track earlier today"
+	},
+	{
+		"code": 828,
+		"reason": "This train has been cancelled because of a safety inspection on a train earlier today"
+	},
+	{
+		"code": 829,
+		"reason": "This train has been cancelled because of a safety inspection on this train earlier in its journey"
+	},
+	{
+		"code": 830,
+		"reason": "This train has been cancelled because of a fault with the on train signalling system"
+	},
+	{
+		"code": 831,
+		"reason": "This train has been cancelled because of a fault with the radio system between the driver and the signaller"
+	},
+	{
+		"code": 832,
+		"reason": "This train has been cancelled because of a fault with the signalling system"
+	},
+	{
+		"code": 833,
+		"reason": "This train has been cancelled because of signalling staff being taken ill"
+	},
+	{
+		"code": 834,
+		"reason": "This train has been cancelled because of the fire alarm sounding in a signalbox"
+	},
+	{
+		"code": 835,
+		"reason": "This train has been cancelled because of the fire alarm sounding in the signalling centre"
+	},
+	{
+		"code": 836,
+		"reason": "This train has been cancelled because of forecasted heavy snow"
+	},
+	{
+		"code": 837,
+		"reason": "This train has been cancelled because of heavy snow"
+	},
+	{
+		"code": 838,
+		"reason": "This train has been cancelled because of heavy snow earlier in this train's journey"
+	},
+	{
+		"code": 839,
+		"reason": "This train has been cancelled because of heavy snow earlier today"
+	},
+	{
+		"code": 840,
+		"reason": "This train has been cancelled because of heavy snow over recent days"
+	},
+	{
+		"code": 841,
+		"reason": "This train has been cancelled because of a speed restriction"
+	},
+	{
+		"code": 842,
+		"reason": "This train has been cancelled because of a speed restriction because of fog"
+	},
+	{
+		"code": 843,
+		"reason": "This train has been cancelled because of a speed restriction because of fog earlier on this train's journey"
+	},
+	{
+		"code": 844,
+		"reason": "This train has been cancelled because of a speed restriction because of fog earlier today"
+	},
+	{
+		"code": 845,
+		"reason": "This train has been cancelled because of a speed restriction because of heavy rain"
+	},
+	{
+		"code": 846,
+		"reason": "This train has been cancelled because of a speed restriction because of heavy rain earlier on this train's journey"
+	},
+	{
+		"code": 847,
+		"reason": "This train has been cancelled because of a speed restriction because of heavy rain earlier today"
+	},
+	{
+		"code": 848,
+		"reason": "This train has been cancelled because of a speed restriction because of high track temperatures"
+	},
+	{
+		"code": 849,
+		"reason": "This train has been cancelled because of a speed restriction because of high track temperatures earlier on this train's journey"
+	},
+	{
+		"code": 850,
+		"reason": "This train has been cancelled because of a speed restriction because of high track temperatures earlier today"
+	},
+	{
+		"code": 851,
+		"reason": "This train has been cancelled because of a speed restriction because of high winds"
+	},
+	{
+		"code": 852,
+		"reason": "This train has been cancelled because of a speed restriction because of high winds earlier on this train's journey"
+	},
+	{
+		"code": 853,
+		"reason": "This train has been cancelled because of a speed restriction because of high winds earlier today"
+	},
+	{
+		"code": 854,
+		"reason": "This train has been cancelled because of a speed restriction because of severe weather"
+	},
+	{
+		"code": 855,
+		"reason": "This train has been cancelled because of a speed restriction because of severe weather earlier on this train's journey"
+	},
+	{
+		"code": 856,
+		"reason": "This train has been cancelled because of a speed restriction because of severe weather earlier today"
+	},
+	{
+		"code": 857,
+		"reason": "This train has been cancelled because of a speed restriction because of snow and ice"
+	},
+	{
+		"code": 858,
+		"reason": "This train has been cancelled because of a speed restriction because of snow and ice earlier on this train's journey"
+	},
+	{
+		"code": 859,
+		"reason": "This train has been cancelled because of a speed restriction because of snow and ice earlier today"
+	},
+	{
+		"code": 860,
+		"reason": "This train has been cancelled because of a speed restriction earlier on this train's journey"
+	},
+	{
+		"code": 861,
+		"reason": "This train has been cancelled because of a speed restriction earlier today"
+	},
+	{
+		"code": 862,
+		"reason": "This train has been cancelled because of a speed restriction in a tunnel"
+	},
+	{
+		"code": 863,
+		"reason": "This train has been cancelled because of a speed restriction in a tunnel earlier on this train's journey"
+	},
+	{
+		"code": 864,
+		"reason": "This train has been cancelled because of a speed restriction in a tunnel earlier today"
+	},
+	{
+		"code": 865,
+		"reason": "This train has been cancelled because of a speed restriction over a bridge"
+	},
+	{
+		"code": 866,
+		"reason": "This train has been cancelled because of a speed restriction over a bridge earlier on this train's journey"
+	},
+	{
+		"code": 867,
+		"reason": "This train has been cancelled because of a speed restriction over a bridge earlier today"
+	},
+	{
+		"code": 868,
+		"reason": "This train has been cancelled because of a speed restriction over an embankment"
+	},
+	{
+		"code": 869,
+		"reason": "This train has been cancelled because of a speed restriction over an embankment earlier on this train's journey"
+	},
+	{
+		"code": 870,
+		"reason": "This train has been cancelled because of a speed restriction over an embankment earlier today"
+	},
+	{
+		"code": 871,
+		"reason": "This train has been cancelled because of a speed restriction over defective track"
+	},
+	{
+		"code": 872,
+		"reason": "This train has been cancelled because of a speed restriction over defective track earlier on this train's journey"
+	},
+	{
+		"code": 873,
+		"reason": "This train has been cancelled because of a speed restriction over defective track earlier today"
+	},
+	{
+		"code": 874,
+		"reason": "This train has been cancelled because of attempted theft of overhead line electrification equipment"
+	},
+	{
+		"code": 875,
+		"reason": "This train has been cancelled because of attempted theft of railway equipment"
+	},
+	{
+		"code": 876,
+		"reason": "This train has been cancelled because of attempted theft of signalling cables"
+	},
+	{
+		"code": 877,
+		"reason": "This train has been cancelled because of attempted theft of third rail electrification equipment"
+	},
+	{
+		"code": 878,
+		"reason": "This train has been cancelled because of theft of overhead line electrification equipment"
+	},
+	{
+		"code": 879,
+		"reason": "This train has been cancelled because of theft of railway equipment"
+	},
+	{
+		"code": 880,
+		"reason": "This train has been cancelled because of theft of signalling cables"
+	},
+	{
+		"code": 881,
+		"reason": "This train has been cancelled because of theft of third rail electrification equipment"
+	},
+	{
+		"code": 882,
+		"reason": "This train has been cancelled because of vandalism at a station"
+	},
+	{
+		"code": 883,
+		"reason": "This train has been cancelled because of vandalism of railway equipment"
+	},
+	{
+		"code": 884,
+		"reason": "This train has been cancelled because of vandalism on a train"
+	},
+	{
+		"code": 885,
+		"reason": "This train has been cancelled because of vandalism on this train"
+	},
+	{
+		"code": 886,
+		"reason": "This train has been cancelled because of train crew being delayed"
+	},
+	{
+		"code": 887,
+		"reason": "This train has been cancelled because of train crew being delayed by service disruption"
+	},
+	{
+		"code": 888,
+		"reason": "This train has been cancelled because of a bridge being damaged"
+	},
+	{
+		"code": 889,
+		"reason": "This train has been cancelled because of a bridge being damaged by a boat"
+	},
+	{
+		"code": 890,
+		"reason": "This train has been cancelled because of a bridge being damaged by a road vehicle"
+	},
+	{
+		"code": 891,
+		"reason": "This train has been cancelled because of a bridge having collapsed"
+	},
+	{
+		"code": 892,
+		"reason": "This train has been cancelled because of a broken rail"
+	},
+	{
+		"code": 893,
+		"reason": "This train has been cancelled because of a late departure while the train was cleaned specially"
+	},
+	{
+		"code": 894,
+		"reason": "This train has been cancelled because of a late running freight train"
+	},
+	{
+		"code": 895,
+		"reason": "This train has been cancelled because of a late running train being in front of this one"
+	},
+	{
+		"code": 896,
+		"reason": "This train has been cancelled because of a points failure"
+	},
+	{
+		"code": 897,
+		"reason": "This train has been cancelled because of a power cut at the station"
+	},
+	{
+		"code": 898,
+		"reason": "This train has been cancelled because of a problem with the station lighting"
+	},
+	{
+		"code": 899,
+		"reason": "This train has been cancelled because of a rail buckling in the heat"
+	},
+	{
+		"code": 900,
+		"reason": "This train has been cancelled because of a railway embankment being damaged"
+	},
+	{
+		"code": 901,
+		"reason": "This train has been cancelled because of a shortage of station staff"
+	},
+	{
+		"code": 902,
+		"reason": "This train has been cancelled because of a tunnel being closed for safety reasons"
+	},
+	{
+		"code": 903,
+		"reason": "This train has been cancelled because of an incident at the airport"
+	},
+	{
+		"code": 904,
+		"reason": "This train has been cancelled because of congestion"
+	},
+	{
+		"code": 905,
+		"reason": "This train has been cancelled because of the communication alarm being activated on a train"
+	},
+	{
+		"code": 906,
+		"reason": "This train has been cancelled because of the communication alarm being activated on this train"
+	},
+	{
+		"code": 907,
+		"reason": "This train has been cancelled because of the train departing late to maintain customer connections"
+	},
+	{
+		"code": 908,
+		"reason": "This train has been cancelled because of the train making extra stops because a train was cancelled"
+	},
+	{
+		"code": 909,
+		"reason": "This train has been cancelled because of the train making extra stops because of service disruption"
+	},
+	{
+		"code": 910,
+		"reason": "This train has been cancelled because of waiting for a part of the train to be attached"
+	}]
+	}
