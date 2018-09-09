@@ -3,17 +3,16 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.27703.2018
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "JoF.Rail.Core.Web", "JoF.Rail.Core.Web\JoF.Rail.Core.Web.csproj", "{69CEBE10-B86C-4792-8FBC-52A619F9ED50}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "JoF.Rail.Web", "Hosting\JoF.Rail.Web\JoF.Rail.Web.csproj", "{69CEBE10-B86C-4792-8FBC-52A619F9ED50}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{01B58ADC-7090-4037-9AA0-E16289EEFB0D}"
 	ProjectSection(SolutionItems) = preProject
 		.gitignore = .gitignore
 		Settings.StyleCop = Settings.StyleCop
-		StyleCop.Cache = StyleCop.Cache
 		stylecop.json = stylecop.json
 	EndProjectSection
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "JoF.Rail.Standard", "JoF.Rail.Standard\JoF.Rail.Standard.csproj", "{DEA7D81D-5B86-4F82-91D9-1350A25C782B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "JoF.Rail.Core", "Core\JoF.Rail.Core\JoF.Rail.Core.csproj", "{DEA7D81D-5B86-4F82-91D9-1350A25C782B}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Services", "Services", "{3FB53660-B254-4220-ACE3-B3A1270EAE53}"
 EndProject
@@ -23,9 +22,13 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "JoF.Rail.Tests.xUnit", "Tes
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "_Tests", "_Tests", "{4F627AD7-774F-4A48-AD31-C3324EBFF5FB}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "JoF.Rail.Standard.Core", "Core\JoF.Rail.Standard.Core\JoF.Rail.Standard.Core.csproj", "{974C5CF4-1163-4E71-B37B-14A372BD0B8A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "JoF.Rail.Models", "Core\JoF.Rail.Models\JoF.Rail.Models.csproj", "{974C5CF4-1163-4E71-B37B-14A372BD0B8A}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Core", "Core", "{D499E75F-F0CD-4512-B712-8EDC2364096C}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "JoF.Rail.Imports", "Core\JoF.Rail.Imports\JoF.Rail.Imports.csproj", "{AEB3E78C-A2D7-487E-8550-6F84D1C035B1}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Hosting", "Hosting", "{FF797222-9603-4AFE-A29E-B3607D0DD12E}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -53,14 +56,21 @@ Global
 		{974C5CF4-1163-4E71-B37B-14A372BD0B8A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{974C5CF4-1163-4E71-B37B-14A372BD0B8A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{974C5CF4-1163-4E71-B37B-14A372BD0B8A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AEB3E78C-A2D7-487E-8550-6F84D1C035B1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AEB3E78C-A2D7-487E-8550-6F84D1C035B1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AEB3E78C-A2D7-487E-8550-6F84D1C035B1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AEB3E78C-A2D7-487E-8550-6F84D1C035B1}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
+		{69CEBE10-B86C-4792-8FBC-52A619F9ED50} = {FF797222-9603-4AFE-A29E-B3607D0DD12E}
+		{DEA7D81D-5B86-4F82-91D9-1350A25C782B} = {D499E75F-F0CD-4512-B712-8EDC2364096C}
 		{B540FF06-18E2-4734-AC3D-0DE2B62E6A5B} = {3FB53660-B254-4220-ACE3-B3A1270EAE53}
 		{A9598202-F1A1-4DF8-BAD1-03AC450DB4D1} = {4F627AD7-774F-4A48-AD31-C3324EBFF5FB}
 		{974C5CF4-1163-4E71-B37B-14A372BD0B8A} = {D499E75F-F0CD-4512-B712-8EDC2364096C}
+		{AEB3E78C-A2D7-487E-8550-6F84D1C035B1} = {D499E75F-F0CD-4512-B712-8EDC2364096C}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {5E1C079A-58AA-4CDF-9B5B-5102A38DA2EC}

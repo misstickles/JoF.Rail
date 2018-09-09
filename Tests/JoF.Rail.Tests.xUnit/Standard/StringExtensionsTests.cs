@@ -1,8 +1,8 @@
 ﻿namespace JoF.Rail.Tests.xUnit.Standard
 {
     using System.Linq;
-    using JoF.Rail.Standard.Core.Extensions;
-    using JoF.Rail.Standard.Models;
+    using JoF.Rail.Core.Extensions;
+    using JoF.Rail.Core.Models;
     using Xunit;
 
     public class StringExtensionsTests
@@ -10,7 +10,7 @@
         [Fact]
         public void XmlString_ConvertsToObject()
         {
-            var result = xml.DeserialiseXml<NetworkOverviewModel>();
+            var result = this.xml.DeserialiseXml<NetworkOverviewModel>();
             Assert.True(result.Tocs.Count == 30);
             // Assert.True(result.Tocs.First(t => t.TocCode == "NT").ServiceGroups.Count == 2);
             Assert.True(result.Tocs.First(t => t.TocCode == "SN").Status == "Minor delays on some routes");

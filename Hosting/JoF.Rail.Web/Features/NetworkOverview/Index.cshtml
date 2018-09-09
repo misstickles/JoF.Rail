@@ -1,0 +1,81 @@
+﻿@model JoF.Rail.Core.Models.NetworkOverviewModel
+
+@{
+    ViewBag.Title = "Network Performance";
+}
+
+@{
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <h2>Network Performance</h2>
+                <p class="lead">Current performance of rail networks across the UK.</p>
+            </div>
+            <div class="col-1">
+                <button type="button" class="btn btn-primary float-right font-weight-bold text-off-white" data-toggle="modal" data-target="#networkOverviewModal">?</button>
+            </div>
+        </div>
+
+        @foreach (var t in Model.Tocs)
+        {
+            var style = "";
+            var icon = "";
+            if (t.StatusImage.Contains("note"))
+            {
+                style = "warning";
+                icon = "exclamation-triangle";
+            }
+            else if (t.StatusImage.Contains("tick"))
+            {
+                style = "success";
+                icon = "check";
+            }
+            else if (t.StatusImage.Contains("disruption"))
+            {
+                style = "danger";
+                icon = "exclamation-triangle";
+            }
+            <div class="bs-callout bs-callout-@style">
+                <div class="row">
+                    <div class="col-12 col-md">
+                        <h5>
+                            <i class="fas fa-@icon text-@style mr-2" aria-hidden="true"></i>
+                            @t.TocName
+                        </h5>
+                    </div>
+                    <div class="col-12 col-md-5 text-right">
+                        @if (t.Status != "Custom")
+                        {
+                            @t.Status
+                        }
+                        else
+                        {
+                            @t.StatusDescription
+                        }
+                    </div>
+                </div>
+            </div>
+        }
+    </div>
+
+    <div class="modal fade" id="networkOverviewModal" tabindex="-1" role="dialog" aria-labelledby="depBoardModalTitle" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content bg-off-white text-secondary">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="networkOverviewModalTitle">Network Performance - Help</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <ul>
+                        <li>Simple list of all TOCs (Train Operating Companies) and their current performance</li>
+                    </ul>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+}

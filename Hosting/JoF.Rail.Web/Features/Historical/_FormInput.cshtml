@@ -1,0 +1,87 @@
+﻿@model Index.QueryMetrics
+
+@using JoF.Rail.Core.Enums
+
+<form method="POST">
+    <span style="position:absolute;top:0;left:-1000px;">
+        <input asp-for="CrsFrom" id="crsFrom" type="text" />
+        <input asp-for="CrsTo" id="crsTo" type="text" />
+    </span>
+
+    <div class="row text-danger">
+        <div class="col-12">
+            <div asp-validation-summary="ModelOnly"></div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-6 col-12">
+            <div class="form-group">
+                <label asp-for="From" class="col-form-label">Station</label>
+                <input asp-for="From" type="text" autocomplete="on" class="form-control ui-autocomplete-input station" data-target="crsFrom" />
+                <div><span asp-validation-for="CrsFrom" class="text-danger"></span></div>
+            </div>
+        </div>
+        <div class="col-md-6 col-12">
+            <div class="form-group">
+                <label asp-for="To" class="col-form-label">Stopping at (optional)</label>
+                <input asp-for="To" type="text" autocomplete="on" class="form-control ui-autocomplete-input station" data-target="crsTo" />
+                <div><span asp-validation-for="CrsTo" class="text-danger"></span></div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-6 col-12">
+            <div class="form-group">
+                <label asp-for="FromDate" class="col-form-label">From Date</label>
+                <input asp-for="FromDate" type="text" class="form-control" />
+                <div><span asp-validation-for="FromDate" class="text-danger"></span></div>
+            </div>
+        </div>
+        <div class="col-md-6 col-12">
+            <div class="form-group">
+                <label asp-for="ToDate" class="col-form-label">To Date</label>
+                <input asp-for="ToDate" type="text" class="form-control" />
+                <div><span asp-validation-for="ToDate" class="text-danger"></span></div>
+            </div>
+        </div>
+        @*<div id="dateRange" class="form-group">
+                <label asp-for="FromDate" class="col-form-label">Date Range</label>
+                <input id="dateFrom" asp-for="FromDate" type="text" class="form-control" />
+                <div><span asp-validation-for="FromDate" class="text-danger"></span></div>
+                <input id="dateTo" asp-for="ToDate" type="text" class="form-control" />
+                <div><span asp-validation-for="ToDate" class="text-danger"></span></div>
+            </div>*@
+    </div>
+    <div class="row">
+        <div class="col-md-6 col-12">
+            <div class="form-group">
+                <label asp-for="FromTime" class="col-form-label">From Time</label>
+                <input asp-for="FromTime" type="text" class="form-control" />
+                <div><span asp-validation-for="FromTime" class="text-danger"></span></div>
+            </div>
+        </div>
+        <div class="col-md-6 col-12">
+            <div class="form-group">
+                <label asp-for="ToTime" class="col-form-label">To Time</label>
+                <input asp-for="ToTime" type="text" class="form-control" />
+                <div><span asp-validation-for="ToTime" class="text-danger"></span></div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col">
+            <div class="form-group">
+                <label asp-for="Days" class="col-form-label">Service Days</label>
+                <select asp-for="Days" asp-items="Enum.GetNames(typeof(DayTypes)).Select(d => new SelectListItem(d.ToString(), d.ToString()))" class="form-control"></select>
+                <div><span asp-validation-for="Days" class="text-danger"></span></div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row pt-4 text-center">
+        <div class="col-sm-4 col-12">
+            <button type="submit" asp-action="Metrics" class="btn btn-outline-primary mr-4 mb-sm-0 mb-2">Metrics</button>
+        </div>
+    </div>
+</form>
