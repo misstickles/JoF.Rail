@@ -16,7 +16,6 @@
 
   <ItemGroup>
     <Content Remove="bundleconfig.json" />
-    <Content Remove="Data\KbStations.json" />
   </ItemGroup>
 
   <ItemGroup>
@@ -36,10 +35,6 @@
   <ItemGroup>
     <Folder Include="wwwroot\dist\css\" />
     <Folder Include="wwwroot\dist\js\" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <None Include="Data\KbStations.json" />
   </ItemGroup>
 
   <ItemGroup>

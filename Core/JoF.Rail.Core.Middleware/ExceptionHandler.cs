@@ -1,4 +1,4 @@
-﻿namespace JoF.Rail.Core.Middlewares
+﻿namespace JoF.Rail.Core.Middleware
 {
     using System;
     using System.Net;

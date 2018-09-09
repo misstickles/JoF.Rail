@@ -52,8 +52,9 @@ namespace JoF.Rail.Web
         {
             if (env.IsDevelopment())
             {
-                app.UseDeveloperExceptionPage();
                 Mapper.AssertConfigurationIsValid();
+                app.UseDeveloperExceptionPage();
+                app.UseStatusCodePages();
             }
             else
             {
@@ -63,7 +64,6 @@ namespace JoF.Rail.Web
             }
 
             app.UseHttpsRedirection();
-            app.UseStatusCodePages();
             app.UseStaticFiles();
             // app.UseCookiePolicy();
             app.UseMvcWithDefaultRoute();
