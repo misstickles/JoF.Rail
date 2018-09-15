@@ -1,5 +1,6 @@
 ﻿namespace JoF.Rail.Web.Features.Boards
 {
+    using System.Linq;
     using System.Threading;
     using System.Threading.Tasks;
     using JoF.Rail.Core.Models.LiveDepartureBoard.Query;
@@ -32,7 +33,23 @@
             {
                 var service = new StationBoardService();
                 //return await this.arrivalsDeparturesBoardService.GetBoard(request);
-                return await service.GetBoard(request);
+
+                var result = await service.GetBoard(request);
+
+                // TODO: Map
+                return new StationBoardViewModel
+                {
+                    Crs = result.Crs,
+                    FilterCrs = result.FilterCrs,
+                    FilterLocation = result.FilterLocation,
+                    FilterType = result.FilterType,
+                    GeneratedAt = result.GeneratedAt,
+                    HasPlatform = result.HasPlatform,
+                    HasServices = result.HasServices,
+                    Location = result.Location,
+                    Messages = result.Messages,
+                    Services = result.Services
+                };
             }
         }
     }

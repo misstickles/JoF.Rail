@@ -3,35 +3,38 @@
 @{
     var service = Model;
 
-    <div class="border-top border-bottom mb-4 pt-2">
-    <div class="row pb-3">
-        <div class="offset-1 col-4">
-            @foreach (var o in service.Origins)
-            {
-                <div>@o.Location (@o.Crs) <small class="d-block">@o.Via</small></div>
-            }
-        </div>
-        <div class="col-4">
-            @foreach (var d in service.Destinations)
-            {
-                <div>@d.Location (@d.Crs) <small class="d-block">@d.Via</small></div>
-            }
-        </div>
-        <div class="offset-1 col-10 text-right">
-            Operated by @service.Operator (@service.ServiceType)
-        </div>
-    </div>
+<div class="border-top border-bottom mb-4 pt-2">
 
     @if (service.IsDetachedHere)
     {
-        <div class="row"><div class="col">Detaches here</div></div>
+        <div class="row text-center"><div class="col">Detaches here</div></div>
     }
 
     @if (service.PreviousCallingPoints.Count() > 0 || service.SubsequentCallingPoints.Count() > 0)
     {
-        <div class="row mb-3">
+        <div class="row mb-3 col">
             <partial name="_CallingPoints" model="service" view-data="ViewData" />
         </div>
     }
+
+    <div class="row text-center">
+        <div class="col">
+            @service.ServiceType service operated by @service.Operator from&nbsp;
+            @foreach (var o in service.Origins)
+            {
+                <span>@o.Location (@o.Crs) @o.Via</span>
+                if (o.Crs != service.Origins.Last().Crs)
+                { <span>,</span> }
+            }
+            &nbsp;to&nbsp;
+            @foreach (var d in service.Destinations)
+            {
+                <span>@d.Location (@d.Crs) @d.Via</span>
+                if (d.Crs != service.Destinations.Last().Crs)
+                { <span>,</span> }
+            }
+        </div>
     </div>
+
+</div>
 }

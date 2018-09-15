@@ -89,7 +89,7 @@
         }
 
         /// <summary>
-        /// Convert two time strings to delay
+        /// Convert two time strings to delay, must use this if has no colon
         /// </summary>
         /// <param name="estimatedTime">Time to compare against</param>
         /// <param name="actualTime">Actual time</param>
@@ -112,6 +112,19 @@
             }
 
             return actualTime.ToTimeDelay(estimatedTime);
+        }
+
+        public static string ToTimeDuration(this string time1, string time2)
+        {
+            int.TryParse(time1.ToTimeDelay(time2), out var mins);
+
+            if (mins == 0)
+            {
+                return string.Empty;
+            }
+
+            var hours = (int)(mins / 60);
+            return $"{(hours > 0 ? hours + "h " : string.Empty)} {mins % 60}";
         }
     }
 }

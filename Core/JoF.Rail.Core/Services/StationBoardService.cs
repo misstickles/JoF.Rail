@@ -17,7 +17,7 @@
 
             // TODO: TEST PROPERLY!!  (with unit tests)
 
-            // var board = ReadFile<GetArrDepBoardWithDetailsResponse>.GetFromJson("~/../../Data/DepArrBoard_HHEECR_Arr_NotStopping.json");
+            //var board = ReadFile<GetArrDepBoardWithDetailsResponse>.GetFromJson("~/../../../Data/DepArrBoard_HHEECR_Arr_NotStopping.json");
 
             return Mapper.Map<StationBoardModel>(board);
         }

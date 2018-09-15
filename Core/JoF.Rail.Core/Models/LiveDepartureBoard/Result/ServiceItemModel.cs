@@ -1,6 +1,5 @@
 ﻿namespace JoF.Rail.Core.Models.LiveDepartureBoard.Result
 {
-    using System;
     using System.Collections.Generic;
     using System.Collections.ObjectModel;
     using JoF.Rail.Core.Enums;

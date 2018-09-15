@@ -131,10 +131,14 @@ footer {
     bottom: 0;
     width: 100%;
     color: $ticket-grey;
-    background-color: $off-white;
+    background-color: transparent;
 }
 
-.departure-board hr {
+.bg-departure-board footer {
+    color: $off-white;
+}
+
+.bg-departure-board hr {
     border: dotted 1px $off-white;
     opacity: 0.4;
 }

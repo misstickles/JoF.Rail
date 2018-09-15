@@ -5,7 +5,8 @@
 }
 
 @{
-    var orderedServices = Model.Services.OrderBy(s => (s.ScheduledTimeArrival ?? s.ScheduledTimeDeparture));
+    var cols = 6;
+    var orderedServices = Model.Services.OrderBy(s => (s.ScheduledTimeDeparture ?? s.ScheduledTimeArrival));
 
     <div class="container">
         <div class="row align-content-center">
@@ -15,10 +16,10 @@
             <div class="col-8 text-right">
                 @{
                     var parms = new Dictionary<string, string>
-                            {
-                                { "crs", Model.Crs },
-                                { "filterCrs", Model.FilterCrs },
-                            };
+                                                                            {
+                                                                                { "crs", Model.Crs },
+                                                                                { "filterCrs", Model.FilterCrs },
+                                                                            };
                 }
                 <a class="btn btn-primary d-none d-sm-inline" asp-action="Departures" asp-all-route-data="parms">Departures</a>
                 <a class="btn btn-primary d-sm-none" asp-action="Departures" asp-all-route-data="parms">Deps</a>
@@ -42,111 +43,152 @@
                 </h3>
             </div>
         </div>
-    </div>
 
-    <div class="container bg-danger text-white">
-        <div class="row">
-            @foreach (var message in Model.Messages)
-            {
-                <div class="col-12 py-2">@Html.Raw(message)</div>
-            }
-        </div>
-    </div>
-
-    <div class="container departure-board">
-        <div class="row align-items-center py-3">
-            <div class="col-sm-2 text-center d-none d-sm-block"><strong>Arrives</strong></div>
-            <div class="col-sm-3 d-none d-sm-block"><strong>Origin</strong></div>
-            <div class="col-sm-2 text-center d-none d-sm-block"><strong>Expected</strong></div>
-            <div class="col-sm-1 text-center d-none d-sm-block"><strong>Delay</strong></div>
-            <div class="col-sm-1 text-center d-none d-sm-block"><strong>Plat</strong></div>
-            <div class="col-sm-1 text-center d-none d-sm-block"><strong>Coaches</strong></div>
-        </div>
-        <div class="row align-items-center d-sm-none">
-            <div class="col-2 text-center d-sm-none"><strong>Arr</strong></div>
-            <div class="col-3 d-sm-none"><strong>Origin</strong></div>
-            <div class="col-2 text-center d-sm-none"><strong>Exp</strong></div>
-            <div class="col-1 text-center d-sm-none"><i class="fas fa-clock"></i></div>
-            <div class="col-1 text-center d-sm-none"><strong>P</strong></div>
-            <div class="col-1 text-center d-sm-none"><strong>#</strong></div>
+        <div class="bg-danger text-white">
+            <div class="row px-3">
+                @foreach (var message in Model.Messages)
+                {
+                    <div class="col-12 py-2">@Html.Raw(message)</div>
+                }
+            </div>
         </div>
 
-        <div id="accordion">
-        @foreach (var service in @Model.Services)
-        {
-            <div class="pb-3" role="button" data-toggle="collapse" data-target="#@service.Id" aria-expanded="false" aria-controls="#@service.Id">
-                <div class="row pb-2 align-items-center">
-                    <div class="col-2 text-center">@service.ScheduledTimeArrival</div>
-                    <div class="col-3">
-                        @foreach (var dest in service.Origins)
+        <div id="accordion" class="pt-3">
+            <table class="table table-sm table-borderless">
+                <thead>
+                    <tr>
+                        <th class="text-center">
+                            <span class="d-none d-sm-block">Arrives</span>
+                            <span class="d-block d-sm-none">Arr</span>
+                        </th>
+                        <th>
+                            <span class="d-none d-sm-block">Origin</span>
+                            <span class="d-block d-sm-none">Origin</span>
+                        </th>
+                        <th class="text-center">
+                            <span class="d-none d-sm-block">Expected</span>
+                            <span class="d-block d-sm-none">Exp</span>
+                        </th>
+                        <th class="text-center">
+                            <span class="d-none d-sm-block">Plat</span>
+                            <span class="d-block d-sm-none">P</span>
+                        </th>
+                        <th class="text-center">
+                            <span class="d-none d-sm-block">Coaches</span>
+                            <span class="d-block d-sm-none">#</span>
+                        </th>
+                        <th></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var service in Model.Services)
+                    {
+                    <tr role="button" data-toggle="collapse" data-target="#@service.Id" aria-expanded="false" aria-controls="#@service.Id">
+                        <td class="text-center">@service.ScheduledTimeArrival</td>
+                        <td>
+                            @foreach (var dest in service.Origins)
+                            {
+                                <span class="d-block text-truncate">@dest.Location</span>
+                                @if (dest.Via != null)
+                                {
+                                    <span class="d-block small indent">@dest.Via</span>
+                                }
+                            }
+                        </td>
+                        <td class="text-center">
+                            <span>@service.EstimatedTimeArrival</span>
+                            @if (service.EstimatedTimeArrivalDelay != "-")
+                            {
+                                <span class="text-danger small">&nbsp;(@service.EstimatedTimeArrivalDelay)</span>
+                            }
+                        </td>
+                        <td class="text-center"><span>@service.Platform</span></td>
+                        <td class="text-center">
+                            @if (service.TrainLength > 0)
+                            {<span>@service.TrainLength</span>}
+                        </td>
+                        <td class="text-center d-none d-sm-block">
+                            <span data-toggle="collapse" data-target="#@service.Id" aria-expanded="false" aria-controls="collapseExample">
+                                <i class="fas fa-angle-down"></i>
+                            </span>
+                        </td>
+                    </tr>
+                        @if (service.DelayReason != null
+                       || service.CancellationReason != null
+                       || service.IsFilterLocationCancelled)
                         {
-                            <div class="d-block">@dest.Location</div>
-                            @if (dest.Via != null)
-                            {
-                                <small class="indent d-none d-sm-block">
-                                    @dest.Via
-                                </small>
-                            }
+                            <tr>
+                                <td colspan="@cols" class="text-danger">
+                                    @if (service.DelayReason != null && service.CancellationReason == null)
+                                    {
+                                        <div>@service.DelayReason</div>
+                                    }
+                                    @if (service.CancellationReason != null)
+                                    {
+                                        <div>@service.CancellationReason</div>
+                                    }
+                                    @if (service.IsFilterLocationCancelled)
+                                    {
+                                        <div>No longer stopping at destination</div>
+                                    }
+                                </td>
+                            </tr>
                         }
-                    </div>
-                    <div class="col-2 text-center">@service.EstimatedTimeArrival</div>
-                    <div class="col-1 text-center">@service.EstimatedTimeArrivalDelay</div>
-                    <div class="col-1 text-center">@service.Platform</div>
-                    <div class="col-1 text-center">@service.TrainLength</div>
-                    <div class="col-1 text-center">
-                        <button class="btn btn-dark" type="button" data-toggle="collapse" data-target="#@service.Id" aria-expanded="false" aria-controls="collapseExample">
-                            <i class="fas fa-info"></i>
-                        </button>
-                    </div>
-                </div>
 
-                @if (service.DelayReason != null || service.CancellationReason != null)
-                {
-                    <div class="row pb-2 align-items-center">
-                        <div class="col text-danger">
-                            @if (service.DelayReason != null && service.CancellationReason == null)
-                            {
-                                @service.DelayReason
-                            }
-                            @if (service.CancellationReason != null)
-                            {
-                                @service.CancellationReason
-                            }
-                        </div>
-                    </div>
-                }
-
-                @if (service.IsFilterLocationCancelled)
-                {
-                    <div class="row pb-2 align-items-center">
-                        <div class="col text-danger">
-                            <p class="text-danger">No longer stopping at destination</p>
-                        </div>
-                    </div>
-                }
-
-                <div class="collapse" id="@service.Id" aria-labelledby="@service.Id" data-parent="#accordion">
-                    @{
-                        ViewData["Here"] = Model.Location;
-                        ViewData["There"] = Model.FilterLocation;
+                        <tr>
+                            <td colspan="6" class="hiddenRow">
+                                <div id="@service.Id" class="collapse" aria-labelledby="@service.Id" data-parent="#accordion">
+                                    @{
+                                        ViewData["Here"] = Model.Location;
+                                        ViewData["There"] = Model.FilterLocation;
+                                    }
+                                    <partial name="_TrainServiceDetails" model="service" , view-data="ViewData" />
+                                </div>
+                            </td>
+                        </tr>
                     }
-                    <partial name="_TrainServiceDetails" model="service" , view-data="ViewData" />
-                </div>
-            </div>
-        }
+                    <tr>
+                        <td colspan="@cols" class="small text-right">
+                            <span class="pt-3">@Model.GeneratedAt</span>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
         </div>
 
-        <div class="row py-3">
-            <small class="col text-right">@Model.GeneratedAt</small>
-        </div>
-
-        <small class="row d-sm-none pb-3">
-            <div class="col">
+        <div class="row">
+            <small class="col-12 d-sm-none pb-3">
                 <i class="fas fa-clock"></i> - Delay, minutes
-                <div>P - Platform number</div>
-                <div># - Number of coaches</div>
-            </div>
-        </small>
-
+                <span class="d-block">P - Platform number</span>
+                <span class="d-block"># - Number of coaches</span>
+            </small>
+        </div>
     </div>
+}
+
+@section Styles {
+    <style type="text/css">
+        tr[aria-expanded="true"] i.fas {
+            transform: rotate(180deg);
+            transition: all linear 0.25s;
+        }
+
+        tr[aria-expanded="false"] i.fas {
+            transition: all linear 0.25s;
+        }
+
+        .hiddenRow {
+            padding: 0 !important;
+        }
+    </style>
+}
+
+@section Scripts {
+    <script>
+        (function () {
+            $('.collapse').on('show.bs.collapse', function () {
+                $('.collapse.in').collapse('hide');
+            });
+        })();
+    </script>
 }
