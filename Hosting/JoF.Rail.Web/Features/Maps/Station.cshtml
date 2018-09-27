@@ -19,13 +19,34 @@
 
                     var myOptions = {
                         center: hhe,
-                        zoom: 10
+                        zoom: 10,
+                        mapTypeId: "OSM",
+                        mapTypeControl: false,
+                        streetViewControl: false
                     };
 
                     map = new google.maps.Map(document.getElementById("stationMap"), myOptions);
 
-                    var transitLayer = new google.maps.TransitLayer();
-                    transitLayer.setMap(map);
+                    map.mapTypes.set("OSM", new google.maps.ImageMapType({
+                        getTileUrl: function (coord, zoom) {
+                            // "Wrap" x (longitude) at 180th meridian properly
+                            // NB: Don't touch coord.x: because coord param is by reference, and changing its x property breaks something in Google's lib
+                            var tilesPerGlobe = 1 << zoom;
+                            var x = coord.x % tilesPerGlobe;
+                            if (x < 0) {
+                                x = tilesPerGlobe + x;
+                            }
+                            // Wrap y (latitude) in a like manner if you want to enable vertical infinite scrolling
+
+                            return "https://tile.thunderforest.com/transport/" + zoom + "/" + x + "/" + coord.y +".png?apikey=f31707f58bde4a80baf55db6692385f6";
+                        },
+                        tileSize: new google.maps.Size(256, 256),
+                        name: "OpenStreetMap",
+                        maxZoom: 18
+                    }));
+
+                    //var transitLayer = new google.maps.TransitLayer();
+                    //transitLayer.setMap(map);
 
                     var markers = data.stations.map(function (location, i) {
                         var marker = new google.maps.Marker({
