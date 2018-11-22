@@ -251,11 +251,6 @@ text-mono {
     border-left-color: $info;
 }
 
-#stationMap {
-    width: 600px;
-    height: 600px;
-}
-
 .chart {
     width: 100% !important;
     min-height: 400px;
@@ -263,4 +258,10 @@ text-mono {
 
 .track-bg {
     background-image: url("../../images/track-bg.png");
+}
+
+
+#stationMap {
+    padding: 0;
+    margin: 0;
 }

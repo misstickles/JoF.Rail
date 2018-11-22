@@ -1,11 +1,15 @@
 ﻿namespace JoF.Rail.Web.ApiControllers
 {
+    using System;
     using System.Collections.Generic;
     using System.IO;
+    using System.Linq;
     using System.Threading.Tasks;
     using JoF.Rail.Core.Extensions;
+    using JoF.Rail.Core.Models;
     using JoF.Rail.Core.Models.Map;
     using Microsoft.AspNetCore.Mvc;
+    using Newtonsoft.Json.Linq;
 
     [Route("api/[Controller]")]
     [ApiController]
@@ -32,10 +36,25 @@
         [HttpGet("All")]
         public async Task<StationLocation> All()
         {
-            using (StreamReader r = File.OpenText(@"~/../Data/KbStations.json"))
+            using (StreamReader sr = File.OpenText(@"~/../Data/operatorCodes.json"))
             {
-                var data = r.ReadToEnd();
-                return data.DeserialiseJson<StationLocation>();
+                // TODO: JObject is a bit lazy...
+                var opCodes = sr.ReadToEnd().DeserialiseJson<OperatorCodes>();
+
+                using (StreamReader r = File.OpenText(@"~/../Data/KbStations.json"))
+                {
+                    var data = r.ReadToEnd();
+                    var stations = data.DeserialiseJson<StationLocation>();
+
+                    var join = stations.Stations
+                        .Join(
+                            opCodes.Operators,
+                            stn => stn.Operator,
+                            op => op.Code,
+                            (stn, op) => new StationLocation.Station { Name = stn.Name, Operator = op.Name, Latitude = stn.Latitude, Longitude = stn.Longitude, CrsCode = stn.CrsCode });
+
+                    return new StationLocation { Stations = join };
+                }
             }
         }
     }

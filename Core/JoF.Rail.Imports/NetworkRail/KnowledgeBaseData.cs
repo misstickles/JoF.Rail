@@ -7,7 +7,7 @@
 
     public class KnowledgeBaseData
     {
-        private readonly string baseDirectory = Path.GetFullPath(Path.Combine(AppDomain.CurrentDomain.BaseDirectory, @"..\..\..\..\..\", @"Core\JoF.Rail.Imports\RawData\"));
+        private readonly string baseDirectory = Path.GetFullPath(Path.Combine(AppDomain.CurrentDomain.BaseDirectory, @"..\..\..\..\..\", @"Data\"));
 
         public void Stations()
         {
