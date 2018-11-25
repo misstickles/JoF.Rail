@@ -36,9 +36,9 @@
         [HttpGet("All")]
         public async Task<StationLocation> All()
         {
+            // TODO: move join to import
             using (StreamReader sr = File.OpenText(@"~/../Data/operatorCodes.json"))
             {
-                // TODO: JObject is a bit lazy...
                 var opCodes = sr.ReadToEnd().DeserialiseJson<OperatorCodes>();
 
                 using (StreamReader r = File.OpenText(@"~/../Data/KbStations.json"))
@@ -46,14 +46,34 @@
                     var data = r.ReadToEnd();
                     var stations = data.DeserialiseJson<StationLocation>();
 
-                    var join = stations.Stations
+                    var result = stations.Stations
                         .Join(
                             opCodes.Operators,
                             stn => stn.Operator,
                             op => op.Code,
-                            (stn, op) => new StationLocation.Station { Name = stn.Name, Operator = op.Name, Latitude = stn.Latitude, Longitude = stn.Longitude, CrsCode = stn.CrsCode });
+                            (stn, op) => new StationLocation.Station
+                            {
+                                AltIds = stn.AltIds,
+                                Crs = stn.Crs,
+                                Facilities = stn.Facilities,
+                                Fare = stn.Fare,
+                                Lat = stn.Lat,
+                                Long = stn.Long,
+                                Name = stn.Name,
+                                Operator = op.Code,
+                                OperatorName = op.Name,
+                                OperatorColour = op.Colour,
+                                Postcode = stn.Postcode,
+                                SixtnCharName = stn.SixtnCharName,
+                                Tocs = stn.Tocs
+                                    .Join(
+                                        opCodes.Operators,
+                                        toc => toc.Toc,
+                                        code => code.Code,
+                                        (toc, code) => new StationLocation.Station.TocRef { Toc = toc.Toc, TocName = code.Name, Colour = code.Colour, Type = code.Type })
+                            });
 
-                    return new StationLocation { Stations = join };
+                    return new StationLocation { Stations = result };
                 }
             }
         }

@@ -12,6 +12,36 @@
           crossorigin="" />
     <link rel="stylesheet" href="https://unpkg.com/leaflet.markercluster@1.4.1/dist/MarkerCluster.Default.css" />
     <link rel="stylesheet" href="https://unpkg.com/leaflet.markercluster@1.4.1/dist/MarkerCluster.css" />
+    <style>
+        .toc {
+            padding: 3px;
+            color: #FFF;
+            font-weight: bold;
+        }
+        .icon {
+            width: 1.7em;
+            height: 1.7em;
+            margin-right: 5pt;
+        }
+
+        h2 {
+            position: absolute;
+            top: 70px;
+            left: 65px;
+            z-index: 1005;
+        }
+
+        #stationMap {
+            position: absolute;
+            top: 62px;
+            bottom: 0px;
+        }
+
+        footer {
+            background: transparent;
+            z-index: 1000;
+        }
+    </style>
 }
 
 @section Scripts {
@@ -22,9 +52,6 @@
 
     <script>
         var $map = $("#stationMap");
-        var $footer = $("footer");
-        $map.css('height', window.innerHeight) - parseInt($footer.outerHeight());
-        $map.css('width', window.innerWidth);
 
         $.ajax({
             context: this,
@@ -37,26 +64,48 @@
         });
 
         var map = L.map("stationMap", {
-            center: new L.LatLng(51.0, -0.1),
-            zoom: 13
+            center: new L.LatLng(51.1, 0.18),
+            zoom: 10
         });
 
-        L.tileLayer("https://tile.thunderforest.com/{style}/{z}/{x}/{y}{r}.png", { //?apikey={apiKey}', {
-            attribution: "Maps &copy; <a href='https://thunderforest.com'>Thunderforest</a> | Data &copy; <a href='https://www.openstreetmap.org/copyright'>OpenStreetMap</a> contributors",
-            maxZoom: 18,
-            style: 'transport',
-            apiKey: 'f31707f58bde4a80baf55db6692385f6'
-        }).addTo(map);
+        L.tileLayer("https://tile.thunderforest.com/{style}/{z}/{x}/{y}{r}.png?apikey={apiKey}",
+            {
+                attribution: "Maps &copy; <a href='https://thunderforest.com'>Thunderforest</a> | Data &copy; <a href='https://www.openstreetmap.org/copyright'>OpenStreetMap</a> contributors",
+                maxZoom: 18,
+                style: 'transport',
+                apiKey: 'f31707f58bde4a80baf55db6692385f6'
+            }).addTo(map);
 
         var markers = new L.MarkerClusterGroup({});
 
         function addMarkers(data) {
             var stations = data.stations.map(function (location, i) {
+                var tocs = "";
+                location.tocs.forEach((toc) => { tocs += `<span class='toc' style='background-color:#${toc.colour}'>${toc.tocName}</span>`; });
+
+                var icons = "";
+                icons += location.fare.tktMachine == true ? "<img class='icon' src='/images/icons/ticket-machine.svg' title='Ticket Machine' />" : "";
+                icons += location.fare.tktOffice == true ? "<img class='icon' src='/images/icons/ticket-office.svg' title='Ticket Office' />" : "";
+                icons += location.fare.oyster == true ? "<img class='icon' src='/images/icons/shell.svg' title='Can use Oyster Card' />" : "";
+                icons += location.facilities.atm == true ? "<img class='icon' src='/images/icons/atm.svg' title='Cash Machine' />" : "";
+                icons += location.facilities.toilet == true ? "<img class='icon' src='/images/icons/wc.svg' title='Toilet Facilities' />" : "";
+
                 markers.addLayer(
-                    L.marker([location.latitude, location.longitude])
+                    L.marker([location.lat, location.long])
                         .bindTooltip(location.name)
                         .openTooltip()
-                    .bindPopup(`<p><strong>${location.name}</strong><br />${location.operator}</p>Location: (${location.latitude}, ${location.longitude})`)
+                        .bindPopup(`
+    <p>
+    <strong>${location.name}</strong>
+    <span style='background-color:#${location.operatorColour};' class='toc' title='${location.operatorName}'>${location.operatorName}</span>
+    </p>
+    <p>
+    Served by: ${tocs}
+    </p>
+    Location: (${location.lat}, ${location.long})
+    <p>
+    ${icons}
+    </p>`)
                     .openPopup()
                 );
             });

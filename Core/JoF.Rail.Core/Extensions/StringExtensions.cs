@@ -1,8 +1,11 @@
 ﻿namespace JoF.Rail.Core.Extensions
 {
     using System;
+    using System.Diagnostics;
     using System.IO;
+    using System.Xml;
     using System.Xml.Serialization;
+    using System.Xml.Xsl;
     using Newtonsoft.Json;
 
     public static class StringExtensions
@@ -16,6 +19,10 @@
         public static T DeserialiseXml<T>(this string xml)
             where T : class
         {
+            if (string.IsNullOrEmpty(xml)) {
+                return default;
+            }
+
             T result = null;
 
             var serializer = new XmlSerializer(typeof(T));
@@ -125,6 +132,44 @@
 
             var hours = (int)(mins / 60);
             return $"{(hours > 0 ? hours + "h " : string.Empty)} {mins % 60}";
+        }
+
+        public static T DeserialiseXml<T>(this string xml, string xsl)
+            where T : class
+        {
+            // TODO: Do not hard-code XSLT file
+            xsl = @"\Xsl\Stations.xslt";
+
+            var xmlDoc = new XmlDocument();
+            xmlDoc.LoadXml(xml);
+
+            var xsltTansform = new XslCompiledTransform();
+            xsltTansform.Load(xsl);
+
+            var flattenedXml = string.Empty;
+
+            using (var stm = new MemoryStream())
+            {
+                xsltTansform.Transform(xmlDoc, null, stm);
+                stm.Position = 0;
+
+                using (var sr = new StreamReader(stm))
+                {
+                    // TODO: async?
+                    flattenedXml = sr.ReadToEnd();
+                }
+            }
+
+            T result = null;
+
+            var serializer = new XmlSerializer(typeof(T));
+
+            using (var reader = new StringReader(flattenedXml))
+            {
+                result = (T)serializer.Deserialize(reader);
+            }
+
+            return result;
         }
     }
 }

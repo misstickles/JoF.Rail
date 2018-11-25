@@ -1,138 +1,201 @@
 ﻿{
-  "operators": [
-    {
-      "code": "AR",
-      "name": "Alliance Rail"
-    },
-    {
-      "code": "CC",
-      "name": "c2c"
-    },
-    {
-      "code": "CH",
-      "name": "Chiltern Railways"
-    },
-    {
-      "code": "CS",
-      "name": "Caledonian Sleeper"
-    },
-    {
-      "code": "EM",
-      "name": "East Midlands Trains"
-    },
-    {
-      "code": "ES",
-      "name": "Eurostar International"
-    },
-    {
-      "code": "GC",
-      "name": "Grand Central"
-    },
-    {
-      "code": "GN",
-      "name": "Great Northern"
-    },
-    {
-      "code": "GR",
-      "name": "Virgin Trains East Coast"
-    },
-    {
-      "code": "GW",
-      "name": "Great Western Railway"
-    },
-    {
-      "code": "GX",
-      "name": "Gatwick Express"
-    },
-    {
-      "code": "HC",
-      "name": "Heathrow Connect"
-    },
-    {
-      "code": "HT",
-      "name": "Hull Trains"
-    },
-    {
-      "code": "HX",
-      "name": "Heathrow Express"
-    },
-    {
-      "code": "IL",
-      "name": "Island Line"
-    },
-
-    {
-      "code": "LE",
-      "name": "Greater Anglia"
-    },
-    {
-      "code": "LM",
-      "name": "West Midlands Trains"
-    },
-    {
-      "code": "LO",
-      "name": "London Overground/Transport for London"
-    },
-    {
-      "code": "ME",
-      "name": "Merseyrail"
-    },
-    {
-      "code": "NR",
-      "name": "Network Rail"
-    },
-    {
-      "code": "NT",
-      "name": "Northern Rail"
-    },
-    {
-      "code": "NY",
-      "name": "North Yorkshire Moors Railway"
-    },
-    {
-      "code": "SE",
-      "name": "Southeastern"
-    },
-    {
-      "code": "SN",
-      "name": "Southern"
-    },
-    {
-      "code": "SR",
-      "name": "ScotRail"
-    },
-    {
-      "code": "SW",
-      "name": "South Western Railway"
-    },
-
-    {
-      "code": "SX",
-      "name": "Stansted Express"
-    },
-    {
-      "code": "TL",
-      "name": "Govia Thameslink Railway (Thameslink branded services)"
-    },
-    {
-      "code": "TP",
-      "name": "TransPennine Express"
-    },
-    {
-      "code": "VT",
-      "name": "Virgin Trains [West Coast and CrossCountry]"
-    },
-    {
-      "code": "WR",
-      "name": "West Coast Railways"
-    },
-    {
-      "code": "XC",
-      "name": "CrossCountry"
-    },
-    {
-      "code": "XR",
-      "name": "TFL Rail/Crossrail"
-    }
-  ]
+	"operators": [{
+		"code": "AR",
+		"name": "Alliance Rail",
+		"colour": "",
+		"type": "r"
+	},
+	{
+		"code": "CC",
+		"name": "c2c",
+		"colour": "b7007c",
+		"type": "r"
+	},
+	{
+		"code": "CH",
+		"name": "Chiltern Railways",
+		"colour": "00bfff",
+		"type": "r"
+	},
+	{
+		"code": "CS",
+		"name": "Caledonian Sleeper",
+		"colour": "2a4549",
+		"type": "r"
+	},
+	{
+		"code": "EM",
+		"name": "East Midlands Trains",
+		"colour": "ffa500",
+		"type": "r"
+	},
+	{
+		"code": "ES",
+		"name": "Eurostar International",
+		"colour": "ffd700",
+		"type": "r"
+	},
+	{
+		"code": "GC",
+		"name": "Grand Central",
+		"colour": "2c3838",
+		"type": "r"
+	},
+	{
+		"code": "GN",
+		"name": "Great Northern",
+		"colour": "0099ff",
+		"type": "r"
+	},
+	{
+		"code": "GR",
+		"name": "Virgin Trains East Coast",
+		"colour": "d70e35",
+		"type": "r"
+	},
+	{
+		"code": "GW",
+		"name": "Great Western Railway",
+		"colour": "0a493e",
+		"type": "r"
+	},
+	{
+		"code": "GX",
+		"name": "Gatwick Express",
+		"colour": "eb1e2d",
+		"type": "r"
+	},
+	{
+		"code": "HC",
+		"name": "Heathrow Connect",
+		"colour": "f78f1e",
+		"type": "r"
+	},
+	{
+		"code": "HT",
+		"name": "Hull Trains",
+		"colour": "de005c",
+		"type": "r"
+	},
+	{
+		"code": "HX",
+		"name": "Heathrow Express",
+		"colour": "f78f1e",
+		"type": "r"
+	},
+	{
+		"code": "IL",
+		"name": "Island Line",
+		"colour": "1e90ff",
+		"type": "r"
+	},
+	{
+		"code": "LE",
+		"name": "Greater Anglia",
+		"colour": "d70428",
+		"type": "r"
+	},
+	{
+		"code": "LM",
+		"name": "West Midlands Trains",
+		"colour": "ff8200",
+		"type": "r"
+	},
+	{
+		"code": "LO",
+		"name": "London Overground/Transport for London",
+		"colour": "ff7518",
+		"type": "og"
+	},
+	{
+		"code": "ME",
+		"name": "Merseyrail",
+		"colour": "fff200",
+		"type": "r"
+	},
+	{
+		"code": "NR",
+		"name": "Network Rail",
+		"colour": "f07d3a",
+		"type": "r"
+	},
+	{
+		"code": "NT",
+		"name": "Northern Rail",
+		"colour": "262262",
+		"type": "r"
+	},
+	{
+		"code": "NY",
+		"name": "North Yorkshire Moors Railway",
+		"colour": "",
+		"type": "r"
+	},
+	{
+		"code": "SE",
+		"name": "Southeastern",
+		"colour": "00afe8",
+		"type": "r"
+	},
+	{
+		"code": "SN",
+		"name": "Southern",
+		"colour": "8cc63e",
+		"type": "r"
+	},
+	{
+		"code": "SR",
+		"name": "ScotRail",
+		"colour": "1c4074",
+		"type": "r"
+	},
+	{
+		"code": "SW",
+		"name": "South Western Railway",
+		"colour": "24398c",
+		"type": "r"
+	},
+	{
+		"code": "SX",
+		"name": "Stansted Express",
+		"colour": "6b717a",
+		"type": "r"
+	},
+	{
+		"code": "TL",
+		"name": "Govia Thameslink Railway",
+		"colour": "e9438d",
+		"type": "r"
+	},
+	{
+		"code": "TP",
+		"name": "TransPennine Express",
+		"colour": "06a6e4",
+		"type": "r"
+	},
+	{
+		"code": "VT",
+		"name": "Virgin Trains",
+		"colour": "ff0000",
+		"type": "r"
+	},
+	{
+		"code": "WR",
+		"name": "West Coast Railways",
+		"colour": "800000",
+		"type": "r"
+	},
+	{
+		"code": "XC",
+		"name": "CrossCountry",
+		"colour": "660f21",
+		"type": "r"
+	},
+	{
+		"code": "XR",
+		"name": "TFL Rail/Crossrail",
+		"colour": "",
+		"type": "r"
+	},
+	]
 }

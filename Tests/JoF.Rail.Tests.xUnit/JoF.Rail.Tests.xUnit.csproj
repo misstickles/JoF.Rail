@@ -7,6 +7,7 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="FluentAssert" Version="1.0.0.11" />
     <PackageReference Include="Microsoft.NET.Test.Sdk" Version="15.7.0" />
     <PackageReference Include="StyleCop.Analyzers" Version="1.0.2" />
     <PackageReference Include="xunit" Version="2.3.1" />
@@ -17,6 +18,7 @@
   <ItemGroup>
     <ProjectReference Include="..\..\Core\JoF.Rail.Core\JoF.Rail.Core.csproj" />
     <ProjectReference Include="..\..\Core\JoF.Rail.Imports\JoF.Rail.Imports.csproj" />
+    <ProjectReference Include="..\..\Hosting\JoF.Rail.Web\JoF.Rail.Web.csproj" />
   </ItemGroup>
 
   <ItemGroup>
