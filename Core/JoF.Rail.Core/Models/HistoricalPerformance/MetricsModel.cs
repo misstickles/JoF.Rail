@@ -1,8 +1,8 @@
-﻿using System.Collections.Generic;
-using Newtonsoft.Json;
-
-namespace JoF.Rail.Core.Models.HistoricalPerformance
+﻿namespace JoF.Rail.Core.Models.HistoricalPerformance
 {
+    using System.Collections.Generic;
+    using Newtonsoft.Json;
+
     public class MetricsModel
     {
         [JsonProperty(PropertyName = "header")]

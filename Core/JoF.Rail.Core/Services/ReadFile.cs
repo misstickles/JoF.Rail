@@ -4,7 +4,8 @@
     using JoF.Rail.Core.Extensions;
     using Newtonsoft.Json;
 
-    public static class ReadFile<T> where T : class
+    public static class ReadFile<T>
+        where T : class
     {
         public static T GetFromJson(string filename)
         {

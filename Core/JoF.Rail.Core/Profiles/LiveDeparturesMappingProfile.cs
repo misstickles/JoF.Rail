@@ -6,8 +6,8 @@
     using JoF.Rail.Core.Models.LiveDepartureBoard.Query;
     using JoF.Rail.Core.Models.LiveDepartureBoard.Result;
     using LiveDepartureBoardsService;
+    using FilterType = JoF.Rail.Core.Enums.FilterType;
     using ServiceType = JoF.Rail.Core.Enums.ServiceType;
-    using FilterTYpe = JoF.Rail.Core.Enums.FilterType;
 
     public class LiveDeparturesMappingProfile : Profile
     {

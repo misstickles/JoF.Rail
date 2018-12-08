@@ -1,8 +1,8 @@
-﻿using System.Collections.Generic;
-using Newtonsoft.Json;
-
-namespace JoF.Rail.Core.Models.HistoricalPerformance
+﻿namespace JoF.Rail.Core.Models.HistoricalPerformance
 {
+    using System.Collections.Generic;
+    using Newtonsoft.Json;
+
     public class DetailModel
     {
         [JsonProperty(PropertyName = "serviceAttributesDetails")]
@@ -43,6 +43,5 @@ namespace JoF.Rail.Core.Models.HistoricalPerformance
                 public string LateCode { get; set; }
             }
         }
-
     }
 }

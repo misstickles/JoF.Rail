@@ -1,7 +1,7 @@
-﻿using Newtonsoft.Json;
-
-namespace JoF.Rail.Core.Models.HistoricalPerformance
+﻿namespace JoF.Rail.Core.Models.HistoricalPerformance
 {
+    using Newtonsoft.Json;
+
     public class Query
     {
         [JsonIgnore]

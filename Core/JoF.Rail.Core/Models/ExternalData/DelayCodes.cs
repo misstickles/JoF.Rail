@@ -1,7 +1,7 @@
-﻿using System.Collections.Generic;
-
-namespace JoF.Rail.Core.Models.ExternalData
+﻿namespace JoF.Rail.Core.Models.ExternalData
 {
+    using System.Collections.Generic;
+
     public class DelayCodes
     {
         public IEnumerable<Codes> LateReasons { get; set; }

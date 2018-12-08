@@ -7,6 +7,8 @@
     public class ArrivalsDeparturesBoardServiceTests
     {
         [Fact]
-        public void ArrDepBoard_ArrDepBoardService_HasResults() { }
+        public void ArrDepBoard_ArrDepBoardService_HasResults()
+        {
+        }
     }
 }
