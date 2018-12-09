@@ -2,6 +2,7 @@ namespace JoF.Rail.Web
 {
     using AutoMapper;
     using FluentValidation.AspNetCore;
+    using JoF.Rail.Core.Web.Features.LiveTimes;
     using MediatR;
     using Microsoft.AspNetCore.Builder;
     using Microsoft.AspNetCore.Hosting;
@@ -45,6 +46,8 @@ namespace JoF.Rail.Web
                         cfg.RegisterValidatorsFromAssemblyContaining<Startup>();
                     })
                 .AddFeatureFolders();
+
+            services.AddSignalR(); // TODO: AddSignalRCore??
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -66,6 +69,11 @@ namespace JoF.Rail.Web
             app.UseHttpsRedirection();
             app.UseStaticFiles();
             // app.UseCookiePolicy();
+
+            app.UseSignalR(routes =>
+            {
+                routes.MapHub<DarwinHub>("/darwinHub");
+            });
             app.UseMvcWithDefaultRoute();
         }
     }

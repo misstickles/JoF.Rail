@@ -27,10 +27,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Handlers\" />
-  </ItemGroup>
-
-  <ItemGroup>
     <ProjectReference Include="..\..\Services\JoF.Rail.Service.LiveDepartureBoards\JoF.Rail.Service.LiveDepartureBoards.csproj" />
   </ItemGroup>
 

@@ -1,7 +1,8 @@
 ﻿{
   "compilerOptions": {
     "allowJs": true,
-    "noEmit": true
+    "noEmit": true,
+    "skipLibCheck": true
   },
   "exclude": [
     "wwwroot/lib" //ignore everything in the lib folder (bootstrap, jquery, etc)

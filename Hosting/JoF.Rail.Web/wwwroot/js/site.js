@@ -1,5 +1,4 @@
-
-(function () {
+;(function () {
     // Open links to different host in a new window.
     $(document.links).filter(function () {
         return this.hostname !== window.location.hostname;

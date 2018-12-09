@@ -30,7 +30,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "JoF.Rail.Imports", "Core\Jo
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Hosting", "Hosting", "{FF797222-9603-4AFE-A29E-B3607D0DD12E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JoF.Rail.Core.Middleware", "Core\JoF.Rail.Core.Middleware\JoF.Rail.Core.Middleware.csproj", "{BD31912C-182C-44F0-8F8A-028D008A558F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "JoF.Rail.Core.Middleware", "Core\JoF.Rail.Core.Middleware\JoF.Rail.Core.Middleware.csproj", "{BD31912C-182C-44F0-8F8A-028D008A558F}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "JoF.Rail.Service.LiveFeeds", "Services\JoF.Rail.Service.DarwinFeed\JoF.Rail.Service.LiveFeeds.csproj", "{FC3ABFA0-B1FD-4E31-817B-6FCEA48888A0}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -66,6 +68,10 @@ Global
 		{BD31912C-182C-44F0-8F8A-028D008A558F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{BD31912C-182C-44F0-8F8A-028D008A558F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{BD31912C-182C-44F0-8F8A-028D008A558F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FC3ABFA0-B1FD-4E31-817B-6FCEA48888A0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FC3ABFA0-B1FD-4E31-817B-6FCEA48888A0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FC3ABFA0-B1FD-4E31-817B-6FCEA48888A0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FC3ABFA0-B1FD-4E31-817B-6FCEA48888A0}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -78,6 +84,7 @@ Global
 		{974C5CF4-1163-4E71-B37B-14A372BD0B8A} = {D499E75F-F0CD-4512-B712-8EDC2364096C}
 		{AEB3E78C-A2D7-487E-8550-6F84D1C035B1} = {D499E75F-F0CD-4512-B712-8EDC2364096C}
 		{BD31912C-182C-44F0-8F8A-028D008A558F} = {D499E75F-F0CD-4512-B712-8EDC2364096C}
+		{FC3ABFA0-B1FD-4E31-817B-6FCEA48888A0} = {3FB53660-B254-4220-ACE3-B3A1270EAE53}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {5E1C079A-58AA-4CDF-9B5B-5102A38DA2EC}

@@ -7,6 +7,8 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="Apache.NMS.NetStd" Version="1.7.1.3898" />
+    <PackageReference Include="Apache.NMS.Stomp.NetStd" Version="1.5.4.3217" />
     <PackageReference Include="FluentAssert" Version="1.0.0.11" />
     <PackageReference Include="Microsoft.NET.Test.Sdk" Version="15.7.0" />
     <PackageReference Include="StyleCop.Analyzers" Version="1.0.2" />
@@ -19,6 +21,7 @@
     <ProjectReference Include="..\..\Core\JoF.Rail.Core\JoF.Rail.Core.csproj" />
     <ProjectReference Include="..\..\Core\JoF.Rail.Imports\JoF.Rail.Imports.csproj" />
     <ProjectReference Include="..\..\Hosting\JoF.Rail.Web\JoF.Rail.Web.csproj" />
+    <ProjectReference Include="..\..\Services\JoF.Rail.Service.DarwinFeed\JoF.Rail.Service.LiveFeeds.csproj" />
   </ItemGroup>
 
   <ItemGroup>
