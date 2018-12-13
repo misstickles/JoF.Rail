@@ -60,14 +60,34 @@ gulp.task("copy-js", function () {
 });
 
 gulp.task("minify-js", ["copy-js"], function () {
-    return gulp.src("wwwroot/js/site.js")
-        .pipe(uglify())
+    return gulp.src([
+        "wwwroot/js/site.js",
+        "wwwroot/js/darwinHub.js"])
+//        .pipe(uglify())
+        .pipe(uglify().on('error', function (uglify) {
+            console.error(uglify.message + " : " + uglify.fileName + " : " + uglify.cause);
+            this.emit('end');
+        }))
         .pipe(rename({ suffix: ".min" }))
+        .pipe(gulp.dest("wwwroot/dist/js"));
+});
+
+gulp.task("copy-signalr", function () {
+    gulp.src(["node_modules/@aspnet/signalr/dist/browser/**"])
+        .pipe(gulp.dest("wwwroot/build/signalr"));
+
+    return gulp.src(["wwwroot/build/signalr/signalr.min.js"])
         .pipe(gulp.dest("wwwroot/dist/js"));
 });
 
 gulp.task("watch", function () {
     gulp.watch("wwwroot/scss/*.scss", ["minify-css"]);
+    gulp.watch("wwwroot/js/*.js", ["minify-js"]);
 });
 
-gulp.task("default", ["minify-js", "minify-css", "fa-fonts"], function (callback) { });
+gulp.task("default", [
+    "minify-js",
+    "minify-css",
+    "fa-fonts",
+    "copy-signalr"],
+    function (callback) { });

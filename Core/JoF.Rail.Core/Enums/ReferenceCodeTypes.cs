@@ -2,7 +2,7 @@
 {
     using System.ComponentModel;
 
-    public enum ReerencefCodeTypes
+    public enum ReferenceCodeTypes
     {
         [Description("Accommodation")]
         ACC,

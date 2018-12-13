@@ -1,0 +1,17 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="Schema\rttiPPT_v12.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Apache.NMS.ActiveMQ.NetStd" Version="1.7.2.4114" />
+    <PackageReference Include="Apache.NMS.NetStd" Version="1.7.1.3898" />
+    <PackageReference Include="Apache.NMS.Stomp.NetStd" Version="1.5.4.3217" />
+  </ItemGroup>
+
+</Project>
