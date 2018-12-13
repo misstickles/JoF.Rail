@@ -8,7 +8,7 @@
 
     public class PportTimetableRef
     {
-        private const string DataFile = @"20180706020720_ref_v3.xml";
+        private const string DataFile = @"20181213020745_ref_v3.xml";
 
         private readonly string baseDirectory = Path.GetFullPath(Path.Combine(AppDomain.CurrentDomain.BaseDirectory, @"..\..\..\..\..\", @"Core\JoF.Rail.Imports\RawData\"));
 
