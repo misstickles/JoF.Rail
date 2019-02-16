@@ -23,13 +23,13 @@
         // TODO: dynamic year selector...
         [JsonProperty(PropertyName = "from_date")]
         [Required(ErrorMessage = "Required")]
-        [RegularExpression(@"^20(17|18)-(0[1-9]|1[0-2])-(0[0-9]|1[0-9]|2[0-9]|3[0-1])$", ErrorMessage = "Format yyyy-mm-dd")]
+        [RegularExpression(@"^20(18|19)-(0[1-9]|1[0-2])-(0[0-9]|1[0-9]|2[0-9]|3[0-1])$", ErrorMessage = "Format yyyy-mm-dd")]
         public string FromDate { get; set; } = now.AddMonths(-1).ToString("yyyy-MM-dd");
 
         // TODO: dynamic year selector...
         [JsonProperty(PropertyName = "to_date")]
         [Required(ErrorMessage = "Required")]
-        [RegularExpression(@"^20(17|18)-(0[1-9]|1[0-2])-(0[0-9]|1[0-9]|2[0-9]|3[0-1])$", ErrorMessage = "Format yyyy-mm-dd")]
+        [RegularExpression(@"^20(18|19)-(0[1-9]|1[0-2])-(0[0-9]|1[0-9]|2[0-9]|3[0-1])$", ErrorMessage = "Format yyyy-mm-dd")]
         public string ToDate { get; set; } = now.ToString("yyyy-MM-dd");
 
         [JsonProperty(PropertyName = "from_time")]
