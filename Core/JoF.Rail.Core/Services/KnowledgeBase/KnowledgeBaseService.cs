@@ -14,7 +14,6 @@
         public async Task<T> Get(KnowledgeBaseQuery query)
         {
             var request = new HttpRequestMessage(HttpMethod.Get, query.Url);
-            request.Headers.Add("Accept", "application/xhtml+xml");
             request.Headers.Add("X-Auth-Token", query.Token);
 
             // return ReadFile<T>.GetFromXml(@"~/../Data/KbStations.xml");

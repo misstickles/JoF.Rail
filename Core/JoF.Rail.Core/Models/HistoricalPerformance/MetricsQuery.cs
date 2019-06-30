@@ -12,13 +12,13 @@
         [StringLength(3, MinimumLength = 3)]
         [Required(ErrorMessage = "Required")]
         [Display(Name = "Between")]
-        public string CrsFrom { get; set; } = "HHE";
+        public string CrsFrom { get; set; } = string.Empty;
 
         [JsonProperty(PropertyName = "to_loc")]
         [StringLength(3, MinimumLength = 3)]
         [Required(ErrorMessage = "Required")]
         [Display(Name = "And")]
-        public string CrsTo { get; set; } = "ECR";
+        public string CrsTo { get; set; } = string.Empty;
 
         // TODO: dynamic year selector...
         [JsonProperty(PropertyName = "from_date")]
